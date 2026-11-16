@@ -1,0 +1,25 @@
+{
+  "name": "@sora/dsh-mui",
+  "version": "0.1.0",
+  "description": "MUI — Multi UI for DeepSeek Harness: one session core, many faces (terminal viewer, browser, tunnels).",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SORALNV/dsh-mui.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "tui",
+    "cli"
+  ],
+  "type": "module",
+  "bin": {
+    "mui-daemon": "bin/mui-daemon.mjs",
+    "mui-view": "bin/mui-view.mjs",
+    "mui-forward": "bin/mui-forward.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
