@@ -117,6 +117,7 @@ async function start() {
     profile,
     origin: `http://127.0.0.1:${port}`,
     token,
+    cwd: process.env.MUI_CWD ?? process.cwd(),
     startedAt: new Date().toISOString(),
     logFile: LOG,
     extraArgs: extra,

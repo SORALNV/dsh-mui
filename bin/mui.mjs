@@ -19,6 +19,7 @@ import { spawn, spawnSync } from 'node:child_process';
 import { readFile, rm } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
+import { DshClient } from '../lib/dsh-api.mjs';
 
 const dir = join(import.meta.dirname, '..');
 const daemon = join(dir, 'bin', 'mui-daemon.mjs');
@@ -97,6 +98,50 @@ switch (command) {
   case 'attach':
     run(view, ['--session', argv[1], ...argv.slice(2)]);
     break;
+  case 'resume': {
+    if (!(await daemonRunning())) {
+      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3219'], {
+        stdio: 'inherit',
+      });
+      if (r.status !== 0) process.exit(r.status ?? 1);
+    }
+    let target = argv[1];
+    if (!target) {
+      // 最後に触っていたセッションへ (tmux attach 相当)。
+      // 候補は daemon と同じワークスペースのセッションに限定し、attach 試行で
+      // 他プロセスのロック衝突 (session/conflict) なら次の候補へ落ちる。
+      const state = JSON.parse(await readFile(STATE, 'utf8'));
+      let daemonCwd = state.cwd;
+      if (!daemonCwd) {
+        const out = spawnSync('lsof', ['-a', '-p', String(state.pid), '-d', 'cwd', '-Fn'], { encoding: 'utf8' });
+        daemonCwd = (out.stdout ?? '').split('\n').find((l) => l.startsWith('n/'))?.slice(1);
+      }
+      const client = new DshClient({ origin: state.origin, token: state.token });
+      const { items } = await client.listSessions();
+      const candidates = items
+        .filter((x) => !x.blank && (!daemonCwd || x.cwd === daemonCwd))
+        .sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0));
+      target = undefined;
+      for (const cand of candidates.slice(0, 5)) {
+        try {
+          await client.call('session/create', { sessionId: cand.sessionId }); // attach (メモリにロード)
+          target = cand.sessionId;
+          const when = cand.updatedAt ? new Date(cand.updatedAt).toLocaleString('ja-JP') : '';
+          console.log(`mui: resuming ${cand.sessionId} ${when}`);
+          break;
+        } catch (e) {
+          if (e.code === 'session/conflict') continue; // 他プロセスが所有 → 次の候補
+          throw e;
+        }
+      }
+      if (!target) {
+        console.error('mui: 再開できるセッションがありません (mui new で作成してください)');
+        process.exit(1);
+      }
+    }
+    run(view, ['--session', target]);
+    break;
+  }
   case 'list':
     run(view, ['list']);
     break;
@@ -120,6 +165,7 @@ switch (command) {
   case '-h':
     console.log(`mui                       daemon を起動（無ければ）して mui-view で attach
 mui new ["prompt"]        新規セッションを作って attach
+mui resume [id]           最後に触っていたセッション（または指定id）を再開
 mui attach <id>           セッションを直指定で attach
 mui list                  セッション一覧
 mui url                   ブラウザ用トークン付きURL

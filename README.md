@@ -22,10 +22,16 @@
 **`~/.local/bin` にインストール済み**（`mui` / `mui-daemon` / `mui-view` / `mui-forward` の symlink）。
 
 ```sh
-mui                 # daemon が無ければ起動して mui-view で attach（日常はこれ一発）
-mui list            # セッション一覧
-mui url             # ブラウザ用トークン付きURL
-mui stop            # daemon 停止
+mui                       # daemon が無ければ起動して mui-view で attach（日常はこれ一発）
+mui new ["最初の指示"]     # 新規セッション作成 + attach
+mui resume [id]           # 最後に触っていたセッション（または指定id）を再開 — tmux attach 相当
+mui list                  # セッション一覧
+mui url                   # ブラウザ用トークン付きURL
+mui start                 # daemon 起動のみ
+mui status                # daemon の状態
+mui stop                  # daemon 正常停止 (SIGTERM)
+mui kill                  # daemon 強制停止 (SIGKILL, ポートも解放)
+mui log                   # daemon ログの末尾
 mui forward tailscale | cloudflared | off | status
 mui --profile mui   # 前景モード（TUI + Web を1プロセスで、ターミナルを閉じたら終了）
 ```
