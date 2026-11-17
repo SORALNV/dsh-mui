@@ -186,21 +186,60 @@ switch (command) {
   case 'help':
   case '--help':
   case '-h':
-    console.log(`mui                       daemon を起動（無ければ）して mui-view で attach
-mui new ["prompt"]        新規セッションを作って attach
-mui resume [id]           最後に触っていたセッション（または指定id）を再開
-mui attach <id>           セッションを直指定で attach
-mui list                  セッション一覧
-mui url                   ブラウザ用トークン付きURL
-mui start                 daemon 起動のみ
-mui status                daemon の状態
-mui stop                  daemon を正常停止 (SIGTERM)
-mui kill                  daemon を強制停止 (SIGKILL, ポートも解放)
-mui log                   daemon ログの末尾
-mui forward <kind>        tailscale | cloudflared | off | status
-mui tui                   フルTUI (dsh-TUI) をフォアグラウンドで起動 — daemonを止めて引き継ぐ
-mui takeover              メインGUIを廃止し daemon を3080で常駐させる (移行コマンド)
-mui --profile <p>         前景モード (dsh --profile <p>)`);
+    console.log(`mui — Multi UI for DeepSeek Harness
+1つのセッションコア(daemon)に、ターミナル・ブラウザ・スマホが同時に接続します。
+どこからの発言も全フェイスにリアルタイム表示されます。
+
+■ 基本の流れ
+
+  1) mui                    コアを起動(無ければ)してターミナルから接続
+  2) mui url                表示されるURLをブラウザで開く → 同じセッション
+  3) mui forward tailscale  外部(Tailnet)に公開 → スマホからも同じセッション
+
+■ コマンド
+
+  mui                       コア(daemon)が無ければ起動し、mui-viewで接続する。
+                            実行したディレクトリがセッションのワークスペースになる。
+  mui new ["最初の指示"]     新しいセッションを作成して接続する。
+                            指示を付けると初回プロンプトとして送信する。
+  mui resume [id]           最後に触っていたセッションを再開する (tmux attach相当)。
+                            自分のコアが所有するセッションだけを候補にするため、
+                            他プロセスのセッションと衝突しない。id指定で任意へ。
+  mui attach <id>           セッションをID直指定で接続する。
+  mui list                  セッション一覧を表示する (●=実行中)。
+  mui url                   ブラウザ用のトークン付きURLを表示する。
+                            トークンはプロセス毎に変わるので、繋がらない時は再取得。
+  mui start                 コアの起動だけ行う (接続しない)。
+  mui status                コアの稼働状態 (pid / port / トークン) を表示する。
+  mui stop                  コアを正常終了する (SIGTERM)。
+  mui kill                  コアを強制終了する (SIGKILL)。
+                            ポートの残骸リスナーも掃除する。復帰は mui でOK。
+  mui log                   コアのログ末尾を表示する (tail -f で追跡)。
+  mui forward <kind>        コアを外部公開する: tailscale | cloudflared | off | status
+  mui tui                   フルTUI (dsh-TUI) を前面で起動する。
+                            TUI自体がコアの座に着く (Web面も同プロセスで提供)。
+                            普段のTUIと同じUI/UXで作業したい時に使う。
+                            TUIを閉じるとコアも終了する (セッションは保存済み)。
+  mui takeover              単独の dsh web を廃止し、コアを3080ポートで常駐させる
+                            移行コマンド (一度実行すれば以後は不要)。
+  mui --profile <p>         従来型の前景モード (dsh --profile <p>)。
+
+■ mui-view 内のコマンド (接続後に入力できる)
+
+  (文章) + Enter            プロンプトを送信する (キューに入る)
+  /resume                   画面を最新の会話に同期し直す
+  /reload                   履歴を最初から描き直す
+  /stop                     実行中のターンを中断する
+  /quit                     切り離す (セッションとターンは生き続ける)
+  /help                     コマンド一覧を表示する
+
+■ 覚えておくと良いこと
+
+  - /quit や SSH 切断でもターンは止まらない (コアが生かし続ける)。
+    後で mui resume すれば続きが見える。
+  - 「セッションは使用中」エラーが出たら、そのセッションの所有ホストと
+    アクセス元のURL (ポート) が違う。mui resume なら自動で避ける。
+  - テスト等で作ったセッションは workspace/archiveSession で一覧から隠せる。`);
     break;
   default:
     console.error(`mui: unknown command "${command}" (see: mui help)`);
