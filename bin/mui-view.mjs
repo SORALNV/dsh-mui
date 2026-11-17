@@ -85,10 +85,17 @@ function printNotification(label, text) {
   console.log('');
 }
 
+function printDim(text) {
+  clearSpinner();
+  console.log(dim(`· ${text}`));
+}
+
 function renderEvent(ev) {
   const s = summarizeEvent(ev);
   switch (s.kind) {
     case 'user':
+      if (s.text.startsWith('Current runtime context.')) return printDim('runtime context updated');
+      if (s.text.startsWith('Time sampled while preparing')) return printDim('time sample');
       return printUser(s.text);
     case 'assistant':
       return printAssistant(s.text);
@@ -229,6 +236,39 @@ rl.on('line', async (line) => {
     printNotification('cancel', 'requested');
     return rl.prompt(true);
   }
+  if (text === '/resume') {
+    // 直近のイベントを取り込み直す (画面の取りこぼし・復帰後の同期)
+    const page = await client.pageEvents(sessionId, { maxMessages: 60 });
+    for (const rec of page.records) {
+      const ev = rec.event ?? rec;
+      if (typeof ev.seq !== 'number' || ev.seq <= lastSeq) continue;
+      renderEvent(ev);
+      lastSeq = ev.seq;
+    }
+    printNotification('resumed', '最新の会話を取り込みました');
+    return rl.prompt(true);
+  }
+  if (text === '/reload') {
+    process.stdout.write('\x1b[2J\x1b[H');
+    const page = await client.pageEvents(sessionId, { maxMessages: 80 });
+    for (const rec of page.records) {
+      const ev = rec.event ?? rec;
+      renderEvent(ev);
+    }
+    printNotification('reloaded', `${page.records.length} events`);
+    return rl.prompt(true);
+  }
+  if (text === '/help') {
+    console.log(dim('  /resume  最新の会話を取り込み直す'));
+    console.log(dim('  /reload  履歴を最初から描き直す'));
+    console.log(dim('  /stop    実行中のターンを中断'));
+    console.log(dim('  /quit    デタッチ (セッションは生き続ける)'));
+    return rl.prompt(true);
+  }
+  if (text.startsWith('/')) {
+    printNotification('error', `unknown command "${text.split(/\s+/)[0]}" — /help`);
+    return rl.prompt(true);
+  }
   if (text.startsWith('/model ')) {
     const [, provider, model, effort] = text.split(/\s+/);
     try {
@@ -245,8 +285,7 @@ rl.on('line', async (line) => {
     printNotification('error', `send: ${e.message}`);
   }
   rl.prompt(true);
-});
-rl.on('close', () => {
+});rl.on('close', () => {
   clearInterval(pollTimer);
   clearInterval(spinTimer);
   clearSpinner();

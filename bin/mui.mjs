@@ -85,6 +85,26 @@ switch (command) {
     child.on('exit', (code) => process.exit(code ?? 0));
     break;
   }
+  case 'tui': {
+    // フルTUI (dsh-TUI + Web を1プロセスで) に席を譲る:
+    // daemon を止め → TUI をフォアグラウンドで起動 → トークンを捕捉して
+    // mui url / mui-view / 8444 経由がそのまま使えるようにする。
+    await killDaemon();
+    const port = process.env.MUI_PORT ?? '3219';
+    const logFile = join(homedir(), '.dsh', 'mui-tui.log');
+    const watcher = spawn(process.execPath, [join(dir, 'bin', 'mui-token-watch.mjs'), '--log', logFile, '--port', port, '--cwd', process.cwd()], {
+      detached: true,
+      stdio: 'ignore',
+    });
+    watcher.unref();
+    const r = spawnSync('python3', [join(dir, 'bin', 'mui-pty.py'), 'dsh', '--profile', 'mui', '--no-open', '--port', port], {
+      stdio: 'inherit',
+      env: { ...process.env, MUI_PTY_LOG: logFile, MUI_PTY_FIFO: `/tmp/mui-tui-${Date.now()}.in` },
+    });
+    await rm(STATE, { force: true }); // TUI終了 → トークン無効
+    process.exit(r.status ?? 0);
+    break;
+  }
   case 'new': {
     if (!(await daemonRunning())) {
       const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3219'], {
@@ -123,15 +143,15 @@ switch (command) {
         .sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0));
       target = undefined;
       for (const cand of candidates.slice(0, 5)) {
+        // ロックを握らない (prompt時点でhostが解決する)。参照可能かの確認のみ。
         try {
-          await client.call('session/create', { sessionId: cand.sessionId }); // attach (メモリにロード)
+          await client.call('session/page', { address: { kind: 'session', sessionId: cand.sessionId }, maxMessages: 1 });
           target = cand.sessionId;
           const when = cand.updatedAt ? new Date(cand.updatedAt).toLocaleString('ja-JP') : '';
           console.log(`mui: resuming ${cand.sessionId} ${when}`);
           break;
         } catch (e) {
-          if (e.code === 'session/conflict') continue; // 他プロセスが所有 → 次の候補
-          throw e;
+          continue; // 読めなければ次の候補
         }
       }
       if (!target) {
@@ -175,6 +195,7 @@ mui stop                  daemon を正常停止 (SIGTERM)
 mui kill                  daemon を強制停止 (SIGKILL, ポートも解放)
 mui log                   daemon ログの末尾
 mui forward <kind>        tailscale | cloudflared | off | status
+mui tui                   フルTUI (dsh-TUI) をフォアグラウンドで起動 — daemonを止めて引き継ぐ
 mui --profile <p>         前景モード (dsh --profile <p>)`);
     break;
   default:
