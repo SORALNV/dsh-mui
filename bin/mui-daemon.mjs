@@ -74,7 +74,12 @@ async function start() {
   const dash = process.argv.indexOf('--');
   const extra = dash >= 0 ? process.argv.slice(dash + 1) : [];
   const bin = process.env.DSH_BIN ?? 'dsh';
-  const args = ['--profile', profile, '--no-open', '--port', String(port), ...extra];
+  // web プロファイルは `dsh web` サブコマンド形式で起動する
+  // (DSH_BIN にラッパーを差し込んでも `dsh web --profile web` の二重指定にならないように)
+  const args =
+    profile === 'web'
+      ? ['web', '--no-open', '--port', String(port), ...extra]
+      : ['--profile', profile, '--no-open', '--port', String(port), ...extra];
 
   const logFd = await open(LOG, 'w');
   const child = spawn(bin, args, {

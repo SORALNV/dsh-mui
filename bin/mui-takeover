@@ -1,0 +1,35 @@
+#!/bin/bash
+# mui takeover — retire the standalone `dsh web` GUI and make the MUI daemon
+# the single session core on port 3080.
+#
+# Run this from YOUR OWN terminal (not from inside a dsh session):
+# the current GUI host dies mid-turn; its sessions resume in the new daemon.
+set -u
+
+cd "$(dirname "$0")/.." || exit 1
+
+echo 'mui-takeover: stopping the current daemon…'
+mui kill 2>/dev/null || true
+
+echo 'mui-takeover: stopping the standalone GUI on :3080…'
+for pid in $(lsof -tiTCP:3080 -sTCP:LISTEN 2>/dev/null); do
+  kill "$pid" 2>/dev/null || true
+done
+for i in $(seq 1 30); do
+  lsof -tiTCP:3080 -sTCP:LISTEN >/dev/null 2>&1 || break
+  sleep 0.5
+done
+
+echo 'mui-takeover: starting the MUI daemon on :3080 (with the Playwright browser env)…'
+DSH_BIN="$HOME/Code/Playwright/bin/dsh-web-with-browser-env" mui-daemon start --port 3080 || exit 1
+
+# tailscale の両マッピングを同じ daemon へ (443 / 8444 どちらのURLも生きる)
+if command -v tailscale >/dev/null 2>&1; then
+  tailscale serve --bg 3080 >/dev/null 2>&1 || true
+  tailscale serve --bg --https=8444 3080 >/dev/null 2>&1 || true
+fi
+
+echo
+echo 'mui-takeover: done. ブラウザで開いてください:'
+mui url
+echo '(スマホ等からは https://macstudio.tailcf365a.ts.net/?token=<上のtoken> または :8444 でも同じ)'

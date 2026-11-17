@@ -76,7 +76,7 @@ switch (command) {
   case undefined: {
     if (!(await daemonRunning())) {
       console.log('mui: starting daemon…');
-      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3219'], {
+      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
         stdio: 'inherit',
       });
       if (r.status !== 0) process.exit(r.status ?? 1);
@@ -90,7 +90,7 @@ switch (command) {
     // daemon を止め → TUI をフォアグラウンドで起動 → トークンを捕捉して
     // mui url / mui-view / 8444 経由がそのまま使えるようにする。
     await killDaemon();
-    const port = process.env.MUI_PORT ?? '3219';
+    const port = process.env.MUI_PORT ?? '3080';
     const logFile = join(homedir(), '.dsh', 'mui-tui.log');
     const watcher = spawn(process.execPath, [join(dir, 'bin', 'mui-token-watch.mjs'), '--log', logFile, '--port', port, '--cwd', process.cwd()], {
       detached: true,
@@ -107,7 +107,7 @@ switch (command) {
   }
   case 'new': {
     if (!(await daemonRunning())) {
-      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3219'], {
+      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
         stdio: 'inherit',
       });
       if (r.status !== 0) process.exit(r.status ?? 1);
@@ -120,7 +120,7 @@ switch (command) {
     break;
   case 'resume': {
     if (!(await daemonRunning())) {
-      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3219'], {
+      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
         stdio: 'inherit',
       });
       if (r.status !== 0) process.exit(r.status ?? 1);
@@ -177,6 +177,9 @@ switch (command) {
   case 'kill':
     await killDaemon();
     break;
+  case 'takeover':
+    run('/bin/bash', [join(dir, 'bin', 'mui-takeover')]);
+    break;
   case 'forward':
     run(forward, argv.slice(1));
     break;
@@ -196,6 +199,7 @@ mui kill                  daemon を強制停止 (SIGKILL, ポートも解放)
 mui log                   daemon ログの末尾
 mui forward <kind>        tailscale | cloudflared | off | status
 mui tui                   フルTUI (dsh-TUI) をフォアグラウンドで起動 — daemonを止めて引き継ぐ
+mui takeover              メインGUIを廃止し daemon を3080で常駐させる (移行コマンド)
 mui --profile <p>         前景モード (dsh --profile <p>)`);
     break;
   default:
