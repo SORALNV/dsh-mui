@@ -1,0 +1,168 @@
+- generic [ref=f18e1]:
+  - iframe [aria-hidden] [ref=f18e2]
+  - region
+  - generic [ref=f18e4]:
+    - navigation [ref=f18e5]:
+      - button "メイン コンテンツにスキップ" [ref=f18e7] [cursor=pointer]
+      - button "キーボード ショートカット" [ref=f18e11] [cursor=pointer]
+      - button "ユーザー補助に関するフィードバック" [ref=f18e15] [cursor=pointer]
+    - banner [ref=f18e19]:
+      - generic [ref=f18e20]:
+        - link "ドライブ" [ref=f18e24] [cursor=pointer]:
+          - /url: https://drive.google.com/?tab=oo&authuser=0
+        - generic [ref=f18e27]:
+          - search [ref=f18e29]:
+            - table [ref=f18e31]:
+              - rowgroup [ref=f18e32]:
+                - row [ref=f18e33]:
+                  - cell [ref=f18e34]:
+                    - textbox "ドライブから回答を得る" [ref=f18e35]: title:"submission.json"
+            - button "検索オプション" [ref=f18e36] [cursor=pointer]
+            - button "検索をクリア" [ref=f18e39] [cursor=pointer]
+            - button "Google ドライブを検索" [ref=f18e43] [cursor=pointer]
+          - generic [ref=f18e46]:
+            - button "オフラインで使用可能にできます" [ref=f18e372] [cursor=pointer]
+            - button "サポート" [ref=f18e49] [cursor=pointer]
+            - button "設定" [ref=f18e54] [cursor=pointer]
+            - generic [ref=f18e61]:
+              - generic:
+                - button "Gemini に質問する" [ref=f18e68] [cursor=pointer]
+                - tooltip [aria-hidden] [ref=f18e71]: Gemini に質問する
+        - generic [ref=f18e73]:
+          - button "Google アプリ" [ref=f18e77] [cursor=pointer]
+          - 'button "Google アカウント: そら (kodera.daigaku.24052@gmail.com), Google メンバーシップ" [ref=f18e83] [cursor=pointer]'
+    - button "新規" [ref=f18e89] [cursor=pointer]
+    - navigation [ref=f18e100]:
+      - heading "フォルダとビュー" [level=2] [ref=f18e101]
+      - tree "フォルダとビュー" [ref=f18e102]:
+        - treeitem [ref=f18e103]:
+          - link "ホーム" [ref=f18e104] [cursor=pointer]:
+            - generic "ホーム" [ref=f18e122]
+          - group
+        - treeitem [ref=f18e123]:
+          - link "プロジェクト" [ref=f18e124] [cursor=pointer]:
+            - generic "プロジェクト" [ref=f18e136]
+          - group
+        - treeitem [ref=f18e137]:
+          - link "マイドライブ 折りたたみました" [ref=f18e138] [cursor=pointer]:
+            - generic "マイドライブ" [ref=f18e155]
+            - text: 折りたたみました
+        - treeitem [ref=f18e156]:
+          - link "パソコン 折りたたみました" [ref=f18e157] [cursor=pointer]:
+            - generic "パソコン" [ref=f18e176]
+            - text: 折りたたみました
+        - treeitem [ref=f18e177]:
+          - link "共有されたアイテム" [ref=f18e178] [cursor=pointer]:
+            - generic "共有されたアイテム" [ref=f18e197]: 共有アイテム
+          - group
+        - treeitem [ref=f18e198]:
+          - link "最近使用したアイテム" [ref=f18e199] [cursor=pointer]:
+            - generic "最近使用したアイテム" [ref=f18e218]
+          - group
+        - treeitem [ref=f18e219]:
+          - link "スター付きアイテム" [ref=f18e220] [cursor=pointer]:
+            - generic "スター付きアイテム" [ref=f18e234]: スター付き
+          - group
+        - treeitem [ref=f18e235]:
+          - link "スパム" [ref=f18e236] [cursor=pointer]:
+            - generic "スパム" [ref=f18e253]
+          - group
+        - treeitem [ref=f18e254]:
+          - link "ゴミ箱内のアイテム" [ref=f18e255] [cursor=pointer]:
+            - generic "ゴミ箱内のアイテム" [ref=f18e273]: ゴミ箱
+          - group
+        - treeitem [ref=f18e274]:
+          - link "保存容量" [ref=f18e275] [cursor=pointer]:
+            - generic "保存容量" [ref=f18e291]
+          - group
+      - generic [ref=f18e385]:
+        - 'generic "保存容量の概要: 5 TB 中 28.28 GB を使用" [ref=f18e388] [cursor=pointer]': 5 TB 中 28.28 GB を使用
+        - generic [ref=f18e392] [cursor=pointer]:
+          - text: 保存容量を増やす
+          - link "保存容量を増やす" [ref=f18e393]:
+            - /url: https://drive.google.com/settings/storage?authuser=0&i=m&utm_source=drive&utm_medium=web&utm_campaign=g1_widget_normal#upgrade
+    - generic [ref=f18e307]:
+      - generic [ref=f18e313]:
+        - generic [ref=f18e318]:
+          - banner [ref=f18e321]:
+            - heading "検索結果" [level=1] [ref=f18e322]
+            - button "概要をすばやく確認" [ref=f18e323] [cursor=pointer]
+          - toolbar [ref=f18e326]:
+            - generic [ref=f18e327]:
+              - radiogroup "リスト レイアウトまたはグリッド レイアウト（⌥V、L キーの順）" [ref=f18e394]:
+                - generic [ref=f18e332]:
+                  - radio "リスト" [checked] [ref=f18e395] [cursor=pointer]
+                  - radio "グリッド" [ref=f18e404] [cursor=pointer]
+              - button "詳細を表示（⌥V、D キーの順）" [ref=f18e351] [cursor=pointer]
+        - generic [ref=f18e416]:
+          - generic [ref=f18e417]: 1 個のフィルタが適用されています
+          - toolbar "フィルタ" [ref=f18e419]:
+            - generic [ref=f18e421]:
+              - button "種類" [ref=f18e422] [cursor=pointer]:
+                - generic [ref=f18e424]: 種類
+              - button "ユーザー" [ref=f18e428] [cursor=pointer]:
+                - generic [ref=f18e430]: ユーザー
+              - button "最終更新" [ref=f18e434] [cursor=pointer]:
+                - generic [ref=f18e436]: 最終更新
+              - button "ソース" [ref=f18e440] [cursor=pointer]:
+                - generic [ref=f18e442]: ソース
+              - button "場所" [ref=f18e446] [cursor=pointer]:
+                - generic [ref=f18e448]: 場所
+              - generic "タイトルのみ" [ref=f18e452]:
+                - button "タイトルのみ" [pressed] [ref=f18e454] [cursor=pointer]
+              - status "フィルタ [タイトルのみ] を適用済み"
+              - button "ToDo" [ref=f18e456] [cursor=pointer]:
+                - generic [ref=f18e458]: ToDo
+            - button "フィルタをクリア" [ref=f18e462] [cursor=pointer]
+      - main [ref=f18e359]:
+        - region [ref=f18e469]:
+          - generic [ref=f18e470]:
+            - grid "アイテムリスト" [ref=f18e473]:
+              - rowgroup [ref=f18e474]:
+                - row [ref=f18e475]:
+                  - columnheader "名前" [ref=f18e476]
+                  - columnheader "更新日時" [ref=f18e477] [cursor=pointer]
+                  - columnheader "オーナー" [ref=f18e479]
+                  - columnheader "並べ替え" [ref=f18e480]:
+                    - generic [ref=f18e486]:
+                      - button "並べ替え" [ref=f18e487] [cursor=pointer]
+                      - tooltip [aria-hidden] [ref=f18e492]: 並べ替えのオプションを表示
+              - rowgroup [ref=f18e493]:
+                - row [ref=f18e494]:
+                  - gridcell [ref=f18e495]:
+                    - generic "submission.json 不明" [ref=f18e506]:
+                      - strong [ref=f18e509]: submission.json
+                  - gridcell [ref=f18e510]:
+                    - generic "最終変更 16:47" [ref=f18e514]: 16:47
+                  - gridcell [ref=f18e516]:
+                    - img "オーナーを読み込んでいます" [ref=f18e518]
+                  - gridcell [ref=f18e519]:
+                    - generic [ref=f18e523]:
+                      - button "その他の操作（Alt+A）" [ref=f18e524] [cursor=pointer]
+                      - tooltip [aria-hidden] [ref=f18e530]: その他の操作（Alt+A）
+            - progressbar "circular progressbar, single color" [ref=f18e533]
+      - generic:
+        - navigation
+    - generic [ref=f18e360]:
+      - complementary "サイドパネル" [ref=f18e538]:
+        - tablist [ref=f18e540]:
+          - tab "カレンダー":
+            - generic [ref=f18e541] [cursor=pointer]
+          - tab "Keep":
+            - generic [ref=f18e542] [cursor=pointer]
+          - tab "ToDo リスト":
+            - generic [ref=f18e543] [cursor=pointer]
+          - tab "コンタクト":
+            - generic [ref=f18e544] [cursor=pointer]
+          - separator [disabled] [ref=f18e545]
+          - tab "アドオンを取得":
+            - generic [ref=f18e546] [cursor=pointer]
+      - generic:
+        - button "サイドパネルを非表示":
+          - generic [ref=f18e547] [cursor=pointer]
+  - generic [ref=f18e362]:
+    - generic [ref=f18e363]:
+      - generic [ref=f18e364]: 共有ファイルや重要なイベントの通知をパソコンで受け取りましょう
+      - button "オンにする" [ref=f18e365] [cursor=pointer]
+    - button "表示しない" [ref=f18e366] [cursor=pointer]
+  - region

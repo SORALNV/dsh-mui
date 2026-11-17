@@ -81,3 +81,13 @@ if (replies.length < 2) fail('expected two assistant replies');
 
 // 4. turn serialization: seq order of user messages must be strictly increasing
 log('PASS: two faces shared one live session; turns serialized; both replies visible');
+
+// 5. clean up: archive the test session so the thread list stays clean
+if (!process.argv.includes('--keep')) {
+  try {
+    await A.call('workspace/archiveSession', { request: { sessionId, stopActivity: true } });
+    log('test session archived');
+  } catch (e) {
+    log('archive failed (harmless):', e.message);
+  }
+}
