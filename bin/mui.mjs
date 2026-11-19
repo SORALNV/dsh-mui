@@ -159,7 +159,7 @@ switch (command) {
   }
   case 'new': {
     await ensureDaemon();
-    run(view, ['--new', ...argv.slice(1)]);
+    run(view, ['--new', '--cwd', process.cwd(), ...argv.slice(1)]);
     break;
   }
   case 'attach':

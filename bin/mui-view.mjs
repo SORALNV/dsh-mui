@@ -146,7 +146,8 @@ if (has('list') || argv[0] === 'list') {
   process.exit(0);
 }
 if (has('--new')) {
-  const created = await client.call('session/create', {});
+  const createArgs = flag('--cwd') ? { cwd: flag('--cwd') } : {};
+  const created = await client.call('session/create', createArgs);
   sessionId = created.sessionId;
   const initial = argv[argv.indexOf('--new') + 1];
   if (initial && !initial.startsWith('-')) await client.prompt(sessionId, initial);
@@ -160,16 +161,29 @@ console.log(`${accent('mui-view')} ${dim('· a terminal face attached to the MUI
 console.log(dim(`  ${sessionId}${''}`));
 console.log('');
 
-// render recent history
+// render boot context: 直近のやり取りだけにして情報過多を防ぐ (/reload で全文)
 let lastSeq = -1;
 {
   const page = await client.pageEvents(sessionId, { maxMessages: 80 });
-  for (const rec of page.records) {
-    const ev = rec.event ?? rec;
+  const events = page.records.map((rec) => rec.event ?? rec);
+  const talkKinds = new Set(['user', 'assistant']);
+  const talkEvents = events.filter((ev) => talkKinds.has(summarizeEvent(ev).kind));
+  const keep = new Set(talkEvents.slice(-6)); // 直近6件のやり取りだけ表示
+  let skipped = 0;
+  let started = false;
+  for (const ev of events) {
+    const s = summarizeEvent(ev);
+    const isTalk = talkKinds.has(s.kind);
+    if (keep.has(ev)) started = true;
+    if (isTalk && !keep.has(ev)) {
+      skipped++;
+      continue;
+    }
+    if (!started && isTalk) continue;
     renderEvent(ev);
     if (typeof ev.seq === 'number') lastSeq = Math.max(lastSeq, ev.seq);
   }
-  if (typeof page.cursor === 'number') lastSeq = Math.max(lastSeq, page.cursor - 1);
+  if (skipped > 0 || !started) printDim(`以前の会話 ${skipped}件を省略 (/reload で全文表示)`);
 }
 printNotification('attached', `${sessionId.slice(0, 22)} · /quit to exit (session stays alive)`);
 

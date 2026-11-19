@@ -82,10 +82,12 @@ async function start() {
       : ['--profile', profile, '--no-open', '--port', String(port), ...extra];
 
   const logFd = await open(LOG, 'w');
+  // ワークスペースは粘着的: 以前のコアと同じ場所を引き継ぐ (シェルの起動場所に左右されない)
+  const bootCwd = process.env.MUI_CWD ?? existing?.cwd ?? process.cwd();
   const child = spawn(bin, args, {
     detached: true,
     stdio: ['ignore', logFd.fd, logFd.fd],
-    cwd: process.env.MUI_CWD ?? process.cwd(),
+    cwd: bootCwd,
     env: importProviderKeysFromLaunchd({ ...process.env }),
   });
   child.unref();
