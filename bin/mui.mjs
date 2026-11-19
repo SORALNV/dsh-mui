@@ -106,6 +106,22 @@ async function killDaemon() {
   await rm(STATE, { force: true });
 }
 
+// コアを(必要なら)起動し、結果を一目で分かる文にして返す
+async function ensureDaemon() {
+  if (await daemonRunning()) {
+    const s = JSON.parse(await readFile(STATE, 'utf8'));
+    console.log(`mui: コアは既に起動済みです → ${s?.origin ?? ''}`);
+    return;
+  }
+  console.log('mui: コアを起動中…');
+  const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
+    stdio: 'inherit',
+  });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+  const s = JSON.parse(await readFile(STATE, 'utf8'));
+  console.log(`mui: ✓ コアを起動しました → ${s?.origin ?? ''}`);
+}
+
 if (command === '--profile' || command === '-p') {
   const r = spawnSync('dsh', ['--profile', argv[1] ?? 'mui'], { stdio: 'inherit' });
   process.exit(r.status ?? 0);
@@ -114,13 +130,7 @@ if (command === '--profile' || command === '-p') {
 switch (command) {
   case undefined: {
     // mui は「起動するだけ」: 最新のワークスペースセッションへ即接続
-    if (!(await daemonRunning())) {
-      console.log('mui: starting daemon…');
-      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
-        stdio: 'inherit',
-      });
-      if (r.status !== 0) process.exit(r.status ?? 1);
-    }
+    await ensureDaemon();
     const latest = await latestWorkspaceSession();
     const extra = latest ? [`--session=${latest}`] : ['--new'];
     const child = spawn(process.execPath, [view, ...extra], { stdio: 'inherit' });
@@ -148,12 +158,7 @@ switch (command) {
     break;
   }
   case 'new': {
-    if (!(await daemonRunning())) {
-      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
-        stdio: 'inherit',
-      });
-      if (r.status !== 0) process.exit(r.status ?? 1);
-    }
+    await ensureDaemon();
     run(view, ['--new', ...argv.slice(1)]);
     break;
   }
@@ -161,12 +166,7 @@ switch (command) {
     run(view, ['--session', argv[1], ...argv.slice(2)]);
     break;
   case 'resume': {
-    if (!(await daemonRunning())) {
-      const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
-        stdio: 'inherit',
-      });
-      if (r.status !== 0) process.exit(r.status ?? 1);
-    }
+    await ensureDaemon();
     let target = argv[1];
     if (!target && process.stdin.isTTY) {
       // フルスクリーン・セッションピッカー (↑↓ / 検索 / フィルタ / アーカイブ)
