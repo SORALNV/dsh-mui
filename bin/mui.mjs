@@ -129,12 +129,8 @@ if (command === '--profile' || command === '-p') {
 
 switch (command) {
   case undefined: {
-    // mui は「起動するだけ」: 最新のワークスペースセッションへ即接続
+    // mui はコアの起動だけ (フェイスは mui resume / mui view / ブラウザで別途)
     await ensureDaemon();
-    const latest = await latestWorkspaceSession();
-    const extra = latest ? [`--session=${latest}`] : ['--new'];
-    const child = spawn(process.execPath, [view, ...extra], { stdio: 'inherit' });
-    child.on('exit', (code) => process.exit(code ?? 0));
     break;
   }
   case 'tui': {
@@ -215,8 +211,7 @@ switch (command) {
 
 ■ コマンド
 
-  mui                       起動して即、最新のセッションに接続する。
-                            実行したディレクトリがセッションのワークスペース。
+
   mui new ["最初の指示"]     新しいセッションを作成して接続する。
                             指示を付けると初回プロンプトとして送信する。
   mui resume [id]           セッション一覧から選んで再開する (↑↓/検索/フィルタ、
