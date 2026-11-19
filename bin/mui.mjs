@@ -41,6 +41,31 @@ async function runPicker() {
   return pickInteractive({ client, daemonCwd });
 }
 
+// ワークスペース(daemonのcwd)の最新セッションを1つ返す
+async function latestWorkspaceSession() {
+  const state = JSON.parse(await readFile(STATE, 'utf8'));
+  let daemonCwd = state.cwd;
+  if (!daemonCwd && state.pid) {
+    const out = spawnSync('lsof', ['-a', '-p', String(state.pid), '-d', 'cwd', '-Fn'], { encoding: 'utf8' });
+    daemonCwd = (out.stdout ?? '').split('\n').find((l) => l.startsWith('n/'))?.slice(1);
+  }
+  const client = new DshClient({ origin: state.origin, token: state.token });
+  const { items } = await client.listSessions();
+  const candidates = items
+    .filter((x) => !x.blank && (!daemonCwd || x.cwd === daemonCwd))
+    .sort((a, b) => new Date(b.updatedAt ?? 0) - new Date(a.updatedAt ?? 0));
+  // 参照可能かの確認だけ行い、ロックは握らない (prompt時点でhostが解決する)
+  for (const cand of candidates) {
+    try {
+      await client.call('session/page', { address: { kind: 'session', sessionId: cand.sessionId }, maxMessages: 1 });
+      return cand.sessionId;
+    } catch {
+      continue;
+    }
+  }
+  return undefined;
+}
+
 const argv = process.argv.slice(2);
 const command = argv[0];
 
@@ -88,6 +113,7 @@ if (command === '--profile' || command === '-p') {
 
 switch (command) {
   case undefined: {
+    // mui は「起動するだけ」: 最新のワークスペースセッションへ即接続
     if (!(await daemonRunning())) {
       console.log('mui: starting daemon…');
       const r = spawnSync(process.execPath, [daemon, 'start', '--port', process.env.MUI_PORT ?? '3080'], {
@@ -95,16 +121,10 @@ switch (command) {
       });
       if (r.status !== 0) process.exit(r.status ?? 1);
     }
-    if (process.stdin.isTTY) {
-      const target = await runPicker(); // フルスクリーン・セッションピッカー
-      if (target === null) process.exit(0); // quit
-      const extra = target === 'new' ? [] : [`--session=${target}`];
-      const child = spawn(process.execPath, [view, ...extra], { stdio: 'inherit' });
-      child.on('exit', (code) => process.exit(code ?? 0));
-    } else {
-      const child = spawn(process.execPath, [view, ...argv.slice(1)], { stdio: 'inherit' });
-      child.on('exit', (code) => process.exit(code ?? 0));
-    }
+    const latest = await latestWorkspaceSession();
+    const extra = latest ? [`--session=${latest}`] : ['--new'];
+    const child = spawn(process.execPath, [view, ...extra], { stdio: 'inherit' });
+    child.on('exit', (code) => process.exit(code ?? 0));
     break;
   }
   case 'tui': {
@@ -153,36 +173,15 @@ switch (command) {
       const picked = await runPicker();
       if (picked === null) process.exit(0);
       target = picked === 'new' ? undefined : picked;
-      if (!target) {
-        run(view, ['--new']);
-        break;
-      }
     } else if (!target) {
       // TTY無し (パイプ等): 最後に触っていたセッションへ自動resume
-      const state = JSON.parse(await readFile(STATE, 'utf8'));
-      let daemonCwd = state.cwd;
-      if (!daemonCwd) {
-        const out = spawnSync('lsof', ['-a', '-p', String(state.pid), '-d', 'cwd', '-Fn'], { encoding: 'utf8' });
-        daemonCwd = (out.stdout ?? '').split('\n').find((l) => l.startsWith('n/'))?.slice(1);
-      }
-      const client = new DshClient({ origin: state.origin, token: state.token });
-      const { items } = await client.listSessions();
-      const candidates = items.filter((x) => !x.blank && (!daemonCwd || x.cwd === daemonCwd));
-      for (const cand of candidates) {
-        try {
-          await client.call('session/page', { address: { kind: 'session', sessionId: cand.sessionId }, maxMessages: 1 });
-          target = cand.sessionId;
-          break;
-        } catch (e) {
-          continue;
-        }
-      }
+      target = await latestWorkspaceSession();
       if (!target) {
         console.error('mui: 再開できるセッションがありません (mui new で作成してください)');
         process.exit(1);
       }
     }
-    run(view, ['--session', target]);
+    run(view, target ? ['--session', target] : ['--new']);
     break;
   }
   case 'list':
@@ -216,8 +215,8 @@ switch (command) {
 
 ■ コマンド
 
-  mui                       コア(daemon)が無ければ起動し、mui-viewで接続する。
-                            実行したディレクトリがセッションのワークスペースになる。
+  mui                       起動して即、最新のセッションに接続する。
+                            実行したディレクトリがセッションのワークスペース。
   mui new ["最初の指示"]     新しいセッションを作成して接続する。
                             指示を付けると初回プロンプトとして送信する。
   mui resume [id]           セッション一覧から選んで再開する (↑↓/検索/フィルタ、
