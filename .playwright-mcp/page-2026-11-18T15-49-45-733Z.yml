@@ -1,0 +1,29 @@
+- generic [ref=f254e1]:
+  - generic:
+    - link "メイン コンテンツにスキップ" [ref=f254e2] [cursor=pointer]
+    - navigation "タイトルバーのナビゲーション" [ref=f254e3]:
+      - generic [ref=f254e4]:
+        - generic [ref=f254e9]:
+          - button "メインメニュー" [expanded] [ref=f254e10] [cursor=pointer]
+          - tooltip [aria-hidden] [ref=f254e16]: メインメニュー
+        - generic [ref=f254e23]:
+          - button "Google アプリ" [ref=f254e27] [cursor=pointer]
+          - 'button "Google アカウント: EP24052小寺 漱空 (ep24052-0864@gs4e.chubu.ac.jp)" [ref=f254e33] [cursor=pointer]'
+    - navigation "メイン ナビゲーション" [ref=f254e40]:
+      - menu [ref=f254e42]:
+        - generic [ref=f254e43]:
+          - menuitem "ホーム" [ref=f254e44] [cursor=pointer]
+          - menuitem "カレンダー" [ref=f254e53] [cursor=pointer]
+          - menuitem "Gemini" [ref=f254e61] [cursor=pointer]
+          - separator [ref=f254e69]
+          - progressbar "読み込んでいます…" [ref=f254e73]
+          - separator [ref=f254e78]
+          - menuitem "アーカイブされたクラス" [ref=f254e79] [cursor=pointer]
+          - menuitem "設定" [ref=f254e87] [cursor=pointer]
+  - generic [ref=f254e101]:
+    - status "ページを読み込んでいます..."
+  - contentinfo [ref=f254e103]:
+    - generic [ref=f254e106]:
+      - button "ヘルプとフィードバック" [ref=f254e107] [cursor=pointer]
+      - tooltip [aria-hidden] [ref=f254e113]: ヘルプとフィードバック
+  - generic [ref=f254e114]: スクリーン リーダーのサポートが有効になっています。

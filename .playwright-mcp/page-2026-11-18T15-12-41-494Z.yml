@@ -1,0 +1,60 @@
+- generic [ref=f101e2]:
+  - generic [ref=f101e3]:
+    - generic [ref=f101e4]:
+      - link [ref=f101e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f101e7]
+      - list [ref=f101e9]:
+        - listitem [ref=f101e10]:
+          - generic:
+            - link [ref=f101e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f101e13]
+            - link "小寺 漱空 さん" [ref=f101e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f101e16]:
+          - generic [ref=f101e17] [cursor=pointer]: Language
+        - listitem [ref=f101e18]:
+          - img "設定" [ref=f101e20] [cursor=pointer]
+        - listitem [ref=f101e21]:
+          - link "ログアウト" [ref=f101e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f101e23]:
+      - list:
+        - listitem [ref=f101e24]:
+          - link "HOME" [ref=f101e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f101e27]:
+          - link [ref=f101e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f101e29]: 機械学習
+        - listitem [ref=f101e30]:
+          - link [ref=f101e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f101e32]: 教師あり学習の基礎：線形学習器
+        - listitem [ref=f101e33]:
+          - link [ref=f101e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f101e35]: 板書
+    - generic [ref=f101e36]: 機械学習
+  - generic [ref=f101e42]:
+    - generic [ref=f101e43]:
+      - paragraph [ref=f101e45]: 資料
+      - button "教材一覧に戻る" [ref=f101e47] [cursor=pointer]
+    - generic [ref=f101e49]:
+      - paragraph [ref=f101e51]:
+        - link "参照状況を更新する" [ref=f101e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f101e53]:
+        - rowgroup [ref=f101e54]:
+          - row [ref=f101e55]:
+            - rowheader "No.1" [ref=f101e56]
+            - cell [ref=f101e57]:
+              - img "ファイル資料" [ref=f101e58]
+              - link "板書.pdf" [ref=f101e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f101e60]
+            - cell "登録日:2026/10/15" [ref=f101e61]
+            - cell "-" [ref=f101e62]
+          - row [ref=f101e63]:
+            - cell [ref=f101e64]

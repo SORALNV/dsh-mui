@@ -1,0 +1,27 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e4]:
+    - link [ref=f1e6] [cursor=pointer]:
+      - /url: javascript:void(0);
+      - img "CoursePower" [ref=f1e7]
+    - generic:
+      - generic:
+        - list
+  - generic [ref=f1e8]:
+    - generic [ref=f1e9]: CoursePower
+    - generic [ref=f1e11]:
+      - generic [ref=f1e13]:
+        - generic [ref=f1e14]:
+          - generic [ref=f1e15]: ユーザーID
+          - textbox [ref=f1e17]: ep24052
+        - generic [ref=f1e18]:
+          - generic [ref=f1e19]: パスワード
+          - textbox [ref=f1e22]: aSg8au%s
+        - generic [ref=f1e23]:
+          - generic [ref=f1e24]: Language
+          - combobox [ref=f1e26]:
+            - option "日本語" [selected]
+            - option "English"
+      - generic [ref=f1e27]:
+        - button "ログイン" [ref=f1e28] [cursor=pointer]
+        - link "管理者へのお問い合わせ" [ref=f1e30] [cursor=pointer]:
+          - /url: javascript:void(0);

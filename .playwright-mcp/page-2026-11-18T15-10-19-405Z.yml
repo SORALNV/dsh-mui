@@ -1,0 +1,60 @@
+- generic [ref=f49e2]:
+  - generic [ref=f49e3]:
+    - generic [ref=f49e4]:
+      - link [ref=f49e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f49e7]
+      - list [ref=f49e9]:
+        - listitem [ref=f49e10]:
+          - generic:
+            - link [ref=f49e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f49e13]
+            - link "小寺 漱空 さん" [ref=f49e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f49e16]:
+          - generic [ref=f49e17] [cursor=pointer]: Language
+        - listitem [ref=f49e18]:
+          - img "設定" [ref=f49e20] [cursor=pointer]
+        - listitem [ref=f49e21]:
+          - link "ログアウト" [ref=f49e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f49e23]:
+      - list:
+        - listitem [ref=f49e24]:
+          - link "HOME" [ref=f49e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f49e27]:
+          - link [ref=f49e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f49e29]: 機械学習
+        - listitem [ref=f49e30]:
+          - link [ref=f49e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f49e32]: 学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。
+        - listitem [ref=f49e33]:
+          - link [ref=f49e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f49e35]: 板書
+    - generic [ref=f49e36]: 機械学習
+  - generic [ref=f49e42]:
+    - generic [ref=f49e43]:
+      - paragraph [ref=f49e45]: 資料
+      - button "教材一覧に戻る" [ref=f49e47] [cursor=pointer]
+    - generic [ref=f49e49]:
+      - paragraph [ref=f49e51]:
+        - link "参照状況を更新する" [ref=f49e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f49e53]:
+        - rowgroup [ref=f49e54]:
+          - row [ref=f49e55]:
+            - rowheader "No.1" [ref=f49e56]
+            - cell [ref=f49e57]:
+              - img "ファイル資料" [ref=f49e58]
+              - link "板書.pdf" [ref=f49e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f49e60]
+            - cell "登録日:2026/10/01" [ref=f49e61]
+            - cell "-" [ref=f49e62]
+          - row [ref=f49e63]:
+            - cell [ref=f49e64]

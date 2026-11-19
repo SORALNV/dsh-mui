@@ -1,0 +1,60 @@
+- generic [ref=f218e2]:
+  - generic [ref=f218e3]:
+    - generic [ref=f218e4]:
+      - link [ref=f218e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f218e7]
+      - list [ref=f218e9]:
+        - listitem [ref=f218e10]:
+          - generic:
+            - link [ref=f218e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f218e13]
+            - link "小寺 漱空 さん" [ref=f218e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f218e16]:
+          - generic [ref=f218e17] [cursor=pointer]: Language
+        - listitem [ref=f218e18]:
+          - img "設定" [ref=f218e20] [cursor=pointer]
+        - listitem [ref=f218e21]:
+          - link "ログアウト" [ref=f218e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f218e23]:
+      - list:
+        - listitem [ref=f218e24]:
+          - link "HOME" [ref=f218e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f218e27]:
+          - link [ref=f218e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f218e29]: 機械学習
+        - listitem [ref=f218e30]:
+          - link [ref=f218e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f218e32]: 3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。
+        - listitem [ref=f218e33]:
+          - link [ref=f218e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f218e35]: 講義資料
+    - generic [ref=f218e36]: 機械学習
+  - generic [ref=f218e42]:
+    - generic [ref=f218e43]:
+      - paragraph [ref=f218e45]: 資料
+      - button "教材一覧に戻る" [ref=f218e47] [cursor=pointer]
+    - generic [ref=f218e49]:
+      - paragraph [ref=f218e51]:
+        - link "参照状況を更新する" [ref=f218e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f218e53]:
+        - rowgroup [ref=f218e54]:
+          - row [ref=f218e55]:
+            - rowheader "No.1" [ref=f218e56]
+            - cell [ref=f218e57]:
+              - img "ファイル資料" [ref=f218e58]
+              - link "PerceptronV6.pdf" [active] [ref=f218e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f218e60]
+            - cell "登録日:2026/11/11" [ref=f218e61]
+            - cell "-" [ref=f218e62]
+          - row [ref=f218e63]:
+            - cell [ref=f218e64]

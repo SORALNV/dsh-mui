@@ -1,0 +1,63 @@
+- generic [ref=f166e2]:
+  - generic [ref=f166e3]:
+    - generic [ref=f166e4]:
+      - link [ref=f166e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f166e7]
+      - list [ref=f166e9]:
+        - listitem [ref=f166e10]:
+          - generic:
+            - link [ref=f166e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f166e13]
+            - link "小寺 漱空 さん" [ref=f166e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f166e16]:
+          - generic [ref=f166e17] [cursor=pointer]: Language
+        - listitem [ref=f166e18]:
+          - img "設定" [ref=f166e20] [cursor=pointer]
+        - listitem [ref=f166e21]:
+          - link "ログアウト" [ref=f166e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f166e23]:
+      - list:
+        - listitem [ref=f166e24]:
+          - link "HOME" [ref=f166e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f166e27]:
+          - link [ref=f166e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f166e29]: 機械学習
+        - listitem [ref=f166e30]:
+          - link [ref=f166e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f166e32]: ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・
+        - listitem [ref=f166e33]:
+          - link [ref=f166e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f166e35]: NNPerceptron.py
+    - generic [ref=f166e36]: 機械学習
+  - generic [ref=f166e42]:
+    - generic [ref=f166e43]:
+      - paragraph [ref=f166e45]: 資料
+      - button "教材一覧に戻る" [ref=f166e47] [cursor=pointer]
+    - generic [ref=f166e49]:
+      - paragraph [ref=f166e51]:
+        - link "参照状況を更新する" [ref=f166e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f166e53]:
+        - rowgroup [ref=f166e54]:
+          - row [ref=f166e55]:
+            - rowheader "No.1" [ref=f166e56]
+            - cell [ref=f166e57]:
+              - img "ファイル資料" [ref=f166e58]
+              - link "NNPerceptron.py" [active] [ref=f166e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "参照済" [ref=f166e60]
+            - cell "登録日:2026/10/28" [ref=f166e61]
+            - cell [ref=f166e62]:
+              - text: "初回参照日:"
+              - link "2026/10/29" [ref=f166e63] [cursor=pointer]:
+                - /url: javascript:void(0);
+          - row [ref=f166e64]:
+            - cell [ref=f166e65]

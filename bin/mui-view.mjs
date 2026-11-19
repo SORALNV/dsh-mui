@@ -38,7 +38,9 @@ const LOADER_FRAMES = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '
 const argv = process.argv.slice(2);
 const flag = (name) => {
   const i = argv.indexOf(name);
-  return i >= 0 ? argv[i + 1] : undefined;
+  if (i >= 0) return argv[i + 1];
+  const eq = argv.find((a) => a.startsWith(`${name}=`)); // --session=<id> 形式
+  return eq ? eq.slice(name.length + 1) : undefined;
 };
 const has = (name) => argv.includes(name);
 

@@ -1,0 +1,60 @@
+- generic [ref=f88e2]:
+  - generic [ref=f88e3]:
+    - generic [ref=f88e4]:
+      - link [ref=f88e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f88e7]
+      - list [ref=f88e9]:
+        - listitem [ref=f88e10]:
+          - generic:
+            - link [ref=f88e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f88e13]
+            - link "小寺 漱空 さん" [ref=f88e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f88e16]:
+          - generic [ref=f88e17] [cursor=pointer]: Language
+        - listitem [ref=f88e18]:
+          - img "設定" [ref=f88e20] [cursor=pointer]
+        - listitem [ref=f88e21]:
+          - link "ログアウト" [ref=f88e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f88e23]:
+      - list:
+        - listitem [ref=f88e24]:
+          - link "HOME" [ref=f88e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f88e27]:
+          - link [ref=f88e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f88e29]: 機械学習
+        - listitem [ref=f88e30]:
+          - link [ref=f88e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f88e32]: 教師あり学習の基礎：線形学習器
+        - listitem [ref=f88e33]:
+          - link [ref=f88e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f88e35]: 講義資料
+    - generic [ref=f88e36]: 機械学習
+  - generic [ref=f88e42]:
+    - generic [ref=f88e43]:
+      - paragraph [ref=f88e45]: 資料
+      - button "教材一覧に戻る" [ref=f88e47] [cursor=pointer]
+    - generic [ref=f88e49]:
+      - paragraph [ref=f88e51]:
+        - link "参照状況を更新する" [ref=f88e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f88e53]:
+        - rowgroup [ref=f88e54]:
+          - row [ref=f88e55]:
+            - rowheader "No.1" [ref=f88e56]
+            - cell [ref=f88e57]:
+              - img "ファイル資料" [ref=f88e58]
+              - link "第3回講義.pdf" [ref=f88e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f88e60]
+            - cell "登録日:2026/10/14" [ref=f88e61]
+            - cell "-" [ref=f88e62]
+          - row [ref=f88e63]:
+            - cell [ref=f88e64]

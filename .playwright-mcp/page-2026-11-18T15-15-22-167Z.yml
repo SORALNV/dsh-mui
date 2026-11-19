@@ -1,0 +1,60 @@
+- generic [ref=f192e2]:
+  - generic [ref=f192e3]:
+    - generic [ref=f192e4]:
+      - link [ref=f192e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f192e7]
+      - list [ref=f192e9]:
+        - listitem [ref=f192e10]:
+          - generic:
+            - link [ref=f192e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f192e13]
+            - link "小寺 漱空 さん" [ref=f192e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f192e16]:
+          - generic [ref=f192e17] [cursor=pointer]: Language
+        - listitem [ref=f192e18]:
+          - img "設定" [ref=f192e20] [cursor=pointer]
+        - listitem [ref=f192e21]:
+          - link "ログアウト" [ref=f192e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f192e23]:
+      - list:
+        - listitem [ref=f192e24]:
+          - link "HOME" [ref=f192e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f192e27]:
+          - link [ref=f192e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f192e29]: 機械学習
+        - listitem [ref=f192e30]:
+          - link [ref=f192e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f192e32]: ３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。
+        - listitem [ref=f192e33]:
+          - link [ref=f192e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f192e35]: 講義資料
+    - generic [ref=f192e36]: 機械学習
+  - generic [ref=f192e42]:
+    - generic [ref=f192e43]:
+      - paragraph [ref=f192e45]: 資料
+      - button "教材一覧に戻る" [ref=f192e47] [cursor=pointer]
+    - generic [ref=f192e49]:
+      - paragraph [ref=f192e51]:
+        - link "参照状況を更新する" [ref=f192e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f192e53]:
+        - rowgroup [ref=f192e54]:
+          - row [ref=f192e55]:
+            - rowheader "No.1" [ref=f192e56]
+            - cell [ref=f192e57]:
+              - img "ファイル資料" [ref=f192e58]
+              - link "第6回.pdf" [active] [ref=f192e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f192e60]
+            - cell "登録日:2026/11/04" [ref=f192e61]
+            - cell "-" [ref=f192e62]
+          - row [ref=f192e63]:
+            - cell [ref=f192e64]

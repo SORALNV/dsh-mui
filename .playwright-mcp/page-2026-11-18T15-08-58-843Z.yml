@@ -1,0 +1,167 @@
+- generic [ref=f22e2]:
+  - generic [ref=f22e3]:
+    - generic [ref=f22e4]:
+      - link [ref=f22e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f22e7]
+      - list [ref=f22e9]:
+        - listitem [ref=f22e10]:
+          - generic:
+            - link [ref=f22e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f22e13]
+            - link "小寺 漱空 さん" [ref=f22e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f22e16]:
+          - generic [ref=f22e17] [cursor=pointer]: Language
+        - listitem [ref=f22e18]:
+          - img "設定" [ref=f22e20] [cursor=pointer]
+        - listitem [ref=f22e21]:
+          - link "ログアウト" [ref=f22e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f22e23]:
+      - list:
+        - listitem [ref=f22e24]:
+          - link "HOME" [ref=f22e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f22e27]:
+          - link [ref=f22e28]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f22e29]: 機械学習
+    - generic [ref=f22e30]: 機械学習
+  - generic [ref=f22e33]:
+    - list [ref=f22e35]:
+      - listitem [ref=f22e36]:
+        - link "授業・教材" [ref=f22e37] [cursor=pointer]:
+          - /url: "#"
+        - list [ref=f22e39]:
+          - listitem [ref=f22e40]:
+            - link "実施" [ref=f22e41] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f22e42]:
+            - link "成績参照" [ref=f22e43] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=f22e45]:
+      - generic [ref=f22e46]:
+        - list:
+          - listitem [ref=f22e47]: 授業別に表示する
+          - listitem [ref=f22e48]:
+            - link "教材別に表示する" [ref=f22e49] [cursor=pointer]:
+              - /url: javascript:void(0);
+          - listitem [ref=f22e50]:
+            - link "状況別に表示する" [ref=f22e51] [cursor=pointer]:
+              - /url: javascript:void(0);
+      - table [ref=f22e56]:
+        - rowgroup [ref=f22e57]:
+          - row [ref=f22e58]:
+            - columnheader "すべて開く 名称" [ref=f22e59]:
+              - generic [ref=f22e60] [cursor=pointer]: すべて開く
+              - text: 名称
+            - columnheader "公開期限" [ref=f22e63]
+            - columnheader "授業実施日" [ref=f22e64]
+            - columnheader "出欠" [ref=f22e65]
+          - row [ref=f22e66]:
+            - cell "学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。 (3)" [ref=f22e67] [cursor=pointer]:
+              - generic [ref=f22e69]: 学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。
+              - text: (3)
+            - cell "‐" [ref=f22e70]
+            - cell "2026/10/01" [ref=f22e71]
+            - cell [ref=f22e72]
+          - row [ref=f22e73]:
+            - 'cell "パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。 (3)" [ref=f22e74] [cursor=pointer]':
+              - generic [ref=f22e76]: "パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。"
+              - text: (3)
+            - cell "‐" [ref=f22e77]
+            - cell "2026/10/08" [ref=f22e78]
+            - cell [ref=f22e79]
+          - row [ref=f22e80]:
+            - cell "教師あり学習の基礎：線形学習器 (3)" [ref=f22e81] [cursor=pointer]:
+              - generic [ref=f22e83]: 教師あり学習の基礎：線形学習器
+              - text: (3)
+            - cell "‐" [ref=f22e84]
+            - cell "2026/10/15" [ref=f22e85]
+            - cell [ref=f22e86]
+          - row [ref=f22e87]:
+            - cell "ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。 (4)" [ref=f22e88] [cursor=pointer]:
+              - generic [ref=f22e90]: ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。
+              - text: (4)
+            - cell "‐" [ref=f22e91]
+            - cell "2026/10/21" [ref=f22e92]
+            - cell [ref=f22e93]
+          - row [ref=f22e94]:
+            - cell "ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・ (4)" [ref=f22e95] [cursor=pointer]:
+              - generic [ref=f22e97]: ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・
+              - text: (4)
+            - cell "‐" [ref=f22e98]
+            - cell "2026/10/29" [ref=f22e99]
+            - cell [ref=f22e100]
+          - row [ref=f22e101]:
+            - cell "３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。 (3)" [ref=f22e102] [cursor=pointer]:
+              - generic [ref=f22e104]: ３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。
+              - text: (3)
+            - cell "‐" [ref=f22e105]
+            - cell "2026/11/05" [ref=f22e106]
+            - cell [ref=f22e107]
+          - row [ref=f22e108]:
+            - cell "3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。 (4)" [ref=f22e109] [cursor=pointer]:
+              - generic [ref=f22e111]: 3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。
+              - text: (4)
+            - cell "‐" [ref=f22e112]
+            - cell "2026/11/12" [ref=f22e113]
+            - cell [ref=f22e114]
+          - row [ref=f22e115]:
+            - cell "3層パーセプトロンのPyTorchプログラム：PyTorchを使った3層パーセプトロンのニューラルネットワーク構築法を学ぶ (0)" [ref=f22e116] [cursor=pointer]:
+              - generic [ref=f22e118]: 3層パーセプトロンのPyTorchプログラム：PyTorchを使った3層パーセプトロンのニューラルネットワーク構築法を学ぶ
+              - text: (0)
+            - cell "‐" [ref=f22e119]
+            - cell "2026/11/19" [ref=f22e120]
+            - cell [ref=f22e121]
+          - row [ref=f22e122]:
+            - cell "教師あり学習とその周辺：パラメータの初期化、学習タスクと評価関数、クロスバリデーションについて説明する。教師あり学習を成功裏に行うためには様々な準備が必要であり、そのための深い理論・・・ (0)" [ref=f22e123] [cursor=pointer]:
+              - generic [ref=f22e125]: 教師あり学習とその周辺：パラメータの初期化、学習タスクと評価関数、クロスバリデーションについて説明する。教師あり学習を成功裏に行うためには様々な準備が必要であり、そのための深い理論・・・
+              - text: (0)
+            - cell "‐" [ref=f22e126]
+            - cell "‐" [ref=f22e127]
+            - cell [ref=f22e128]
+          - row [ref=f22e129]:
+            - cell "ニューラルネットワークの汎化能力とは何か？／ニューラルネットワークの汎化能力について説明すると共に、Deep Neural Networkにおける汎化能力向上方法について述べる。 (0)" [ref=f22e130] [cursor=pointer]:
+              - generic [ref=f22e132]: ニューラルネットワークの汎化能力とは何か？／ニューラルネットワークの汎化能力について説明すると共に、Deep Neural Networkにおける汎化能力向上方法について述べる。
+              - text: (0)
+            - cell "‐" [ref=f22e133]
+            - cell "‐" [ref=f22e134]
+            - cell [ref=f22e135]
+          - row [ref=f22e136]:
+            - cell "Convolutional Neural Network (CNN) について解説する (0)" [ref=f22e137] [cursor=pointer]:
+              - generic [ref=f22e139]: Convolutional Neural Network (CNN) について解説する
+              - text: (0)
+            - cell "‐" [ref=f22e140]
+            - cell "‐" [ref=f22e141]
+            - cell [ref=f22e142]
+          - row [ref=f22e143]:
+            - cell "教師なし学習法： これまでは教師あり学習法を学んできたが、人工知能のもう一つの大きな柱として教師なし学習法がある。そのなかでも強化学習を取り上げて解説する (0)" [ref=f22e144] [cursor=pointer]:
+              - generic [ref=f22e146]: 教師なし学習法： これまでは教師あり学習法を学んできたが、人工知能のもう一つの大きな柱として教師なし学習法がある。そのなかでも強化学習を取り上げて解説する
+              - text: (0)
+            - cell "‐" [ref=f22e147]
+            - cell "‐" [ref=f22e148]
+            - cell [ref=f22e149]
+          - row [ref=f22e150]:
+            - cell "教師無し学習２：「強化学習」の中には報酬が遅れて与えられるものが存在する。このような状況であっても学習できるようにする各種強化学習を学ぶ。 (0)" [ref=f22e151] [cursor=pointer]:
+              - generic [ref=f22e153]: 教師無し学習２：「強化学習」の中には報酬が遅れて与えられるものが存在する。このような状況であっても学習できるようにする各種強化学習を学ぶ。
+              - text: (0)
+            - cell "‐" [ref=f22e154]
+            - cell "‐" [ref=f22e155]
+            - cell [ref=f22e156]
+          - row [ref=f22e157]:
+            - cell "期末テストの対策 (0)" [ref=f22e158] [cursor=pointer]:
+              - generic [ref=f22e160]: 期末テストの対策
+              - text: (0)
+            - cell "‐" [ref=f22e161]
+            - cell "‐" [ref=f22e162]
+            - cell [ref=f22e163]
+          - row [ref=f22e164]:
+            - cell "期末テスト (0)" [ref=f22e165] [cursor=pointer]:
+              - generic [ref=f22e167]: 期末テスト
+              - text: (0)
+            - cell "‐" [ref=f22e168]
+            - cell "‐" [ref=f22e169]
+            - cell [ref=f22e170]

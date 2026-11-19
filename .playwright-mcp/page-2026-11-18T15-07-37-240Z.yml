@@ -1,0 +1,169 @@
+- generic [ref=f7e2]:
+  - generic [ref=f7e4]:
+    - link [ref=f7e6] [cursor=pointer]:
+      - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+      - img "CoursePower" [ref=f7e7]
+    - list [ref=f7e9]:
+      - listitem [ref=f7e10]:
+        - generic:
+          - link [ref=f7e11] [cursor=pointer]:
+            - /url: "#"
+            - img "プロフィール画像" [ref=f7e13]
+          - link "小寺 漱空 さん" [ref=f7e14] [cursor=pointer]:
+            - /url: "#"
+      - listitem [ref=f7e16]:
+        - generic [ref=f7e17] [cursor=pointer]: Language
+      - listitem [ref=f7e18]:
+        - img "設定" [ref=f7e20] [cursor=pointer]
+      - listitem [ref=f7e21]:
+        - link "ログアウト" [ref=f7e22] [cursor=pointer]:
+          - /url: "#"
+  - generic [ref=f7e23]:
+    - generic [ref=f7e24]:
+      - table [ref=f7e27]:
+        - rowgroup [ref=f7e28]:
+          - row [ref=f7e29]:
+            - cell [ref=f7e30]:
+              - generic [ref=f7e31]:
+                - img "役割種別" [ref=f7e32]
+                - text: 受講者
+            - cell [ref=f7e33]
+            - cell [ref=f7e34]
+      - generic [ref=f7e35]:
+        - generic [ref=f7e36]:
+          - link [ref=f7e38] [cursor=pointer]:
+            - /url: "#"
+            - img "プロフィール画像" [ref=f7e40]
+          - link "小寺 漱空" [ref=f7e41] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f7e43]:
+          - link "学習実績" [ref=f7e46] [cursor=pointer]:
+            - /url: /lmsv2/sttsGkuf/jissekiIndex;SID=s1a1ef32f3f1137df5801cf4147
+          - link "詳細を見る" [ref=f7e48] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f7e49]:
+          - generic [ref=f7e50]: 前回ログイン
+          - generic [ref=f7e51]: 2026/11/14 19:54
+    - generic [ref=f7e53]:
+      - generic [ref=f7e54]:
+        - generic [ref=f7e55]:
+          - generic [ref=f7e56]:
+            - text: お知らせ(最新 2件)
+            - generic [ref=f7e57]:
+              - link "すべて見る" [ref=f7e58] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - text: ">"
+          - generic [ref=f7e61]:
+            - list [ref=f7e62]:
+              - img "新着" [ref=f7e63]
+              - text: 2026/11/12
+              - link "教材の公開通知" [ref=f7e64] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - list [ref=f7e65]:
+              - img "新着" [ref=f7e66]
+              - text: 2026/10/29
+              - link "教材の公開通知" [ref=f7e67] [cursor=pointer]:
+                - /url: javascript:void(0);
+        - generic [ref=f7e68]:
+          - generic [ref=f7e69]:
+            - text: Topics
+            - generic [ref=f7e70]:
+              - link "すべて見る" [ref=f7e71] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - text: ">"
+          - generic [ref=f7e74]:
+            - list [ref=f7e75]:
+              - img "Topics" [ref=f7e76]
+              - text: 2017/10/05
+              - link "入力文字の制限について" [ref=f7e77] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - list [ref=f7e78]:
+              - img "Topics" [ref=f7e79]
+              - text: 2017/06/30
+              - link "●【マニュアルを掲載しました（パッケージ標準版）】" [ref=f7e80] [cursor=pointer]:
+                - /url: javascript:void(0);
+      - generic [ref=f7e82]:
+        - generic [ref=f7e83] [cursor=pointer]: 講義一覧
+        - generic [ref=f7e84] [cursor=pointer]: 2026年度
+        - generic [ref=f7e86] [cursor=pointer]:
+          - img "検索/" [ref=f7e87]
+          - text: 他の講義を探す
+      - generic [ref=f7e88]:
+        - generic [ref=f7e89]:
+          - generic [ref=f7e90]: 月曜日
+          - generic [ref=f7e92]:
+            - generic [ref=f7e93]:
+              - text: ９－１０時限
+              - generic [ref=f7e94]: 秋期毎週
+            - generic [ref=f7e95]:
+              - generic [ref=f7e96]:
+                - link [ref=f7e97] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - text: 情報工学ゼミナールＢ
+              - generic [ref=f7e100]: 山下 隆義
+        - generic [ref=f7e101]:
+          - generic [ref=f7e102]: 火曜日
+          - generic [ref=f7e104]:
+            - generic [ref=f7e105]:
+              - text: ５－８時限
+              - generic [ref=f7e106]: 秋期毎週
+            - generic [ref=f7e107]:
+              - generic [ref=f7e108]:
+                - link [ref=f7e109] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - text: 情報工学実験Ｂ
+              - generic [ref=f7e112]: 木村 秀明 ほか
+        - generic [ref=f7e113]:
+          - generic [ref=f7e114]: 水曜日
+          - generic [ref=f7e116]:
+            - generic [ref=f7e117]:
+              - text: ３－４時限
+              - generic [ref=f7e118]: 秋期毎週
+            - generic [ref=f7e119]:
+              - generic [ref=f7e120]:
+                - link [ref=f7e121] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - text: パセオコンテンツＢ
+              - generic [ref=f7e124]: 本田 浩章 ほか
+        - generic [ref=f7e125]:
+          - generic [ref=f7e126]: 木曜日
+          - generic [ref=f7e127]:
+            - generic [ref=f7e128]:
+              - generic [ref=f7e129]:
+                - text: ３－４時限
+                - generic [ref=f7e130]: 秋期毎週
+              - generic [ref=f7e131]:
+                - generic [ref=f7e132]:
+                  - link [ref=f7e133] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                  - text: 機械学習
+                - generic [ref=f7e136]: 山内 康一郎
+            - generic [ref=f7e137]:
+              - generic [ref=f7e138]:
+                - text: ５－６時限
+                - generic [ref=f7e139]: 秋期毎週
+              - generic [ref=f7e140]:
+                - generic [ref=f7e141]:
+                  - link [ref=f7e142] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                  - text: 音声情報処理
+                - generic [ref=f7e145]: 山本 一公
+        - generic [ref=f7e146]:
+          - generic [ref=f7e147]: その他
+          - generic [ref=f7e148]:
+            - generic [ref=f7e149]:
+              - generic [ref=f7e150]: 通年毎週
+              - generic [ref=f7e152]:
+                - generic [ref=f7e153]:
+                  - link [ref=f7e154] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                  - text: e-learning_INFOSS情報倫理
+                - generic [ref=f7e157]: 鈴木 知治 ほか
+            - generic [ref=f7e158]:
+              - generic [ref=f7e159]: 通年毎週
+              - generic [ref=f7e161]:
+                - generic [ref=f7e162]:
+                  - link [ref=f7e163] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                  - text: e-learning_Office
+                - generic [ref=f7e166]: 鈴木 知治 ほか

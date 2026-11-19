@@ -1,0 +1,60 @@
+- generic [ref=f114e2]:
+  - generic [ref=f114e3]:
+    - generic [ref=f114e4]:
+      - link [ref=f114e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f114e7]
+      - list [ref=f114e9]:
+        - listitem [ref=f114e10]:
+          - generic:
+            - link [ref=f114e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f114e13]
+            - link "小寺 漱空 さん" [ref=f114e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f114e16]:
+          - generic [ref=f114e17] [cursor=pointer]: Language
+        - listitem [ref=f114e18]:
+          - img "設定" [ref=f114e20] [cursor=pointer]
+        - listitem [ref=f114e21]:
+          - link "ログアウト" [ref=f114e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f114e23]:
+      - list:
+        - listitem [ref=f114e24]:
+          - link "HOME" [ref=f114e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f114e27]:
+          - link [ref=f114e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f114e29]: 機械学習
+        - listitem [ref=f114e30]:
+          - link [ref=f114e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f114e32]: ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。
+        - listitem [ref=f114e33]:
+          - link [ref=f114e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f114e35]: 講義資料
+    - generic [ref=f114e36]: 機械学習
+  - generic [ref=f114e42]:
+    - generic [ref=f114e43]:
+      - paragraph [ref=f114e45]: 資料
+      - button "教材一覧に戻る" [ref=f114e47] [cursor=pointer]
+    - generic [ref=f114e49]:
+      - paragraph [ref=f114e51]:
+        - link "参照状況を更新する" [ref=f114e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f114e53]:
+        - rowgroup [ref=f114e54]:
+          - row [ref=f114e55]:
+            - rowheader "No.1" [ref=f114e56]
+            - cell [ref=f114e57]:
+              - img "ファイル資料" [ref=f114e58]
+              - link "第4回講義.pdf" [ref=f114e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f114e60]
+            - cell "登録日:2026/10/21" [ref=f114e61]
+            - cell "-" [ref=f114e62]
+          - row [ref=f114e63]:
+            - cell [ref=f114e64]

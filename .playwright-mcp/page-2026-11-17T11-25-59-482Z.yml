@@ -1,0 +1,34 @@
+- generic [ref=f37e1]:
+  - generic [ref=f37e10]:
+    - navigation [ref=f37e11]:
+      - link "Omnicampus" [ref=f37e12] [cursor=pointer]:
+        - /url: /dashboard/
+      - button "" [ref=f37e15] [cursor=pointer]
+    - generic [ref=f37e19]:
+      - heading "宿題の提出" [level=4] [ref=f37e20]
+      - generic [ref=f37e21]:
+        - list [ref=f37e23]:
+          - listitem [ref=f37e24]:
+            - link "トップ" [ref=f37e25] [cursor=pointer]:
+              - /url: /dashboard/
+          - listitem [ref=f37e26]:
+            - text: /
+            - link "2026年 大規模言語モデル講座 2" [ref=f37e27] [cursor=pointer]:
+              - /url: /courses/182
+          - listitem [ref=f37e28]: / 宿題:最終課題コンペティション
+        - button " リーダーボードへ" [ref=f37e30] [cursor=pointer]:
+          - generic [ref=f37e31]: 
+          - text: リーダーボードへ
+      - separator [ref=f37e32]
+      - paragraph [ref=f37e35]: あなたは0回提出しました。（上限 50 回）
+      - group [ref=f37e39]:
+        - generic [ref=f37e40]:
+          - generic [ref=f37e41]:
+            - button "拡張子（.json）のファイルを提出" [ref=f37e42] [cursor=pointer]
+            - paragraph [ref=f37e54]: submission.json
+          - button "提出" [ref=f37e55] [cursor=pointer]
+        - button "提出(1)内容をダウンロード" [ref=f37e46] [cursor=pointer]
+      - generic [ref=f37e48]:
+        - heading "提出内容" [level=5] [ref=f37e49]
+        - textbox [disabled] [ref=f37e53]: 未提出です
+  - alert [ref=f37e9]

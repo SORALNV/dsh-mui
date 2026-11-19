@@ -1,0 +1,60 @@
+- generic [ref=f244e2]:
+  - generic [ref=f244e3]:
+    - generic [ref=f244e4]:
+      - link [ref=f244e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f244e7]
+      - list [ref=f244e9]:
+        - listitem [ref=f244e10]:
+          - generic:
+            - link [ref=f244e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f244e13]
+            - link "小寺 漱空 さん" [ref=f244e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f244e16]:
+          - generic [ref=f244e17] [cursor=pointer]: Language
+        - listitem [ref=f244e18]:
+          - img "設定" [ref=f244e20] [cursor=pointer]
+        - listitem [ref=f244e21]:
+          - link "ログアウト" [ref=f244e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f244e23]:
+      - list:
+        - listitem [ref=f244e24]:
+          - link "HOME" [ref=f244e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f244e27]:
+          - link [ref=f244e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f244e29]: 機械学習
+        - listitem [ref=f244e30]:
+          - link [ref=f244e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f244e32]: 3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。
+        - listitem [ref=f244e33]:
+          - link [ref=f244e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f244e35]: 板書
+    - generic [ref=f244e36]: 機械学習
+  - generic [ref=f244e42]:
+    - generic [ref=f244e43]:
+      - paragraph [ref=f244e45]: 資料
+      - button "教材一覧に戻る" [ref=f244e47] [cursor=pointer]
+    - generic [ref=f244e49]:
+      - paragraph [ref=f244e51]:
+        - link "参照状況を更新する" [ref=f244e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f244e53]:
+        - rowgroup [ref=f244e54]:
+          - row [ref=f244e55]:
+            - rowheader "No.1" [ref=f244e56]
+            - cell [ref=f244e57]:
+              - img "ファイル資料" [ref=f244e58]
+              - link "261112122703982.JPG" [active] [ref=f244e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f244e60]
+            - cell "登録日:2026/11/12" [ref=f244e61]
+            - cell "-" [ref=f244e62]
+          - row [ref=f244e63]:
+            - cell [ref=f244e64]

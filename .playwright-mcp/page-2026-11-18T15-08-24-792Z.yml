@@ -1,0 +1,481 @@
+- generic [ref=f14e2]:
+  - generic [ref=f14e3]:
+    - generic [ref=f14e4]:
+      - link [ref=f14e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f14e7]
+      - list [ref=f14e9]:
+        - listitem [ref=f14e10]:
+          - generic:
+            - link [ref=f14e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f14e13]
+            - link "小寺 漱空 さん" [ref=f14e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f14e16]:
+          - generic [ref=f14e17] [cursor=pointer]: Language
+        - listitem [ref=f14e18]:
+          - img "設定" [ref=f14e20] [cursor=pointer]
+        - listitem [ref=f14e21]:
+          - link "ログアウト" [ref=f14e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f14e23]:
+      - list:
+        - listitem [ref=f14e24]:
+          - link "HOME" [ref=f14e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f14e27]:
+          - link [ref=f14e28]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f14e29]: 機械学習
+    - generic [ref=f14e30]: 機械学習
+  - generic [ref=f14e33]:
+    - list [ref=f14e35]:
+      - listitem [ref=f14e36]:
+        - link "授業・教材" [ref=f14e37] [cursor=pointer]:
+          - /url: "#"
+        - list [ref=f14e39]:
+          - listitem [ref=f14e40]:
+            - link "実施" [ref=f14e41] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f14e42]:
+            - link "成績参照" [ref=f14e43] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=f14e45]:
+      - generic [ref=f14e46]:
+        - list:
+          - listitem [ref=f14e47]: 授業別に表示する
+          - listitem [ref=f14e48]:
+            - link "教材別に表示する" [ref=f14e49] [cursor=pointer]:
+              - /url: javascript:void(0);
+          - listitem [ref=f14e50]:
+            - link "状況別に表示する" [ref=f14e51] [cursor=pointer]:
+              - /url: javascript:void(0);
+      - table [ref=f14e56]:
+        - rowgroup [ref=f14e57]:
+          - row [ref=f14e209]:
+            - columnheader "すべて閉じる 名称" [ref=f14e210]:
+              - generic [ref=f14e60] [cursor=pointer]: すべて閉じる
+              - text: 名称
+            - columnheader "公開期限" [ref=f14e63]
+            - columnheader "授業実施日" [ref=f14e64]
+            - columnheader "出欠" [ref=f14e65]
+          - row [ref=f14e66]:
+            - cell "学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。 (3)" [ref=f14e67] [cursor=pointer]:
+              - generic [ref=f14e69]: 学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。
+              - text: (3)
+            - cell "‐" [ref=f14e70]
+            - cell "2026/10/01" [ref=f14e71]
+            - cell [ref=f14e72]
+          - row [ref=f14e211]:
+            - cell [ref=f14e212]:
+              - generic [ref=f14e213]:
+                - paragraph [ref=f14e214]: 【内容】学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。【授業外学習】機械学習が具体的にどのような使われ方をしているのかを調査すること。
+                - table [ref=f14e215]:
+                  - rowgroup [ref=f14e216]:
+                    - row [ref=f14e217]:
+                      - columnheader "教材名" [ref=f14e218]
+                      - columnheader "公開期限" [ref=f14e219]
+                      - columnheader "状況" [ref=f14e220]
+                    - row [ref=f14e221]:
+                      - cell [ref=f14e222]:
+                        - img "資料" [ref=f14e223]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e224] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e225]
+                      - cell "未参照" [ref=f14e226]
+                    - row [ref=f14e228]:
+                      - cell [ref=f14e229]:
+                        - img "テスト" [ref=f14e230]
+                        - text: テスト 課題
+                      - cell "公開終了" [ref=f14e231]
+                      - cell [ref=f14e232]:
+                        - link "実施済" [ref=f14e234] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                    - row [ref=f14e235]:
+                      - cell [ref=f14e236]:
+                        - img "資料" [ref=f14e237]
+                        - text: 資料
+                        - link "板書" [ref=f14e238] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e239]
+                      - cell "未参照" [ref=f14e240]
+          - row [ref=f14e73]:
+            - 'cell "パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。 (3)" [ref=f14e74] [cursor=pointer]':
+              - generic [ref=f14e76]: "パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。"
+              - text: (3)
+            - cell "‐" [ref=f14e77]
+            - cell "2026/10/08" [ref=f14e78]
+            - cell [ref=f14e79]
+          - row [ref=f14e242]:
+            - cell [ref=f14e243]:
+              - generic [ref=f14e244]:
+                - paragraph [ref=f14e245]: "【内容】パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。【授業外学習】識別境界線とは何か？ これを自ら調査すること。"
+                - table [ref=f14e246]:
+                  - rowgroup [ref=f14e247]:
+                    - row [ref=f14e248]:
+                      - columnheader "教材名" [ref=f14e249]
+                      - columnheader "公開期限" [ref=f14e250]
+                      - columnheader "状況" [ref=f14e251]
+                    - row [ref=f14e252]:
+                      - cell [ref=f14e253]:
+                        - img "資料" [ref=f14e254]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e255] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e256]
+                      - cell "未参照" [ref=f14e257]
+                    - row [ref=f14e259]:
+                      - cell [ref=f14e260]:
+                        - img "テスト" [ref=f14e261]
+                        - text: テスト 課題
+                      - cell "公開終了" [ref=f14e262]
+                      - cell [ref=f14e263]:
+                        - link "実施済" [ref=f14e265] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                    - row [ref=f14e266]:
+                      - cell [ref=f14e267]:
+                        - img "資料" [ref=f14e268]
+                        - text: 資料
+                        - link "板書" [ref=f14e269] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e270]
+                      - cell "未参照" [ref=f14e271]
+          - row [ref=f14e80]:
+            - cell "教師あり学習の基礎：線形学習器 (3)" [ref=f14e81] [cursor=pointer]:
+              - generic [ref=f14e83]: 教師あり学習の基礎：線形学習器
+              - text: (3)
+            - cell "‐" [ref=f14e84]
+            - cell "2026/10/15" [ref=f14e85]
+            - cell [ref=f14e86]
+          - row [ref=f14e273]:
+            - cell [ref=f14e274]:
+              - generic [ref=f14e275]:
+                - paragraph [ref=f14e276]: 【内容】教師あり学習の基礎：線形学習器【授業外学習】改めて識別境界線について復習するとともに、最小誤り率とは何かを調査する。
+                - table [ref=f14e277]:
+                  - rowgroup [ref=f14e278]:
+                    - row [ref=f14e279]:
+                      - columnheader "教材名" [ref=f14e280]
+                      - columnheader "公開期限" [ref=f14e281]
+                      - columnheader "状況" [ref=f14e282]
+                    - row [ref=f14e283]:
+                      - cell [ref=f14e284]:
+                        - img "資料" [ref=f14e285]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e286] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e287]
+                      - cell "未参照" [ref=f14e288]
+                    - row [ref=f14e290]:
+                      - cell [ref=f14e291]:
+                        - img "テスト" [ref=f14e292]
+                        - text: テスト 第3回課題
+                      - cell "公開終了" [ref=f14e293]
+                      - cell "未実施" [ref=f14e294]
+                    - row [ref=f14e296]:
+                      - cell [ref=f14e297]:
+                        - img "資料" [ref=f14e298]
+                        - text: 資料
+                        - link "板書" [ref=f14e299] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e300]
+                      - cell "未参照" [ref=f14e301]
+          - row [ref=f14e87]:
+            - cell "ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。 (4)" [ref=f14e88] [cursor=pointer]:
+              - generic [ref=f14e90]: ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。
+              - text: (4)
+            - cell "‐" [ref=f14e91]
+            - cell "2026/10/21" [ref=f14e92]
+            - cell [ref=f14e93]
+          - row [ref=f14e303]:
+            - cell [ref=f14e304]:
+              - generic [ref=f14e305]:
+                - paragraph [ref=f14e306]: 【内容】ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。【授業外学習】ニューロン1つ分の情報処理能力と線形識別との関係を復習せよ。
+                - table [ref=f14e307]:
+                  - rowgroup [ref=f14e308]:
+                    - row [ref=f14e309]:
+                      - columnheader "教材名" [ref=f14e310]
+                      - columnheader "公開期限" [ref=f14e311]
+                      - columnheader "状況" [ref=f14e312]
+                    - row [ref=f14e313]:
+                      - cell [ref=f14e314]:
+                        - img "資料" [ref=f14e315]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e316] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e317]
+                      - cell "未参照" [ref=f14e318]
+                    - row [ref=f14e320]:
+                      - cell [ref=f14e321]:
+                        - img "資料" [ref=f14e322]
+                        - text: 資料
+                        - link "Neuron.py" [ref=f14e323] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e324]
+                      - cell "参照済" [ref=f14e325]
+                    - row [ref=f14e327]:
+                      - cell [ref=f14e328]:
+                        - img "テスト" [ref=f14e329]
+                        - text: テスト 課題
+                      - cell "公開終了" [ref=f14e330]
+                      - cell [ref=f14e331]:
+                        - link "実施済" [ref=f14e333] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                    - row [ref=f14e334]:
+                      - cell [ref=f14e335]:
+                        - img "資料" [ref=f14e336]
+                        - text: 資料
+                        - link "板書" [ref=f14e337] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e338]
+                      - cell "未参照" [ref=f14e339]
+          - row [ref=f14e94]:
+            - cell "ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・ (4)" [ref=f14e95] [cursor=pointer]:
+              - generic [ref=f14e97]: ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・
+              - text: (4)
+            - cell "‐" [ref=f14e98]
+            - cell "2026/10/29" [ref=f14e99]
+            - cell [ref=f14e100]
+          - row [ref=f14e341]:
+            - cell [ref=f14e342]:
+              - generic [ref=f14e343]:
+                - paragraph [ref=f14e344]: 【内容】ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・【授業外学習】ニューロン1つ分のモデルとして形式ニューロンモデルを実現するクラスをpythonでプログラムする。1-Nearest Neighborを実現するpythonプログラムを完成させて簡単な事例ベース推論を行わせてみよ。
+                - table [ref=f14e345]:
+                  - rowgroup [ref=f14e346]:
+                    - row [ref=f14e347]:
+                      - columnheader "教材名" [ref=f14e348]
+                      - columnheader "公開期限" [ref=f14e349]
+                      - columnheader "状況" [ref=f14e350]
+                    - row [ref=f14e351]:
+                      - cell [ref=f14e352]:
+                        - img "資料" [ref=f14e353]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e354] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e355]
+                      - cell "未参照" [ref=f14e356]
+                    - row [ref=f14e358]:
+                      - cell [ref=f14e359]:
+                        - img "資料" [ref=f14e360]
+                        - text: 資料
+                        - link "NNPerceptron.py" [ref=f14e361] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e362]
+                      - cell "参照済" [ref=f14e363]
+                    - row [ref=f14e365]:
+                      - cell [ref=f14e366]:
+                        - img "テスト" [ref=f14e367]
+                        - text: テスト 課題
+                      - cell "公開終了" [ref=f14e368]
+                      - cell [ref=f14e369]:
+                        - link "実施済" [ref=f14e371] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                    - row [ref=f14e372]:
+                      - cell [ref=f14e373]:
+                        - img "資料" [ref=f14e374]
+                        - text: 資料
+                        - link "板書" [ref=f14e375] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e376]
+                      - cell "未参照" [ref=f14e377]
+          - row [ref=f14e101]:
+            - cell "３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。 (3)" [ref=f14e102] [cursor=pointer]:
+              - generic [ref=f14e104]: ３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。
+              - text: (3)
+            - cell "‐" [ref=f14e105]
+            - cell "2026/11/05" [ref=f14e106]
+            - cell [ref=f14e107]
+          - row [ref=f14e379]:
+            - cell [ref=f14e380]:
+              - generic [ref=f14e381]:
+                - paragraph [ref=f14e382]: 【内容】３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。【授業外学習】中間層の重みを更新する式を導出してみよ。
+                - table [ref=f14e383]:
+                  - rowgroup [ref=f14e384]:
+                    - row [ref=f14e385]:
+                      - columnheader "教材名" [ref=f14e386]
+                      - columnheader "公開期限" [ref=f14e387]
+                      - columnheader "状況" [ref=f14e388]
+                    - row [ref=f14e389]:
+                      - cell [ref=f14e390]:
+                        - img "資料" [ref=f14e391]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e392] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e393]
+                      - cell "未参照" [ref=f14e394]
+                    - row [ref=f14e396]:
+                      - cell [ref=f14e397]:
+                        - img "テスト" [ref=f14e398]
+                        - text: テスト 課題
+                      - cell "公開終了" [ref=f14e399]
+                      - cell [ref=f14e400]:
+                        - link "実施済" [ref=f14e402] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                    - row [ref=f14e403]:
+                      - cell [ref=f14e404]:
+                        - img "資料" [ref=f14e405]
+                        - text: 資料
+                        - link "板書" [ref=f14e406] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e407]
+                      - cell "未参照" [ref=f14e408]
+          - row [ref=f14e108]:
+            - cell "3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。 (4)" [ref=f14e109] [cursor=pointer]:
+              - generic [ref=f14e111]: 3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。
+              - text: (4)
+            - cell "‐" [ref=f14e112]
+            - cell "2026/11/12" [ref=f14e113]
+            - cell [ref=f14e114]
+          - row [ref=f14e172]:
+            - cell [ref=f14e173]:
+              - generic [ref=f14e174]:
+                - paragraph [ref=f14e175]: 【内容】3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。【授業外学習】様々な状況下でExcelで構築した3層パーセプトロンを手動で動作させ、理論通りの動作をすることを確認する。
+                - table [ref=f14e176]:
+                  - rowgroup [ref=f14e177]:
+                    - row [ref=f14e178]:
+                      - columnheader "教材名" [ref=f14e179]
+                      - columnheader "公開期限" [ref=f14e180]
+                      - columnheader "状況" [ref=f14e181]
+                    - row [ref=f14e182]:
+                      - cell [ref=f14e183]:
+                        - img "資料" [ref=f14e184]
+                        - text: 資料
+                        - link "講義資料" [ref=f14e185] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e186]
+                      - cell "未参照" [ref=f14e187]
+                    - row [ref=f14e189]:
+                      - cell [ref=f14e190]:
+                        - img "資料" [ref=f14e191]
+                        - text: 資料
+                        - link "３層パーセプトロンon Excel" [ref=f14e192] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e193]
+                      - cell "未参照" [ref=f14e194]
+                    - row [ref=f14e196]:
+                      - cell [ref=f14e197]:
+                        - img "資料" [ref=f14e198]
+                        - text: 資料 課題
+                      - cell "公開終了" [ref=f14e199]
+                      - cell "未参照" [ref=f14e200]
+                    - row [ref=f14e202]:
+                      - cell [ref=f14e203]:
+                        - img "資料" [ref=f14e204]
+                        - text: 資料
+                        - link "板書" [ref=f14e205] [cursor=pointer]:
+                          - /url: javascript:void(0);
+                      - cell "‐" [ref=f14e206]
+                      - cell "未参照" [ref=f14e207]
+          - row [ref=f14e115]:
+            - cell "3層パーセプトロンのPyTorchプログラム：PyTorchを使った3層パーセプトロンのニューラルネットワーク構築法を学ぶ (0)" [ref=f14e116] [cursor=pointer]:
+              - generic [ref=f14e118]: 3層パーセプトロンのPyTorchプログラム：PyTorchを使った3層パーセプトロンのニューラルネットワーク構築法を学ぶ
+              - text: (0)
+            - cell "‐" [ref=f14e119]
+            - cell "2026/11/19" [ref=f14e120]
+            - cell [ref=f14e121]
+          - row [ref=f14e410]:
+            - cell [ref=f14e411]:
+              - generic [ref=f14e412]:
+                - paragraph [ref=f14e413]: 【内容】3層パーセプトロンのPyTorchプログラム：PyTorchを使った3層パーセプトロンのニューラルネットワーク構築法を学ぶ【授業外学習】1層増やしたネットワークを構築してみよう。
+                - paragraph [ref=f14e415]: 教材が登録されていません。
+                - paragraph [ref=f14e416]
+                - table
+          - row [ref=f14e122]:
+            - cell "教師あり学習とその周辺：パラメータの初期化、学習タスクと評価関数、クロスバリデーションについて説明する。教師あり学習を成功裏に行うためには様々な準備が必要であり、そのための深い理論・・・ (0)" [ref=f14e123] [cursor=pointer]:
+              - generic [ref=f14e125]: 教師あり学習とその周辺：パラメータの初期化、学習タスクと評価関数、クロスバリデーションについて説明する。教師あり学習を成功裏に行うためには様々な準備が必要であり、そのための深い理論・・・
+              - text: (0)
+            - cell "‐" [ref=f14e126]
+            - cell "‐" [ref=f14e127]
+            - cell [ref=f14e128]
+          - row [ref=f14e417]:
+            - cell [ref=f14e418]:
+              - generic [ref=f14e419]:
+                - paragraph [ref=f14e420]: 【内容】教師あり学習とその周辺：パラメータの初期化、学習タスクと評価関数、クロスバリデーションについて説明する。教師あり学習を成功裏に行うためには様々な準備が必要であり、そのための深い理論・・・【授業外学習】第8回で使用したプログラムを使って、損失関数を変えて学習させてみよう。
+                - paragraph [ref=f14e422]: 教材が登録されていません。
+                - paragraph [ref=f14e423]
+                - table
+          - row [ref=f14e129]:
+            - cell "ニューラルネットワークの汎化能力とは何か？／ニューラルネットワークの汎化能力について説明すると共に、Deep Neural Networkにおける汎化能力向上方法について述べる。 (0)" [ref=f14e130] [cursor=pointer]:
+              - generic [ref=f14e132]: ニューラルネットワークの汎化能力とは何か？／ニューラルネットワークの汎化能力について説明すると共に、Deep Neural Networkにおける汎化能力向上方法について述べる。
+              - text: (0)
+            - cell "‐" [ref=f14e133]
+            - cell "‐" [ref=f14e134]
+            - cell [ref=f14e135]
+          - row [ref=f14e424]:
+            - cell [ref=f14e425]:
+              - generic [ref=f14e426]:
+                - paragraph [ref=f14e427]: 【内容】ニューラルネットワークの汎化能力とは何か？／ニューラルネットワークの汎化能力について説明すると共に、Deep Neural Networkにおける汎化能力向上方法について述べる。【授業外学習】サンプルプログラムを使って、DropOutを適用する場合と適用しない場合とでテストサンプルに対する正解率がどのように変化するかを調べる。
+                - paragraph [ref=f14e429]: 教材が登録されていません。
+                - paragraph [ref=f14e430]
+                - table
+          - row [ref=f14e136]:
+            - cell "Convolutional Neural Network (CNN) について解説する (0)" [ref=f14e137] [cursor=pointer]:
+              - generic [ref=f14e139]: Convolutional Neural Network (CNN) について解説する
+              - text: (0)
+            - cell "‐" [ref=f14e140]
+            - cell "‐" [ref=f14e141]
+            - cell [ref=f14e142]
+          - row [ref=f14e431]:
+            - cell [ref=f14e432]:
+              - generic [ref=f14e433]:
+                - paragraph [ref=f14e434]: 【内容】Convolutional Neural Network (CNN) について解説する【授業外学習】全結合型ネットワークとCNNとの正解率の比較を行う。
+                - paragraph [ref=f14e436]: 教材が登録されていません。
+                - paragraph [ref=f14e437]
+                - table
+          - row [ref=f14e143]:
+            - cell "教師なし学習法： これまでは教師あり学習法を学んできたが、人工知能のもう一つの大きな柱として教師なし学習法がある。そのなかでも強化学習を取り上げて解説する (0)" [ref=f14e144] [cursor=pointer]:
+              - generic [ref=f14e146]: 教師なし学習法： これまでは教師あり学習法を学んできたが、人工知能のもう一つの大きな柱として教師なし学習法がある。そのなかでも強化学習を取り上げて解説する
+              - text: (0)
+            - cell "‐" [ref=f14e147]
+            - cell "‐" [ref=f14e148]
+            - cell [ref=f14e149]
+          - row [ref=f14e438]:
+            - cell [ref=f14e439]:
+              - generic [ref=f14e440]:
+                - paragraph [ref=f14e441]: 【内容】教師なし学習法： これまでは教師あり学習法を学んできたが、人工知能のもう一つの大きな柱として教師なし学習法がある。そのなかでも強化学習を取り上げて解説する【授業外学習】太古の昔、学校は存在しなかったはずである。自分がこの状況に置かれたとしたら、どの様に物事を学んでいくだろうか。予想するとともに、このような状況で学ぶには何が必要か考察する。
+                - paragraph [ref=f14e443]: 教材が登録されていません。
+                - paragraph [ref=f14e444]
+                - table
+          - row [ref=f14e150]:
+            - cell "教師無し学習２：「強化学習」の中には報酬が遅れて与えられるものが存在する。このような状況であっても学習できるようにする各種強化学習を学ぶ。 (0)" [ref=f14e151] [cursor=pointer]:
+              - generic [ref=f14e153]: 教師無し学習２：「強化学習」の中には報酬が遅れて与えられるものが存在する。このような状況であっても学習できるようにする各種強化学習を学ぶ。
+              - text: (0)
+            - cell "‐" [ref=f14e154]
+            - cell "‐" [ref=f14e155]
+            - cell [ref=f14e156]
+          - row [ref=f14e445]:
+            - cell [ref=f14e446]:
+              - generic [ref=f14e447]:
+                - paragraph [ref=f14e448]: 【内容】教師無し学習２：「強化学習」の中には報酬が遅れて与えられるものが存在する。このような状況であっても学習できるようにする各種強化学習を学ぶ。【授業外学習】DynaQ学習について調査し、これが通常のQ学習に比べてどのような点で優れるのかを理解する。
+                - paragraph [ref=f14e450]: 教材が登録されていません。
+                - paragraph [ref=f14e451]
+                - table
+          - row [ref=f14e157]:
+            - cell "期末テストの対策 (0)" [ref=f14e158] [cursor=pointer]:
+              - generic [ref=f14e160]: 期末テストの対策
+              - text: (0)
+            - cell "‐" [ref=f14e161]
+            - cell "‐" [ref=f14e162]
+            - cell [ref=f14e163]
+          - row [ref=f14e452]:
+            - cell [ref=f14e453]:
+              - generic [ref=f14e454]:
+                - paragraph [ref=f14e455]: 【内容】期末テストの対策【授業外学習】
+                - paragraph [ref=f14e457]: 教材が登録されていません。
+                - paragraph [ref=f14e458]
+                - table
+          - row [ref=f14e164]:
+            - cell "期末テスト (0)" [ref=f14e165] [cursor=pointer]:
+              - generic [ref=f14e167]: 期末テスト
+              - text: (0)
+            - cell "‐" [ref=f14e168]
+            - cell "‐" [ref=f14e169]
+            - cell [ref=f14e170]
+          - row [ref=f14e459]:
+            - cell [ref=f14e460]:
+              - generic [ref=f14e461]:
+                - paragraph [ref=f14e462]: 【内容】期末テスト【授業外学習】
+                - paragraph [ref=f14e464]: 教材が登録されていません。
+                - paragraph [ref=f14e465]
+                - table

@@ -1,0 +1,195 @@
+- generic [ref=f95e2]:
+  - generic [ref=f95e3]:
+    - generic [ref=f95e4]:
+      - link [ref=f95e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f95e7]
+      - list [ref=f95e9]:
+        - listitem [ref=f95e10]:
+          - generic:
+            - link [ref=f95e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f95e13]
+            - link "小寺 漱空 さん" [ref=f95e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f95e16]:
+          - generic [ref=f95e17] [cursor=pointer]: Language
+        - listitem [ref=f95e18]:
+          - img "設定" [ref=f95e20] [cursor=pointer]
+        - listitem [ref=f95e21]:
+          - link "ログアウト" [ref=f95e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f95e23]:
+      - list:
+        - listitem [ref=f95e24]:
+          - link "HOME" [ref=f95e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f95e27]:
+          - link [ref=f95e28]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f95e29]: 機械学習
+    - generic [ref=f95e30]: 機械学習
+  - generic [ref=f95e33]:
+    - list [ref=f95e35]:
+      - listitem [ref=f95e36]:
+        - link "授業・教材" [ref=f95e37] [cursor=pointer]:
+          - /url: "#"
+        - list [ref=f95e39]:
+          - listitem [ref=f95e40]:
+            - link "実施" [ref=f95e41] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f95e42]:
+            - link "成績参照" [ref=f95e43] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=f95e45]:
+      - generic [ref=f95e46]:
+        - list:
+          - listitem [ref=f95e47]:
+            - link "授業別に表示する" [ref=f95e48] [cursor=pointer]:
+              - /url: javascript:void(0);
+          - listitem [ref=f95e49]: 教材別に表示する
+          - listitem [ref=f95e50]:
+            - link "状況別に表示する" [ref=f95e51] [cursor=pointer]:
+              - /url: javascript:void(0);
+      - generic [ref=f95e53]:
+        - generic [ref=f95e54]:
+          - list:
+            - listitem [ref=f95e55]:
+              - img "資料" [ref=f95e56]
+              - text: 資料
+            - listitem [ref=f95e57]:
+              - link [ref=f95e58] [cursor=pointer]:
+                - /url: javascript:void(0);
+                - img "テスト" [ref=f95e59]
+                - text: テスト
+        - table [ref=f95e63]:
+          - rowgroup [ref=f95e64]:
+            - row [ref=f95e65]:
+              - columnheader "教材名" [ref=f95e66]
+              - columnheader "公開期限" [ref=f95e67]
+              - columnheader "状況" [ref=f95e68]
+            - row [ref=f95e69]:
+              - cell "講義資料 (学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。)" [ref=f95e70]:
+                - link "講義資料" [ref=f95e71] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e72]: (学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。)
+              - cell "‐" [ref=f95e73]
+              - cell "参照済" [ref=f95e74]
+            - row [ref=f95e76]:
+              - cell "板書 (学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。)" [ref=f95e77]:
+                - link "板書" [ref=f95e78] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e79]: (学習とは何か:機械学習がどのようなものなのかを、あるトイプロブレムを一例として説明する。)
+              - cell "‐" [ref=f95e80]
+              - cell "参照済" [ref=f95e81]
+            - row [ref=f95e83]:
+              - 'cell "講義資料 (パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。)" [ref=f95e84]':
+                - link "講義資料" [ref=f95e85] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e86]: "(パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。)"
+              - cell "‐" [ref=f95e87]
+              - cell "参照済" [ref=f95e88]
+            - row [ref=f95e90]:
+              - 'cell "板書 (パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。)" [ref=f95e91]':
+                - link "板書" [ref=f95e92] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e93]: "(パターン認識の基礎: 機械学習とパターン認識は切っても切れない関係にあることを示すとともに、もっとも簡単な教師あり学習として事例ベース学習手法について説明する。)"
+              - cell "‐" [ref=f95e94]
+              - cell "参照済" [ref=f95e95]
+            - row [ref=f95e97]:
+              - cell "講義資料 (教師あり学習の基礎：線形学習器)" [ref=f95e98]:
+                - link "講義資料" [ref=f95e99] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e100]: (教師あり学習の基礎：線形学習器)
+              - cell "‐" [ref=f95e101]
+              - cell "参照済" [ref=f95e102]
+            - row [ref=f95e104]:
+              - cell "板書 (教師あり学習の基礎：線形学習器)" [ref=f95e105]:
+                - link "板書" [ref=f95e106] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e107]: (教師あり学習の基礎：線形学習器)
+              - cell "‐" [ref=f95e108]
+              - cell "未参照" [ref=f95e109]
+            - row [ref=f95e111]:
+              - cell "講義資料 (ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。)" [ref=f95e112]:
+                - link "講義資料" [ref=f95e113] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e114]: (ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。)
+              - cell "‐" [ref=f95e115]
+              - cell "未参照" [ref=f95e116]
+            - row [ref=f95e118]:
+              - cell "Neuron.py (ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。)" [ref=f95e119]:
+                - link "Neuron.py" [ref=f95e120] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e121]: (ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。)
+              - cell "‐" [ref=f95e122]
+              - cell "参照済" [ref=f95e123]
+            - row [ref=f95e125]:
+              - cell "板書 (ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。)" [ref=f95e126]:
+                - link "板書" [ref=f95e127] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e128]: (ニューラルネットワーク（神経回路）とはなにか： 線形識別器とほぼ同一な仕組みを持つ神経回路について概説する。)
+              - cell "‐" [ref=f95e129]
+              - cell "未参照" [ref=f95e130]
+            - row [ref=f95e132]:
+              - cell "講義資料 (ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・)" [ref=f95e133]:
+                - link "講義資料" [ref=f95e134] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e135]: (ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・)
+              - cell "‐" [ref=f95e136]
+              - cell "未参照" [ref=f95e137]
+            - row [ref=f95e139]:
+              - cell "NNPerceptron.py (ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・)" [ref=f95e140]:
+                - link "NNPerceptron.py" [ref=f95e141] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e142]: (ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・)
+              - cell "‐" [ref=f95e143]
+              - cell "参照済" [ref=f95e144]
+            - row [ref=f95e146]:
+              - cell "板書 (ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・)" [ref=f95e147]:
+                - link "板書" [ref=f95e148] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e149]: (ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・)
+              - cell "‐" [ref=f95e150]
+              - cell "未参照" [ref=f95e151]
+            - row [ref=f95e153]:
+              - cell "講義資料 (３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。)" [ref=f95e154]:
+                - link "講義資料" [ref=f95e155] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e156]: (３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。)
+              - cell "‐" [ref=f95e157]
+              - cell "未参照" [ref=f95e158]
+            - row [ref=f95e160]:
+              - cell "板書 (３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。)" [ref=f95e161]:
+                - link "板書" [ref=f95e162] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e163]: (３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。)
+              - cell "‐" [ref=f95e164]
+              - cell "未参照" [ref=f95e165]
+            - row [ref=f95e167]:
+              - cell "講義資料 (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)" [ref=f95e168]:
+                - link "講義資料" [ref=f95e169] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e170]: (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)
+              - cell "‐" [ref=f95e171]
+              - cell "未参照" [ref=f95e172]
+            - row [ref=f95e174]:
+              - cell "３層パーセプトロンon Excel (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)" [ref=f95e175]:
+                - link "３層パーセプトロンon Excel" [ref=f95e176] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e177]: (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)
+              - cell "‐" [ref=f95e178]
+              - cell "未参照" [ref=f95e179]
+            - row [ref=f95e181]:
+              - cell "課題 (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)" [ref=f95e182]:
+                - text: 課題
+                - generic [ref=f95e183]: (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)
+              - cell "公開終了" [ref=f95e184]
+              - cell "未参照" [ref=f95e185]
+            - row [ref=f95e187]:
+              - cell "板書 (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)" [ref=f95e188]:
+                - link "板書" [ref=f95e189] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                - generic [ref=f95e190]: (3層パーセプトロンの学習演習：3層パーセプトロンをExcelで構築する。これを手動で動作させ、それぞれの重みがどのように更新されるのかを確認する。)
+              - cell "‐" [ref=f95e191]
+              - cell "未参照" [ref=f95e192]

@@ -1,0 +1,48 @@
+- generic [ref=f267e1]:
+  - generic:
+    - link "メイン コンテンツにスキップ" [ref=f267e2] [cursor=pointer]
+    - navigation "タイトルバーのナビゲーション" [ref=f267e3]:
+      - generic [ref=f267e4]:
+        - generic [ref=f267e6]:
+          - generic [ref=f267e9]:
+            - button "メインメニュー" [expanded] [ref=f267e10] [cursor=pointer]
+            - tooltip [aria-hidden] [ref=f267e16]: メインメニュー
+          - heading "Google Classroom Classroom ToDo" [level=1] [ref=f267e17]:
+            - link "Google Classroom Classroom" [ref=f267e18] [cursor=pointer]:
+              - /url: /u/0/h
+              - img "Google Classroom" [ref=f267e19]
+              - generic [ref=f267e20]: Classroom
+            - generic [ref=f267e24]: ToDo
+        - generic [ref=f267e32]:
+          - button "Google アプリ" [ref=f267e36] [cursor=pointer]
+          - 'button "Google アカウント: EP24052小寺 漱空 (ep24052-0864@gs4e.chubu.ac.jp)" [ref=f267e42] [cursor=pointer]'
+    - navigation "メイン ナビゲーション" [ref=f267e49]:
+      - menu [ref=f267e51]:
+        - generic [ref=f267e52]:
+          - menuitem "ホーム" [ref=f267e53] [cursor=pointer]
+          - menuitem "カレンダー" [ref=f267e61] [cursor=pointer]
+          - menuitem "Gemini" [ref=f267e69] [cursor=pointer]
+          - separator [ref=f267e77]
+          - progressbar "読み込んでいます…" [ref=f267e81]
+          - separator [ref=f267e86]
+          - menuitem "アーカイブされたクラス" [ref=f267e87] [cursor=pointer]
+          - menuitem "設定" [ref=f267e95] [cursor=pointer]
+    - navigation "ページ ナビゲーション" [ref=f267e104]:
+      - list [ref=f267e109]:
+        - listitem [ref=f267e110]:
+          - link "割り当て済み（選択中）" [ref=f267e111] [cursor=pointer]:
+            - /url: /u/0/a/not-turned-in/all
+            - text: 割り当て済み
+        - listitem [ref=f267e112]:
+          - link "未提出" [ref=f267e113] [cursor=pointer]:
+            - /url: /u/0/a/missing/all
+        - listitem [ref=f267e114]:
+          - link "完了" [ref=f267e115] [cursor=pointer]:
+            - /url: /u/0/a/turned-in/all
+  - generic [ref=f267e122]:
+    - status "ページを読み込んでいます..."
+    - region "情報バナー"
+  - contentinfo [ref=f267e127]:
+    - generic [ref=f267e130]:
+      - button "ヘルプとフィードバック" [ref=f267e131] [cursor=pointer]
+      - tooltip [aria-hidden] [ref=f267e137]: ヘルプとフィードバック

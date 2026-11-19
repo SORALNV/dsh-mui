@@ -1,0 +1,60 @@
+- generic [ref=f153e2]:
+  - generic [ref=f153e3]:
+    - generic [ref=f153e4]:
+      - link [ref=f153e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f153e7]
+      - list [ref=f153e9]:
+        - listitem [ref=f153e10]:
+          - generic:
+            - link [ref=f153e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f153e13]
+            - link "小寺 漱空 さん" [ref=f153e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f153e16]:
+          - generic [ref=f153e17] [cursor=pointer]: Language
+        - listitem [ref=f153e18]:
+          - img "設定" [ref=f153e20] [cursor=pointer]
+        - listitem [ref=f153e21]:
+          - link "ログアウト" [ref=f153e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f153e23]:
+      - list:
+        - listitem [ref=f153e24]:
+          - link "HOME" [ref=f153e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f153e27]:
+          - link [ref=f153e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f153e29]: 機械学習
+        - listitem [ref=f153e30]:
+          - link [ref=f153e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f153e32]: ニューラルネットワークとオブジェクト指向プログラミング１：／ニューラルネットワークとオブジェクト指向言語との親和性について解説するとともに1-Nearest Neighbor法を実・・・
+        - listitem [ref=f153e33]:
+          - link [ref=f153e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f153e35]: 講義資料
+    - generic [ref=f153e36]: 機械学習
+  - generic [ref=f153e42]:
+    - generic [ref=f153e43]:
+      - paragraph [ref=f153e45]: 資料
+      - button "教材一覧に戻る" [ref=f153e47] [cursor=pointer]
+    - generic [ref=f153e49]:
+      - paragraph [ref=f153e51]:
+        - link "参照状況を更新する" [ref=f153e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f153e53]:
+        - rowgroup [ref=f153e54]:
+          - row [ref=f153e55]:
+            - rowheader "No.1" [ref=f153e56]
+            - cell [ref=f153e57]:
+              - img "ファイル資料" [ref=f153e58]
+              - link "第5回.pdf" [active] [ref=f153e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f153e60]
+            - cell "登録日:2026/10/28" [ref=f153e61]
+            - cell "-" [ref=f153e62]
+          - row [ref=f153e63]:
+            - cell [ref=f153e64]

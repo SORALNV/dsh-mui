@@ -1,0 +1,1620 @@
+- generic [ref=f42e2]:
+  - link "メイン コンテンツにスキップ" [ref=f42e5] [cursor=pointer]:
+    - /url: "#notebook-main"
+  - banner [ref=f42e9]:
+    - generic [ref=f42e12]:
+      - link "Colab Pro のホーム" [ref=f42e15] [cursor=pointer]:
+        - /url: https://colab.research.google.com/
+      - generic [ref=f42e23]:
+        - generic [ref=f42e24]:
+          - img "Google ドライブに保存されているノートブック" [ref=f42e25]
+          - textbox "ノートブック名" [ref=f42e33]: V02_hybrid_rerank_run002.ipynb
+          - generic [aria-hidden] [ref=f42e34]: V02_hybrid_rerank_run002.ipynb_
+          - button "スター" [ref=f42e36] [cursor=pointer]
+          - 'button "最終保存: 21:01" [ref=f42e42] [cursor=pointer]'
+        - menubar [ref=f42e48]:
+          - button "ファイル" [ref=f42e49] [cursor=pointer]
+          - button "編集" [ref=f42e53] [cursor=pointer]
+          - button "表示" [ref=f42e57] [cursor=pointer]
+          - button "挿入" [ref=f42e61] [cursor=pointer]
+          - button "ランタイム" [ref=f42e65] [cursor=pointer]
+          - button "ツール" [ref=f42e69] [cursor=pointer]
+          - button "ヘルプ" [ref=f42e73] [cursor=pointer]
+      - generic [ref=f42e77]:
+        - button "コメントパネルを開く" [ref=f42e79] [cursor=pointer]
+        - button "設定を開く" [ref=f42e84] [cursor=pointer]
+        - button "ノートブックを共有" [ref=f42e91] [cursor=pointer]:
+          - generic [ref=f42e94]: 共有
+        - 'button "Google アカウント: そら (kodera.daigaku.24052@gmail.com), Google メンバーシップ" [ref=f42e102] [cursor=pointer]'
+  - generic [ref=f42e106]:
+    - button "コマンド コマンド パレットを表示 ⌘/Ctrl+Shift+P" [ref=f42e110] [cursor=pointer]:
+      - generic [ref=f42e113]:
+        - generic:
+          - generic [ref=f42e114]: コマンド
+          - generic [ref=f42e115]: コマンド パレットを表示 ⌘/Ctrl+Shift+P
+    - generic [ref=f42e116]:
+      - button "コード 下にコードセルを挿入 ⌘/Ctrl+M B" [ref=f42e120] [cursor=pointer]:
+        - generic [ref=f42e123]:
+          - generic:
+            - generic [ref=f42e124]: コード
+            - generic [ref=f42e125]: 下にコードセルを挿入 ⌘/Ctrl+M B
+      - button "コードセル オプションを挿入する" [ref=f42e127] [cursor=pointer]
+    - button "テキスト テキストセルを追加" [ref=f42e133] [cursor=pointer]:
+      - generic [ref=f42e136]:
+        - generic:
+          - generic [ref=f42e137]: テキスト
+          - generic [ref=f42e138]: テキストセルを追加
+    - generic [ref=f42e140]:
+      - button "すべてのセルを実行 ノートブック内のすべてのセルを実行" [ref=f42e144] [cursor=pointer]:
+        - generic [ref=f42e147]:
+          - generic:
+            - generic [ref=f42e148]: すべてのセルを実行
+            - generic [ref=f42e149]: ノートブック内のすべてのセルを実行
+      - button "その他の操作" [ref=f42e151] [cursor=pointer]
+    - generic [ref=f42e154]:
+      - button "接続 T4 新しいランタイムに接続する" [ref=f42e158] [cursor=pointer]:
+        - generic [ref=f42e160]:
+          - generic:
+            - generic [ref=f42e162]:
+              - generic [ref=f42e163]: 接続
+              - generic [ref=f42e164]: T4
+            - generic [ref=f42e166]: 新しいランタイムに接続する
+      - button "その他の接続オプション" [ref=f42e168] [cursor=pointer]
+    - button "ヘッダーの表示 / 非表示を切り替え" [ref=f42e172] [cursor=pointer]
+  - generic [ref=f42e175]:
+    - complementary "left pane" [ref=f42e176]:
+      - toolbar [ref=f42e177]:
+        - generic [ref=f42e178]:
+          - generic "目次" [ref=f42e180]:
+            - button "目次" [ref=f42e181] [cursor=pointer]
+          - generic "検索と置換" [ref=f42e186]:
+            - button "検索と置換" [ref=f42e187] [cursor=pointer]
+          - generic "コード スニペット" [ref=f42e192]:
+            - button "コード スニペット" [ref=f42e193] [cursor=pointer]
+          - generic "データ インスペクタ" [ref=f42e198]:
+            - button "データ インスペクタ" [ref=f42e199] [cursor=pointer]
+          - generic "シークレット" [ref=f42e204]:
+            - button "シークレット" [ref=f42e205] [cursor=pointer]
+          - generic "ファイル" [ref=f42e210]:
+            - button "ファイル" [ref=f42e211] [cursor=pointer]
+          - generic "データ エクスプローラ" [ref=f42e216]:
+            - button "データ エクスプローラ" [ref=f42e217] [cursor=pointer]
+    - main "ノートブック" [ref=f42e230]:
+      - generic [ref=f42e231]:
+        - generic [ref=f42e236]:
+          - 'region "セル 0: テキストセル: BM25 / Ruri / BGE-M3 / Qwen 組み合わせ RAG ベースライン" [ref=f42e237]':
+            - generic [ref=f42e238]:
+              - generic:
+                - button "セルを上に移動 ⌘/Ctrl+M K" [disabled]
+              - button "セルを下に移動 ⌘/Ctrl+M J" [ref=f42e240] [cursor=pointer]
+              - button "編集" [ref=f42e244] [cursor=pointer]
+              - button "セルの削除 ⌘/Ctrl+M D" [ref=f42e248] [cursor=pointer]
+              - button "その他のセル操作" [ref=f42e252] [cursor=pointer]
+            - generic [ref=f42e260]:
+              - generic [ref=f42e261]:
+                - generic "BM25 / Ruri / BGE-M3 / Qwen 組み合わせ RAG ベースライン の下の子セル 29 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e262]:
+                  - button "BM25 / Ruri / BGE-M3 / Qwen 組み合わせ RAG ベースライン の下の子セル 29 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e263] [cursor=pointer]
+                - heading "BM25 / Ruri / BGE-M3 / Qwen 組み合わせ RAG ベースライン" [level=1] [ref=f42e267]
+              - paragraph [ref=f42e268]:
+                - strong [ref=f42e269]: 目的
+                - text: ": 日本語 Wikipedia のチャンク（約100万件）から根拠を検索し、短答式の質問301問に答える。この notebook は配布済みインデックスを使い、正解を含まない質問ファイルで推論して提出ファイルを作る。採点は行わない。"
+              - table [ref=f42e270]:
+                - rowgroup [ref=f42e271]:
+                  - row [ref=f42e272]:
+                    - columnheader "項目" [ref=f42e273]
+                    - columnheader "内容" [ref=f42e274]
+                - rowgroup [ref=f42e275]:
+                  - row [ref=f42e276]:
+                    - cell "質問数" [ref=f42e277]
+                    - cell "301問" [ref=f42e278]
+                  - row [ref=f42e279]:
+                    - cell "チャンク" [ref=f42e280]
+                    - cell "1,003,139件（日本語 Wikipedia 49,043記事を約500文字ごとに分割）" [ref=f42e281]
+                  - row [ref=f42e282]:
+                    - cell "実行環境" [ref=f42e283]
+                    - 'cell "Google Colab（GPU: T4、ランタイムのバージョン 2026.07）" [ref=f42e284]'
+              - paragraph [ref=f42e285]:
+                - strong [ref=f42e286]: 回答の形式
+                - text: ": 生成モデルは、回答と、その根拠にしたチャンクの ID を1つだけ出力する。"
+              - code [ref=f42e288]:
+                - generic [ref=f42e289]: "{\"answer\": \"1803年9月28日\", \"chunk_id\": 500276}"
+              - paragraph [ref=f42e290]:
+                - strong [ref=f42e291]: 提出形式
+                - text: ":"
+                - code [ref=f42e292]: submission.json
+                - text: に、
+                - code [ref=f42e293]: q_id
+                - text: ・
+                - code [ref=f42e294]: answer
+                - text: ・
+                - code [ref=f42e295]: chunk
+                - text: の3項目だけを持つ JSON 配列を保存する。評価は別の運営用スクリプトで行う。
+              - paragraph [ref=f42e296]:
+                - strong [ref=f42e297]: ベースラインの構成
+                - text: ": Hugging Face のデータセットから取得したインデックスをそのまま使うので、インデックスの作成は不要である。検索は BM25・Ruri・BGE-M3・Qwen から任意の組み合わせを選べる。デフォルトは Ruri 単体・リランカーなし。"
+              - table [ref=f42e298]:
+                - rowgroup [ref=f42e299]:
+                  - row [ref=f42e300]:
+                    - columnheader "工程" [ref=f42e301]
+                    - columnheader "設定" [ref=f42e302]
+                - rowgroup [ref=f42e303]:
+                  - row [ref=f42e304]:
+                    - cell "BM25" [ref=f42e305]
+                    - cell "SudachiPy（SplitMode C、辞書形）で分かち書きし、Okapi BM25（k1 = 1.2、b = 0.75）で上位100件" [ref=f42e306]
+                  - row [ref=f42e307]:
+                    - cell "埋め込み検索" [ref=f42e308]
+                    - cell "Ruri / BGE-M3 / Qwen のうち選択した各モデルで上位100件" [ref=f42e309]
+                  - row [ref=f42e310]:
+                    - cell "統合" [ref=f42e311]
+                    - cell "検索を2つ以上選んだ場合だけ、各検索の順位を等重みの RRF（k = 60）で統合して上位100件。1つなら順位をそのまま使う" [ref=f42e312]
+                  - row [ref=f42e313]:
+                    - cell "リランク" [ref=f42e314]
+                    - cell [ref=f42e315]:
+                      - text: 使う場合（
+                      - code [ref=f42e316]: USE_RERANKER = True
+                      - text: ）は、
+                      - code [ref=f42e317]: RERANKER_NAME
+                      - text: で選んだリランカー（Ruri / BGE / Qwen。デフォルトは Ruri）で統合結果の上位50件を並べ替え、上位10件を使う。
+                  - row [ref=f42e318]:
+                    - cell "回答生成" [ref=f42e319]
+                    - cell [ref=f42e320]:
+                      - code [ref=f42e321]: Qwen/Qwen3.5-0.8B
+                      - text: を vLLM で実行。サンプリングはモデルカードの推奨値、thinking 無効、最大1024トークン、出力は JSON スキーマで制約
+              - paragraph [ref=f42e322]:
+                - strong [ref=f42e323]: 事前に済ませておくこと
+                - text: ":"
+              - list [ref=f42e324]:
+                - listitem [ref=f42e325]:
+                  - text: Hugging Face のアカウントを作り、データセット
+                  - link "bumbuboon/llm-course-final-2026 新しいタブでリンクが開きます" [ref=f42e326] [cursor=pointer]:
+                    - /url: https://www.google.com/url?q=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fbumbuboon%2Fllm-course-final-2026
+                    - code [ref=f42e327]: bumbuboon/llm-course-final-2026
+                  - text: のページで利用条件に同意する
+                - listitem [ref=f42e328]:
+                  - text: Hugging Face の
+                  - link "トークン設定ページ 新しいタブでリンクが開きます" [ref=f42e329] [cursor=pointer]:
+                    - /url: https://www.google.com/url?q=https%3A%2F%2Fhuggingface.co%2Fsettings%2Ftokens
+                    - text: トークン設定ページ
+                  - text: で Read 権限のトークンを作り、Colab の左の鍵アイコン（シークレット）に
+                  - code [ref=f42e330]: HF_READ_TOKEN
+                  - text: という名前で追加して「ノートブックからのアクセス」を有効にする。データとインデックスの取得に使う。書き込み権限は不要
+                - listitem [ref=f42e331]:
+                  - text: Colab のメニュー「ランタイム」→「ランタイムのタイプを変更」で、ハードウェア アクセラレータに
+                  - strong [ref=f42e332]: T4 GPU
+                  - text: を選び、ライブラリの版を固定するためにランタイムのバージョンに
+                  - strong [ref=f42e333]: "2026.07"
+                  - text: を選ぶ。最新版を選ぶと、Colab の更新でライブラリが変わり動かなくなることがある
+          - 'region "セル 1: テキストセル: データの置き場所" [ref=f42e335]':
+            - generic [ref=f42e341]:
+              - heading "データの置き場所" [level=2] [ref=f42e343]
+              - paragraph [ref=f42e344]:
+                - text: 質問は、マイドライブの
+                - code [ref=f42e345]: LLM講座最終コンペ_work/questions.json
+                - text: （設定セルの
+                - code [ref=f42e346]: WORK_DIR
+                - text: の下）から読み込む。JSON 配列の各要素は
+                - code [ref=f42e347]: "{\"q_id\": \"q001\", \"question\": \"質問文\"}"
+                - text: の2項目だけで、正解や根拠 ID は含まない。
+              - paragraph [ref=f42e348]:
+                - text: Drive にこのファイルがない場合だけ、Hugging Face の
+                - code [ref=f42e349]: data/questions.json
+                - text: を取得して同じ場所に保存する。ファイルがすでにあればそのまま使い、上書きしない。
+              - paragraph [ref=f42e350]:
+                - text: チャンクとインデックスは、Hugging Face から Colab のローカルディスク（
+                - code [ref=f42e351]:
+                  - link "/content/rag_data" [ref=f42e352] [cursor=pointer]:
+                    - /url: "#"
+                - text: ）に取得する。
+              - paragraph [ref=f42e353]:
+                - text: 実行結果は
+                - code [ref=f42e354]: LLM講座最終コンペ_work/<RUN_ID>/
+                - text: に保存する。提出ファイル
+                - code [ref=f42e355]: submission.json
+                - text: のほか、検索設定の
+                - code [ref=f42e356]: retrieval_config.json
+                - text: と生成設定の
+                - code [ref=f42e357]: generation_config.json
+                - text: を置く。
+          - 'region "セル 2: テキストセル: 利用ルール" [ref=f42e359]':
+            - generic [ref=f42e365]:
+              - heading "利用ルール" [level=2] [ref=f42e367]
+              - heading "使用できる深層学習モデル" [level=3] [ref=f42e368]
+              - paragraph [ref=f42e369]: エンコーダ・リランカー・LLM のいずれも、以下のリストにあるモデルだけを使用できる。
+              - table [ref=f42e370]:
+                - rowgroup [ref=f42e371]:
+                  - row [ref=f42e372]:
+                    - columnheader "用途" [ref=f42e373]
+                    - columnheader "モデルID" [ref=f42e374]
+                - rowgroup [ref=f42e375]:
+                  - row [ref=f42e376]:
+                    - cell "エンコーダ" [ref=f42e377]
+                    - cell [ref=f42e378]:
+                      - code [ref=f42e379]: cl-nagoya/ruri-v3-310m
+                  - row [ref=f42e380]:
+                    - cell "エンコーダ" [ref=f42e381]
+                    - cell [ref=f42e382]:
+                      - code [ref=f42e383]: BAAI/bge-m3
+                  - row [ref=f42e384]:
+                    - cell "エンコーダ" [ref=f42e385]
+                    - cell [ref=f42e386]:
+                      - code [ref=f42e387]: Qwen/Qwen3-Embedding-0.6B
+                  - row [ref=f42e388]:
+                    - cell "リランカー" [ref=f42e389]
+                    - cell [ref=f42e390]:
+                      - code [ref=f42e391]: cl-nagoya/ruri-v3-reranker-310m
+                  - row [ref=f42e392]:
+                    - cell "リランカー" [ref=f42e393]
+                    - cell [ref=f42e394]:
+                      - code [ref=f42e395]: BAAI/bge-reranker-v2-m3
+                  - row [ref=f42e396]:
+                    - cell "リランカー" [ref=f42e397]
+                    - cell [ref=f42e398]:
+                      - code [ref=f42e399]: Qwen/Qwen3-Reranker-0.6B
+                  - row [ref=f42e400]:
+                    - cell "LLM" [ref=f42e401]
+                    - cell [ref=f42e402]:
+                      - code [ref=f42e403]: Qwen/Qwen3.5-0.8B
+              - heading "禁止事項" [level=3] [ref=f42e404]
+              - list [ref=f42e405]:
+                - listitem [ref=f42e406]: 外部 API の使用は一切禁止する。
+                - listitem [ref=f42e407]: 配布チャンクの本文や分割を変更することは禁止する。
+                - listitem [ref=f42e408]: 配布外データ（Web 検索、別のコーパス、出典の Wikipedia 記事など）を参照することは禁止する。
+                - listitem [ref=f42e409]: リストにない深層学習モデルを使用することは禁止する。エンコーダ・リランカー・LLM のすべてが対象である。
+                - listitem [ref=f42e410]:
+                  - text: 指定されたもの以外のエンコーダで埋め込みを作成することは禁止する。
+                  - list [ref=f42e411]:
+                    - listitem [ref=f42e412]: ただし、指定されたエンコーダを学習した派生モデルは使用でき、それで埋め込みを作成してよい。
+                - listitem [ref=f42e413]:
+                  - code [ref=f42e414]: Qwen/Qwen3.5-0.8B
+                  - text: 以外の LLM で、質問文やチャンクの加工・アノテーションを行うことは禁止する。
+                - listitem [ref=f42e415]:
+                  - code [ref=f42e416]: Qwen/Qwen3.5-0.8B
+                  - text: 以外の LLM による推論・生成は禁止する。
+                - listitem [ref=f42e417]: 深層学習以外の機械学習モデルも、Colab 以外で実行することは禁止する。
+              - heading "許可事項" [level=3] [ref=f42e418]
+              - paragraph [ref=f42e419]: 以下は、上記のモデル・データ・実行環境の制約の範囲で許可する。
+              - list [ref=f42e420]:
+                - listitem [ref=f42e421]: 検索パラメータの変更。
+                - listitem [ref=f42e422]: 指定された範囲内でのエンコーダの切り替え。
+                - listitem [ref=f42e423]: ハイブリッド検索（複数の検索方式の組み合わせ）。
+                - listitem [ref=f42e424]: 指定されたエンコーダの学習。
+                - listitem [ref=f42e425]: 指定されたリランカーの学習。
+                - listitem [ref=f42e426]: マルチクエリ。
+                - listitem [ref=f42e427]: エージェンティックサーチ。
+                - listitem [ref=f42e428]: 推論パラメータの変更。
+                - listitem [ref=f42e429]: プロンプトの調整。
+                - listitem [ref=f42e430]: 深層学習以外の機械学習モデルを Colab 上で実行すること。
+              - paragraph [ref=f42e431]:
+                - text: マルチクエリやエージェンティックサーチで LLM を使う場合も、使用できる LLM は
+                - code [ref=f42e432]: Qwen/Qwen3.5-0.8B
+                - text: だけである。
+          - 'region "セル 3: テキストセル: Step 0: 環境セットアップ" [ref=f42e434]':
+            - generic [ref=f42e440]:
+              - generic [ref=f42e441]:
+                - 'generic "Step 0: 環境セットアップ の下の子セル 2 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e442]':
+                  - 'button "Step 0: 環境セットアップ の下の子セル 2 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e443] [cursor=pointer]'
+                - 'heading "Step 0: 環境セットアップ" [level=2] [ref=f42e447]'
+              - paragraph [ref=f42e448]: vLLM（LLM 推論）と SudachiPy（分かち書き）を、版を固定して入れる。
+              - list [ref=f42e449]:
+                - listitem [ref=f42e450]: vLLM は PyPI 版が CUDA 13 用で、このランタイムの torch（CUDA 12 系）と組み合わせられないため、GitHub から入れる。
+                - listitem [ref=f42e451]: vLLM が torch を入れ替えることを防ぐため、torch を固定する。
+                - listitem [ref=f42e452]: torchcodec が vLLM の読み込みを妨げるため外す。
+                - listitem [ref=f42e453]: 依存関係の警告（numba、protobuf など）が出るが、Colab に最初から入っている別のパッケージに関するもので、この notebook の処理には影響しない。
+          - 'region "セル 4: コードセル:" [ref=f42e455]':
+            - generic [ref=f42e458]:
+              - generic [ref=f42e459]:
+                - generic [ref=f42e463]:
+                  - button "セルを実行" [ref=f42e464] [cursor=pointer]
+                  - generic [ref=f42e468]: "[ ]"
+                - generic [ref=f42e472]:
+                  - generic [ref=f42e473]: "# [step0.1 setup-install] ← このセルの名前（以降のセルも1行目に名前を記載）"
+                  - generic [ref=f42e474]: VLLM_WHEEL = "https://github.com/vllm-project/vllm/releases/download/v0.26.0/vllm-0.26.0+cu129-cp38-abi3-manylinux_2_28_x86_64.whl"
+                  - generic [ref=f42e475]: "!printf \"torch==2.11.0\\ntorchvision==0.26.0\\n\" > /tmp/constraints.txt"
+                  - generic [ref=f42e476]: "!pip install -q \"$VLLM_WHEEL\" \"sudachipy==0.6.11\" \"sudachidict-core==20260428\" -c /tmp/constraints.txt > /tmp/pip_install.log 2>&1"
+                  - generic [ref=f42e477]: "print(\"exit code:\", _exit_code) # 直前の pip install の終了コード（0 なら成功）"
+                  - generic [ref=f42e478]: "!pip uninstall -y -q torchcodec"
+                  - generic [ref=f42e479]: "!tail -3 /tmp/pip_install.log"
+              - region "セル 4 出力" [ref=f42e480]:
+                - generic [ref=f42e481]:
+                  - generic [ref=f42e483]:
+                    - button "出力を表示 / 非表示" [ref=f42e485] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e489] [cursor=pointer]
+                  - group [ref=f42e496]:
+                    - generic [ref=f42e497]: "exit code: 0 google-adk 2.4.0 requires opentelemetry-sdk<=1.42.1,>=1.39, but you have opentelemetry-sdk 1.45.1 which is incompatible. google-ai-generativelanguage 0.6.15 requires protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.2, but you have protobuf 6.33.6 which is incompatible. grpcio-status 1.71.2 requires protobuf<6.0dev,>=5.26.1, but you have protobuf 6.33.6 which is incompatible."
+          - 'region "セル 5: テキストセル:" [ref=f42e500]':
+            - generic [ref=f42e506]:
+              - paragraph [ref=f42e507]:
+                - strong [ref=f42e508]: ⚠ 上のセルの実行後、「ランタイム」→「セッションを再起動する」を実施し、下の [step1.1 config] 以降を実行する。
+              - paragraph [ref=f42e509]: vLLM は、インストール前に読み込まれた torch などのモジュールが残っていると正しく初期化できないため。
+          - 'region "セル 6: テキストセル: Step 1: BM25 / Ruri / BGE-M3 / Qwen を自由に組み合わせる" [ref=f42e511]':
+            - generic [ref=f42e517]:
+              - generic [ref=f42e518]:
+                - 'generic "Step 1: BM25 / Ruri / BGE-M3 / Qwen を自由に組み合わせる の下の子セル 3 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e519]':
+                  - 'button "Step 1: BM25 / Ruri / BGE-M3 / Qwen を自由に組み合わせる の下の子セル 3 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e520] [cursor=pointer]'
+                - 'heading "Step 1: BM25 / Ruri / BGE-M3 / Qwen を自由に組み合わせる" [level=2] [ref=f42e524]'
+              - paragraph [ref=f42e525]:
+                - text: 設定セルの
+                - code [ref=f42e526]: RETRIEVERS
+                - text: に、使いたい検索だけを並べる。空でない15通りの組み合わせに対応する。
+              - code [ref=f42e528]:
+                - generic [ref=f42e529]: "RETRIEVERS = [\"qwen\"] # 単体"
+                - generic [ref=f42e530]: "RETRIEVERS = [\"ruri\", \"bge\"] # 埋め込み同士"
+                - generic [ref=f42e531]: "RETRIEVERS = [\"bm25\", \"bge\", \"qwen\"] # 3種類"
+                - generic [ref=f42e532]: "RETRIEVERS = [\"bm25\", \"ruri\", \"bge\", \"qwen\"] # 全部"
+              - paragraph [ref=f42e533]:
+                - text: 各検索の候補数は
+                - code [ref=f42e534]: BM25_TOP_K
+                - text: ・
+                - code [ref=f42e535]: RURI_TOP_K
+                - text: ・
+                - code [ref=f42e536]: BGE_TOP_K
+                - text: ・
+                - code [ref=f42e537]: QWEN_TOP_K
+                - text: で個別に指定する。検索が2つ以上なら等重みの RRF で統合し、1つなら順位をそのまま使う。統合後の候補数は
+                - code [ref=f42e538]: FUSED_TOP_K
+                - text: である。リランカーを使うかどうかは
+                - code [ref=f42e539]: USE_RERANKER
+                - text: で、使うリランカーは
+                - code [ref=f42e540]: RERANKER_NAME
+                - text: （
+                - code [ref=f42e541]: "\"ruri\""
+                - text: ・
+                - code [ref=f42e542]: "\"bge\""
+                - text: ・
+                - code [ref=f42e543]: "\"qwen\""
+                - text: ）で選ぶ。デフォルトは
+                - code [ref=f42e544]: RETRIEVERS = ["ruri"]
+                - text: 、
+                - code [ref=f42e545]: USE_RERANKER = False
+                - text: （Ruri 単体・リランカーなし）である。
+              - paragraph [ref=f42e546]:
+                - text: インデックスは、Hugging Face のデータセットの
+                - code [ref=f42e547]: index/
+                - text: の下にある次のフォルダから取得する。BM25 は
+                - code [ref=f42e548]: bm25-sudachi-c/
+                - text: 、Ruri は
+                - code [ref=f42e549]: ruri-v3-310m/
+                - text: 、BGE-M3 は
+                - code [ref=f42e550]: bge-m3/
+                - text: 、Qwen は
+                - code [ref=f42e551]: qwen3-embedding-0.6b/
+                - text: である。
+              - paragraph [ref=f42e552]:
+                - text: 質問の埋め込み設定は
+                - code [ref=f42e553]: EMBED_CONFIGS
+                - text: で指定する。デフォルト値は配布インデックスの
+                - code [ref=f42e554]: index_config.json
+                - text: と同じである。model・revision・pooling・normalize・trust_remote_code は文書ベクトルを作ったときと揃える必要がある。異なる場合は検索精度が下がる。文書ベクトルを別の設定で作り直した場合は、
+                - code [ref=f42e555]: EMB_INDICES
+                - text: をそのインデックスに変え、
+                - code [ref=f42e556]: EMBED_CONFIGS
+                - text: も合わせる。
+                - code [ref=f42e557]: query_prefix
+                - text: ・
+                - code [ref=f42e558]: max_length
+                - text: は質問側だけの設定なので、変更可能である。
+              - paragraph [ref=f42e559]:
+                - text: 追加学習したモデルなどで独自の埋め込み検索を加える場合は、新しい名前を
+                - code [ref=f42e560]: RETRIEVERS
+                - text: に入れ、同じ名前で
+                - code [ref=f42e561]: EMB_INDICES
+                - text: ・
+                - code [ref=f42e562]: EMBED_CONFIGS
+                - text: ・
+                - code [ref=f42e563]: RETRIEVER_TOP_K
+                - text: に設定を加える。
+                - code [ref=f42e564]: RETRIEVERS
+                - text: が空の場合、同じ名前が重複している場合、設定が足りない場合は、設定セルがエラーで止まる。
+              - paragraph [ref=f42e565]:
+                - text: 出力フォルダ名は
+                - code [ref=f42e566]: RUN_ID
+                - text: で指定する。条件を変えて結果を残す場合は
+                - code [ref=f42e567]: RUN_ID
+                - text: も変える。設定を変えたときは、ランタイムを再起動して設定セルから実行し直す。
+          - 'region "セル 7: コードセル:" [ref=f42e569]':
+            - generic [ref=f42e572]:
+              - generic [ref=f42e573]:
+                - generic [ref=f42e577]:
+                  - button "セルを実行" [ref=f42e578] [cursor=pointer]
+                  - generic [ref=f42e582]: "[ ]"
+                - generic [ref=f42e586]:
+                  - generic [ref=f42e587]: "# [step1.1 config]"
+                  - generic [ref=f42e588]: "# ====================================================================="
+                  - generic [ref=f42e589]: "# 1. 検索の組み合わせと実行名"
+                  - generic [ref=f42e590]: "# ====================================================================="
+                  - generic [ref=f42e591]: "# ここだけ変更すれば単体・任意の組み合わせで実行できる。"
+                  - generic [ref=f42e592]: "RETRIEVERS = [\"bm25\", \"ruri\"] # 選択肢: \"bm25\", \"ruri\", \"bge\", \"qwen\"（独自の埋め込み検索を加えた場合はその名前）"
+                  - generic [ref=f42e593]: "# 例: [\"qwen\"] / [\"ruri\", \"bge\"] / [\"bm25\", \"ruri\", \"bge\", \"qwen\"]"
+                  - generic [ref=f42e594]: RUN_ID = "run002"
+                  - generic [ref=f42e595]: "# ====================================================================="
+                  - generic [ref=f42e596]: "# 2. インデックス"
+                  - generic [ref=f42e597]: "# ====================================================================="
+                  - generic [ref=f42e598]: "BM25_INDEX = \"bm25-sudachi-c\" # index/ 直下のフォルダ名"
+                  - generic [ref=f42e599]: "EMB_INDICES = {\"ruri\": \"ruri-v3-310m\", \"bge\": \"bge-m3\", \"qwen\": \"qwen3-embedding-0.6b\"}"
+                  - generic [ref=f42e600]: "# ====================================================================="
+                  - generic [ref=f42e601]: "# 3. モデル"
+                  - generic [ref=f42e602]: "# ====================================================================="
+                  - generic [ref=f42e603]: "# 質問の埋め込みに使う設定。デフォルト値は配布インデックスの index_config.json と同じ。"
+                  - generic [ref=f42e604]: "# 注意: model・revision・pooling・normalize・trust_remote_code は、文書ベクトルを作ったときと同じにすること。"
+                  - generic [ref=f42e605]: "# 違ってもエラーにはならず、検索精度だけが大きく下がる。"
+                  - generic [ref=f42e606]: "# 文書ベクトルを別の設定で作り直した場合は、EMB_INDICES をそのインデックスに変え、ここも合わせる。"
+                  - generic [ref=f42e607]: "# query_prefix・max_length は質問側だけの設定なので、変えて試せる。"
+                  - generic [ref=f42e608]: "# index_config.json と食い違う項目は [step3.2 embedding] で表示する。"
+                  - generic [ref=f42e609]: "EMBED_CONFIGS = {"
+                  - generic [ref=f42e610]: "\"ruri\": {"
+                  - generic [ref=f42e611]: "\"model\": \"cl-nagoya/ruri-v3-310m\","
+                  - generic [ref=f42e612]: "\"revision\": \"18b60fb8c2b9df296fb4212bb7d23ef94e579cd3\","
+                  - generic [ref=f42e613]: "\"query_prefix\": \"検索クエリ: \","
+                  - generic [ref=f42e614]: "\"pooling\": \"mean\", # \"mean\" | \"cls\" | \"last\""
+                  - generic [ref=f42e615]: "\"normalize\": True, # True: L2 正規化（内積 = コサイン類似度）"
+                  - generic [ref=f42e616]: "\"max_length\": 8192,"
+                  - generic [ref=f42e617]: "\"trust_remote_code\": False,"
+                  - generic [ref=f42e618]: "},"
+                  - generic [ref=f42e619]: "\"bge\": {"
+                  - generic [ref=f42e620]: "\"model\": \"BAAI/bge-m3\","
+                  - generic [ref=f42e621]: "\"revision\": \"5617a9f61b028005a4858fdac845db406aefb181\","
+                  - generic [ref=f42e622]: "\"query_prefix\": \"\","
+                  - generic [ref=f42e623]: "\"pooling\": \"cls\","
+                  - generic [ref=f42e624]: "\"normalize\": True,"
+                  - generic [ref=f42e625]: "\"max_length\": 8192,"
+                  - generic [ref=f42e626]: "\"trust_remote_code\": False,"
+                  - generic [ref=f42e627]: "},"
+                  - generic [ref=f42e628]: "\"qwen\": {"
+                  - generic [ref=f42e629]: "\"model\": \"Qwen/Qwen3-Embedding-0.6B\","
+                  - generic [ref=f42e630]: "\"revision\": \"97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3\","
+                  - generic [ref=f42e631]: "\"query_prefix\": \"Instruct: Given a web search query, retrieve relevant passages that answer the query\\nQuery: \","
+                  - generic [ref=f42e632]: "\"pooling\": \"last\","
+                  - generic [ref=f42e633]: "\"normalize\": True,"
+                  - generic [ref=f42e634]: "\"max_length\": 8192,"
+                  - generic [ref=f42e635]: "\"trust_remote_code\": False,"
+                  - generic [ref=f42e636]: "},"
+                  - generic [ref=f42e637]: "}"
+                  - generic [ref=f42e638]: "EMBED_BATCH_SIZE = 1 # 質問埋め込みのバッチサイズ（T4の長い質問にも配慮）"
+                  - generic [ref=f42e639]: "DENSE_QUERY_BATCH_SIZE = 32 # 行列検索時にまとめて処理する質問数"
+                  - generic [ref=f42e640]: "# リランカーの設定。kind は計算方法: \"cross_encoder\"（Ruri・BGE）| \"qwen3\"（Qwen3-Reranker の yes / no 判定）"
+                  - generic [ref=f42e641]: "RERANKER_CONFIGS = {"
+                  - generic [ref=f42e642]: "\"ruri\": {"
+                  - generic [ref=f42e643]: "\"model\": \"cl-nagoya/ruri-v3-reranker-310m\","
+                  - generic [ref=f42e644]: "\"revision\": \"2c23c61a90583f0348880a2ffb2d7fd29e2d14f1\","
+                  - generic [ref=f42e645]: "\"kind\": \"cross_encoder\","
+                  - generic [ref=f42e646]: "\"max_length\": 512,"
+                  - generic [ref=f42e647]: "\"batch_size\": 4,"
+                  - generic [ref=f42e648]: "},"
+                  - generic [ref=f42e649]: "\"bge\": {"
+                  - generic [ref=f42e650]: "\"model\": \"BAAI/bge-reranker-v2-m3\","
+                  - generic [ref=f42e651]: "\"revision\": \"953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e\","
+                  - generic [ref=f42e652]: "\"kind\": \"cross_encoder\","
+                  - generic [ref=f42e653]: "\"max_length\": 512,"
+                  - generic [ref=f42e654]: "\"batch_size\": 4,"
+                  - generic [ref=f42e655]: "},"
+                  - generic [ref=f42e656]: "\"qwen\": {"
+                  - generic [ref=f42e657]: "\"model\": \"Qwen/Qwen3-Reranker-0.6B\","
+                  - generic [ref=f42e658]: "\"revision\": \"e61197ed45024b0ed8a2d74b80b4d909f1255473\","
+                  - generic [ref=f42e659]: "\"kind\": \"qwen3\","
+                  - generic [ref=f42e660]: "\"instruction\": \"Given a web search query, retrieve relevant passages that answer the query\","
+                  - generic [ref=f42e661]: "\"max_length\": 1024, # 指示文と書式の分だけ長くなるため、Ruri・BGE より長くする"
+                  - generic [ref=f42e662]: "\"batch_size\": 4,"
+                  - generic [ref=f42e663]: "},"
+                  - generic [ref=f42e664]: "}"
+                  - generic [ref=f42e665]: "USE_RERANKER = True # False: 統合結果の上位をそのまま使う"
+                  - generic [ref=f42e666]: "RERANKER_NAME = \"ruri\" # USE_RERANKER = True のときに使うリランカー: \"ruri\" | \"bge\" | \"qwen\""
+                  - generic [ref=f42e667]: "DEVICE = \"auto\" # 検索側のモデルの置き場所: \"auto\" | \"cuda\" | \"cpu\""
+                  - generic [ref=f42e668]: "# ====================================================================="
+                  - generic [ref=f42e669]: "# 4. 検索と生成のパラメータ"
+                  - generic [ref=f42e670]: "# ====================================================================="
+                  - generic [ref=f42e671]: "FUSION = \"rrf\" # 複数の検索結果の統合方法（Step 5 の fuse を参照）"
+                  - generic [ref=f42e672]: BM25_K1 = 1.2
+                  - generic [ref=f42e673]: BM25_B = 0.75
+                  - generic [ref=f42e674]: "BM25_TOP_K = 100 # BM25 の候補数"
+                  - generic [ref=f42e675]: "RURI_TOP_K = 100 # Ruri の候補数"
+                  - generic [ref=f42e676]: "BGE_TOP_K = 100 # BGE-M3 の候補数"
+                  - generic [ref=f42e677]: "QWEN_TOP_K = 100 # Qwen の候補数"
+                  - generic [ref=f42e678]: "# 検索名ごとの候補数。独自の埋め込み検索を加えた場合は、ここにも同じ名前で候補数を加える"
+                  - generic [ref=f42e679]: "RETRIEVER_TOP_K = {\"bm25\": BM25_TOP_K, \"ruri\": RURI_TOP_K, \"bge\": BGE_TOP_K, \"qwen\": QWEN_TOP_K}"
+                  - generic [ref=f42e680]: RRF_K = 60
+                  - generic [ref=f42e681]: "FUSED_TOP_K = 100 # 統合後に残す件数"
+                  - generic [ref=f42e682]: "RERANK_CANDIDATES = 50 # リランクにかける件数（統合結果の上位から）"
+                  - generic [ref=f42e683]: "CONTEXT_TOP_K = 10 # 生成モデルに渡すチャンク数"
+                  - generic [ref=f42e684]: "# ====================================================================="
+                  - generic [ref=f42e685]: "# 5. データの取得元・結果の保存先と実行範囲"
+                  - generic [ref=f42e686]: "# ====================================================================="
+                  - generic [ref=f42e687]: "HF_REPO = \"bumbuboon/llm-course-final-2026\" # データとインデックスを置いた Hugging Face のデータセット"
+                  - generic [ref=f42e688]: "HF_REVISION = \"main\" # データセットのブランチ"
+                  - generic [ref=f42e689]: "LOCAL_DATA = \"/content/rag_data\" # データとインデックスの取得先（Colab のローカルディスク）"
+                  - generic [ref=f42e690]: DRIVE_ROOT = "/content/drive/MyDrive"
+                  - generic [ref=f42e691]: "WORK_DIR = DRIVE_ROOT + \"/LLM講座最終コンペ_work\" # 自分の作業フォルダ（Drive）"
+                  - generic [ref=f42e692]: "QUESTION_LIMIT = None # 例: 10 にすると先頭10問だけ実行する（動作確認用）"
+                  - generic [ref=f42e693]: "# ====================================================================="
+                  - generic [ref=f42e694]: "# ここから下は派生値。編集不要。"
+                  - generic [ref=f42e695]: "# ====================================================================="
+                  - generic [ref=f42e696]: CHUNKS_DIR = LOCAL_DATA + "/data/chunks"
+                  - generic [ref=f42e697]: QUESTIONS_PATH = WORK_DIR + "/questions.json"
+                  - generic [ref=f42e698]: "INDEX_ROOT = LOCAL_DATA + \"/index\" # 配布済みインデックスの取得先"
+                  - generic [ref=f42e699]: DENSE_NAMES = [name for name in RETRIEVERS if name != "bm25"]
+                  - generic [ref=f42e700]: RUN_DIR = WORK_DIR + "/" + RUN_ID
+                  - generic [ref=f42e701]: "if USE_RERANKER and RERANKER_NAME not in RERANKER_CONFIGS:"
+                  - generic [ref=f42e702]: raise ValueError("RERANKER_NAME の %r の設定が RERANKER_CONFIGS にない" % RERANKER_NAME)
+                  - generic [ref=f42e703]: RERANKER = RERANKER_CONFIGS[RERANKER_NAME] if USE_RERANKER else None
+                  - generic [ref=f42e704]: "# RETRIEVERS の確認: 空・重複は禁止。埋め込み検索は、同じ名前の設定が3つの辞書にそろっている必要がある"
+                  - generic [ref=f42e705]: "if not RETRIEVERS:"
+                  - generic [ref=f42e706]: raise ValueError("RETRIEVERS が空である。使う検索を1つ以上指定すること")
+                  - generic [ref=f42e707]: "_duplicates = sorted({name for name in RETRIEVERS if RETRIEVERS.count(name) > 1})"
+                  - generic [ref=f42e708]: "if _duplicates:"
+                  - generic [ref=f42e709]: "raise ValueError(\"RETRIEVERS に同じ名前が重複している: %s\" % _duplicates)"
+                  - generic [ref=f42e710]: "for name in RETRIEVERS:"
+                  - generic [ref=f42e711]: "_tables = {\"RETRIEVER_TOP_K\": RETRIEVER_TOP_K} if name == \"bm25\" else {"
+                  - generic [ref=f42e712]: "\"EMB_INDICES\": EMB_INDICES, \"EMBED_CONFIGS\": EMBED_CONFIGS, \"RETRIEVER_TOP_K\": RETRIEVER_TOP_K}"
+                  - generic [ref=f42e713]: _missing = [table for table, values in _tables.items() if name not in values]
+                  - generic [ref=f42e714]: "if _missing:"
+                  - generic [ref=f42e715]: raise ValueError("RETRIEVERS の %r の設定が %s にない。同じ名前で設定を加えること"
+                  - generic [ref=f42e716]: "% (name, \"・\".join(_missing)))"
+                  - generic [ref=f42e717]: print("RUN_ID :", RUN_ID, "->", RUN_DIR)
+                  - generic [ref=f42e718]: print("RETRIEVERS :", RETRIEVERS, "/ FUSION:", FUSION if len(RETRIEVERS) > 1 else "なし")
+                  - generic [ref=f42e719]: "print(\"TOP_K :\", {name: RETRIEVER_TOP_K[name] for name in RETRIEVERS})"
+                  - generic [ref=f42e720]: print("BM25_INDEX :", BM25_INDEX if "bm25" in RETRIEVERS else "使わない")
+                  - generic [ref=f42e721]: "print(\"EMB_INDICES:\", {name: EMB_INDICES[name] for name in DENSE_NAMES})"
+                  - generic [ref=f42e722]: print("RERANKER :", "%s（%s）" % (RERANKER_NAME, RERANKER["model"]) if USE_RERANKER else "使わない")
+              - region "セル 7 出力" [ref=f42e723]:
+                - generic [ref=f42e724]:
+                  - generic [ref=f42e726]:
+                    - button "出力を表示 / 非表示" [ref=f42e728] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e732] [cursor=pointer]
+                  - group [ref=f42e739]:
+                    - generic [ref=f42e740]: "RUN_ID : run001 -> /content/drive/MyDrive/LLM講座最終コンペ_work/run001 RETRIEVERS : ['ruri'] / FUSION: なし TOP_K : {'ruri': 100} BM25_INDEX : 使わない EMB_INDICES: {'ruri': 'ruri-v3-310m'} RERANKER : 使わない"
+          - 'region "セル 8: コードセル:" [ref=f42e743]':
+            - generic [ref=f42e746]:
+              - generic [ref=f42e747]:
+                - generic [ref=f42e751]:
+                  - button "セルを実行" [ref=f42e752] [cursor=pointer]
+                  - generic [ref=f42e756]: "[ ]"
+                - generic [ref=f42e760]:
+                  - generic [ref=f42e761]: "# [step1.2 env-check]"
+                  - generic [ref=f42e762]: "# ライブラリの版と GPU を確認する。想定と違う場合は警告を出す（結果は retrieval_config.json に記録する）"
+                  - generic [ref=f42e763]: import importlib.metadata as _md
+                  - generic [ref=f42e764]: import platform
+                  - generic [ref=f42e765]: import torch
+                  - generic [ref=f42e766]: "EXPECTED_VERSIONS = {\"torch\": \"2.11.0\", \"vllm\": \"0.26.0\"}"
+                  - generic [ref=f42e767]: "ENV = {\"python\": platform.python_version()}"
+                  - generic [ref=f42e768]: "for _pkg in (\"torch\", \"transformers\", \"vllm\", \"sudachipy\"):"
+                  - generic [ref=f42e769]: "try:"
+                  - generic [ref=f42e770]: ENV[_pkg] = _md.version(_pkg)
+                  - generic [ref=f42e771]: "except _md.PackageNotFoundError:"
+                  - generic [ref=f42e772]: ENV[_pkg] = None
+                  - generic [ref=f42e773]: ENV["gpu"] = torch.cuda.get_device_name(0) if torch.cuda.is_available() else None
+                  - generic [ref=f42e774]: "for _k, _v in ENV.items():"
+                  - generic [ref=f42e775]: print(" %-13s %s" % (_k, _v))
+                  - generic [ref=f42e776]: "for _pkg, _want in EXPECTED_VERSIONS.items():"
+                  - generic [ref=f42e777]: "if not (ENV.get(_pkg) or \"\").startswith(_want):"
+                  - generic [ref=f42e778]: "print(\"[警告] %s の版が想定（%s）と違う: %s。ランタイムのバージョン 2026.07 を選び、[step0.1 setup-install] からやり直すこと\""
+                  - generic [ref=f42e779]: "% (_pkg, _want, ENV.get(_pkg)))"
+                  - generic [ref=f42e780]: "if not ENV[\"gpu\"]:"
+                  - generic [ref=f42e781]: print("[警告] GPU が使えない。ランタイムのタイプで T4 GPU を選ぶこと")
+              - region "セル 8 出力" [ref=f42e782]:
+                - generic [ref=f42e783]:
+                  - generic [ref=f42e785]:
+                    - button "出力を表示 / 非表示" [ref=f42e787] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e791] [cursor=pointer]
+                  - group [ref=f42e798]:
+                    - generic [ref=f42e799]: python 3.12.13 torch 2.11.0+cu128 transformers 5.13.1 vllm 0.26.0+cu129 sudachipy 0.6.11 gpu Tesla T4
+          - 'region "セル 9: コードセル:" [ref=f42e802]':
+            - generic [ref=f42e805]:
+              - generic [ref=f42e806]:
+                - generic [ref=f42e810]:
+                  - button "セルを実行" [ref=f42e811] [cursor=pointer]
+                  - generic [ref=f42e815]: "[ ]"
+                - generic [ref=f42e819]:
+                  - generic [ref=f42e820]: "# [step1.3 storage]"
+                  - generic [ref=f42e821]: "# 1) 配布済みデータと選択した検索インデックスをReadトークンで取得する"
+                  - generic [ref=f42e822]: "# 2) Drive をマウントし、作業フォルダ（実行結果の保存先）を作る"
+                  - generic [ref=f42e823]: import json, os, time
+                  - generic [ref=f42e824]: from huggingface_hub import snapshot_download, hf_hub_download
+                  - generic [ref=f42e825]: "def write_json(path, value):"
+                  - generic [ref=f42e826]: "# 一時ファイルに書いてから置き換える（途中で止まっても壊れたファイルを残さない）"
+                  - generic [ref=f42e827]: tmp = path + ".tmp"
+                  - generic [ref=f42e828]: "with open(tmp, \"w\", encoding=\"utf-8\") as f:"
+                  - generic [ref=f42e829]: json.dump(value, f, ensure_ascii=False, indent=2)
+                  - generic [ref=f42e830]: os.replace(tmp, path)
+                  - generic [ref=f42e831]: "def get_secret(name):"
+                  - generic [ref=f42e832]: "try:"
+                  - generic [ref=f42e833]: from google.colab import userdata
+                  - generic [ref=f42e834]: return userdata.get(name)
+                  - generic [ref=f42e835]: "except ImportError:"
+                  - generic [ref=f42e836]: "value = os.environ.get(name) # Colab 以外の環境"
+                  - generic [ref=f42e837]: "except Exception:"
+                  - generic [ref=f42e838]: value = None
+                  - generic [ref=f42e839]: "if value is None:"
+                  - generic [ref=f42e840]: raise RuntimeError("Colab のシークレットに %s がない。左の鍵アイコンから追加し、"
+                  - generic [ref=f42e841]: "\"「ノートブックからのアクセス」を有効にすること\" % name)"
+                  - generic [ref=f42e842]: return value
+                  - generic [ref=f42e843]: HF_READ_TOKEN = get_secret("HF_READ_TOKEN")
+                  - generic [ref=f42e844]: "os.environ[\"HF_TOKEN\"] = HF_READ_TOKEN # モデルの取得にも使う（トークンなしだと遅く、警告も出る）"
+                  - generic [ref=f42e845]: "# 選択した検索のインデックスのフォルダ名"
+                  - generic [ref=f42e846]: SELECTED_INDEXES = ([BM25_INDEX] if "bm25" in RETRIEVERS else []) + [EMB_INDICES[name] for name in DENSE_NAMES]
+                  - generic [ref=f42e847]: t0 = time.time()
+                  - generic [ref=f42e848]: snapshot_download(repo_id=HF_REPO, repo_type="dataset", revision=HF_REVISION, local_dir=LOCAL_DATA,
+                  - generic [ref=f42e849]: allow_patterns=["data/chunks/chunks-*.jsonl", "data/ATTRIBUTION.jsonl", "data/LICENSE.md", "index/chunk_offsets.npy"] + ["index/%s/*" % folder for folder in SELECTED_INDEXES],
+                  - generic [ref=f42e850]: token=HF_READ_TOKEN)
+                  - generic [ref=f42e851]: print("[storage] 取得した（%.0f s）" % (time.time() - t0))
+                  - generic [ref=f42e852]: "try:"
+                  - generic [ref=f42e853]: from google.colab import drive
+                  - generic [ref=f42e854]: drive.mount("/content/drive", force_remount=False)
+                  - generic [ref=f42e855]: "except ImportError:"
+                  - generic [ref=f42e856]: print("[storage] Colab 以外の環境である。DRIVE_ROOT 以下をそのまま使う")
+                  - generic [ref=f42e857]: os.makedirs(WORK_DIR, exist_ok=True)
+                  - generic [ref=f42e858]: "# 選択したインデックスがそろっていて、作成が完了しているか確認する"
+                  - generic [ref=f42e859]: "INDEX_CONFIGS = {}"
+                  - generic [ref=f42e860]: "for folder in SELECTED_INDEXES:"
+                  - generic [ref=f42e861]: cfg_path = os.path.join(INDEX_ROOT, folder, "index_config.json")
+                  - generic [ref=f42e862]: "if not os.path.exists(cfg_path):"
+                  - generic [ref=f42e863]: raise FileNotFoundError("index/%s/index_config.json がない。BM25_INDEX・EMB_INDICES を確認すること" % folder)
+                  - generic [ref=f42e864]: "with open(cfg_path) as f:"
+                  - generic [ref=f42e865]: INDEX_CONFIGS[folder] = json.load(f)
+                  - generic [ref=f42e866]: "if INDEX_CONFIGS[folder].get(\"status\") != \"complete\":"
+                  - generic [ref=f42e867]: raise RuntimeError("index/%s は作成が完了していない（status=%s）" % (folder, INDEX_CONFIGS[folder].get("status")))
+                  - generic [ref=f42e868]: "print(\"[storage] index/%s: type=%s status=complete\" % (folder, INDEX_CONFIGS[folder].get(\"type\")))"
+              - region "セル 9 出力" [ref=f42e869]:
+                - generic [ref=f42e870]:
+                  - generic [ref=f42e872]:
+                    - button "出力を表示 / 非表示" [ref=f42e874] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e878] [cursor=pointer]
+                  - iframe [ref=f42e885]:
+                    - generic [ref=f54e3]:
+                      - generic [ref=f54e5]:
+                        - generic [ref=f54e6]: "Download complete: :"
+                        - generic [ref=f54e11]: 4.20GB, 1.15MB/s
+                      - generic [ref=f54e14]:
+                        - generic [ref=f54e15]: "Reconstruction complete: 100%"
+                        - generic [ref=f54e20]: 4.37GB / 4.37GB, 1.22MB/s
+                      - generic [ref=f54e23]:
+                        - generic [ref=f54e24]: "Fetching 740 files: 100%"
+                        - generic [ref=f54e29]: 740/740 [02:06<00:00, 4.05it/s]
+                      - generic [ref=f54e31]: "[storage] 取得した（128 s） Mounted at /content/drive [storage] index/ruri-v3-310m: type=embedding status=complete"
+          - 'region "セル 10: テキストセル: Step 2: データの読み込み" [ref=f42e887]':
+            - generic [ref=f42e893]:
+              - generic [ref=f42e894]:
+                - 'generic "Step 2: データの読み込み の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e895]':
+                  - 'button "Step 2: データの読み込み の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e896] [cursor=pointer]'
+                - 'heading "Step 2: データの読み込み" [level=2] [ref=f42e900]'
+              - paragraph [ref=f42e901]:
+                - text: 質問と、チャンクの位置の表（
+                - code [ref=f42e902]: chunk_offsets.npy
+                - text: ）を読み込む。
+                - code [ref=f42e903]: QUESTION_LIMIT
+                - text: を指定した場合は、先頭の質問だけを実行対象（
+                - code [ref=f42e904]: TARGET_QUESTIONS
+                - text: ）にする。
+                - code [ref=f42e905]: get_chunks(chunk_ids)
+                - text: で、指定した chunk_id のチャンクをローカルディスクのファイルから取り出せる。
+          - 'region "セル 11: コードセル:" [ref=f42e907]':
+            - generic [ref=f42e910]:
+              - generic [ref=f42e911]:
+                - generic [ref=f42e915]:
+                  - button "セルを実行" [ref=f42e916] [cursor=pointer]
+                  - generic [ref=f42e920]: "[ ]"
+                - generic [ref=f42e924]:
+                  - generic [ref=f42e925]: "# [step2.1 data]"
+                  - generic [ref=f42e926]: import numpy as np
+                  - generic [ref=f42e927]: _questions_missing = not os.path.isfile(QUESTIONS_PATH)
+                  - generic [ref=f42e928]: _questions_source = QUESTIONS_PATH
+                  - generic [ref=f42e929]: "if _questions_missing:"
+                  - generic [ref=f42e930]: _questions_source = hf_hub_download(
+                  - generic [ref=f42e931]: repo_id=HF_REPO, repo_type="dataset", revision=HF_REVISION,
+                  - generic [ref=f42e932]: filename="data/questions.json", token=HF_READ_TOKEN)
+                  - generic [ref=f42e933]: "with open(_questions_source, encoding=\"utf-8\") as f:"
+                  - generic [ref=f42e934]: questions = json.load(f)
+                  - generic [ref=f42e935]: "if _questions_missing:"
+                  - generic [ref=f42e936]: write_json(QUESTIONS_PATH, questions)
+                  - generic [ref=f42e937]: print("[data] Hugging Face から質問を取得して保存した:", QUESTIONS_PATH)
+                  - generic [ref=f42e938]: "else:"
+                  - generic [ref=f42e939]: print("[data] Drive の質問ファイルを使う:", QUESTIONS_PATH)
+                  - generic [ref=f42e940]: "TARGET_QUESTIONS = questions[:QUESTION_LIMIT] # 実行対象の質問（QUESTION_LIMIT で先頭だけに絞れる）"
+                  - generic [ref=f42e941]: CHUNK_FILES = sorted(f for f in os.listdir(CHUNKS_DIR) if f.startswith("chunks-") and f.endswith(".jsonl"))
+                  - generic [ref=f42e942]: OFFSETS_PATH = os.path.join(INDEX_ROOT, "chunk_offsets.npy")
+                  - generic [ref=f42e943]: CHUNK_OFFSETS = np.load(OFFSETS_PATH)
+                  - generic [ref=f42e944]: N_CHUNKS = len(CHUNK_OFFSETS)
+                  - generic [ref=f42e945]: "_handles = {}"
+                  - generic [ref=f42e946]: "def get_chunks(chunk_ids):"
+                  - generic [ref=f42e947]: out = []
+                  - generic [ref=f42e948]: "for cid in chunk_ids:"
+                  - generic [ref=f42e949]: file_no, offset, length = CHUNK_OFFSETS[int(cid)]
+                  - generic [ref=f42e950]: name = CHUNK_FILES[int(file_no)]
+                  - generic [ref=f42e951]: "if name not in _handles:"
+                  - generic [ref=f42e952]: _handles[name] = open(os.path.join(CHUNKS_DIR, name), "rb")
+                  - generic [ref=f42e953]: fh = _handles[name]
+                  - generic [ref=f42e954]: fh.seek(int(offset))
+                  - generic [ref=f42e955]: out.append(json.loads(fh.read(int(length))))
+                  - generic [ref=f42e956]: return out
+                  - generic [ref=f42e957]: print("[data] 質問 %d（実行対象 %d）/ チャンク %d（%d ファイル）"
+                  - generic [ref=f42e958]: "% (len(questions), len(TARGET_QUESTIONS), N_CHUNKS, len(CHUNK_FILES)))"
+              - region "セル 11 出力" [ref=f42e959]:
+                - generic [ref=f42e960]:
+                  - generic [ref=f42e962]:
+                    - button "出力を表示 / 非表示" [ref=f42e964] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e968] [cursor=pointer]
+                  - iframe [ref=f42e975]:
+                    - generic [ref=f55e3]:
+                      - generic [ref=f55e5]:
+                        - generic [ref=f55e6]: "questions.json: 100%"
+                        - generic [ref=f55e11]: 68.0k/68.0k [00:00<00:00, 2.53MB/s]
+                      - generic [ref=f55e13]: "[data] Hugging Face から質問を取得して保存した: /content/drive/MyDrive/LLM講座最終コンペ_work/questions.json [data] 質問 301（実行対象 301）/ チャンク 1003139（491 ファイル）"
+          - 'region "セル 12: テキストセル: Step 3: 配布済みインデックスの読み込み" [ref=f42e977]':
+            - generic [ref=f42e983]:
+              - generic [ref=f42e984]:
+                - 'generic "Step 3: 配布済みインデックスの読み込み の下の子セル 3 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e985]':
+                  - 'button "Step 3: 配布済みインデックスの読み込み の下の子セル 3 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e986] [cursor=pointer]'
+                - 'heading "Step 3: 配布済みインデックスの読み込み" [level=2] [ref=f42e990]'
+              - heading "3.1 BM25" [level=3] [ref=f42e991]
+              - paragraph [ref=f42e992]:
+                - text: 配布済みの転置インデックスを読み込む。
+                - code [ref=f42e993]: BM25_K1
+                - text: ・
+                - code [ref=f42e994]: BM25_B
+                - text: は、読み込み時に各語の重みへ反映する。
+                - code [ref=f42e995]: RETRIEVERS
+                - text: に
+                - code [ref=f42e996]: bm25
+                - text: がなければ読み込まない。
+          - 'region "セル 13: コードセル:" [ref=f42e998]':
+            - generic [ref=f42e1001]:
+              - generic [ref=f42e1002]:
+                - generic [ref=f42e1006]:
+                  - button "セルを実行" [ref=f42e1007] [cursor=pointer]
+                  - generic [ref=f42e1011]: "[ ]"
+                - generic [ref=f42e1015]:
+                  - generic [ref=f42e1016]: "# [step3.1 bm25]"
+                  - generic [ref=f42e1017]: _SUDACHI = None
+                  - generic [ref=f42e1018]: "def sudachi_tokenize(text):"
+                  - generic [ref=f42e1019]: "# SplitMode C で分割して辞書形にする。空白と補助記号（句読点など）は除く"
+                  - generic [ref=f42e1020]: global _SUDACHI
+                  - generic [ref=f42e1021]: from sudachipy import Dictionary, Tokenizer
+                  - generic [ref=f42e1022]: "if _SUDACHI is None:"
+                  - generic [ref=f42e1023]: _SUDACHI = Dictionary().create()
+                  - generic [ref=f42e1024]: return [m.dictionary_form() for m in _SUDACHI.tokenize(text, Tokenizer.SplitMode.C)
+                  - generic [ref=f42e1025]: "if m.part_of_speech()[0] not in {\"空白\", \"補助記号\"}]"
+                  - generic [ref=f42e1026]: "class BM25:"
+                  - generic [ref=f42e1027]: "def __init__(self, path, k1=BM25_K1, b=BM25_B):"
+                  - generic [ref=f42e1028]: z = np.load(os.path.join(path, "bm25_tf.npz"))
+                  - generic [ref=f42e1029]: self.indptr, self.indices = z["indptr"], z["indices"]
+                  - generic [ref=f42e1030]: tf = z["data"].astype(np.float32)
+                  - generic [ref=f42e1031]: doclen = np.load(os.path.join(path, "bm25_doclen.npy")).astype(np.float32)
+                  - generic [ref=f42e1032]: "with open(os.path.join(path, \"bm25_vocab.txt\")) as f:"
+                  - generic [ref=f42e1033]: "self.vocab = {t: i for i, t in enumerate(f.read().split(\"\\n\")[:-1])}"
+                  - generic [ref=f42e1034]: n = len(doclen)
+                  - generic [ref=f42e1035]: df = np.diff(self.indptr)
+                  - generic [ref=f42e1036]: idf = np.maximum(np.log((n - df + 0.5) / (df + 0.5)), 1e-6).astype(np.float32)
+                  - generic [ref=f42e1037]: norm = k1 * (1 - b + b * doclen / doclen.mean())
+                  - generic [ref=f42e1038]: "term = np.repeat(np.arange(len(df), dtype=np.int32), df) # 各要素がどの語か"
+                  - generic [ref=f42e1039]: self.weights = idf[term] * tf * (k1 + 1) / (tf + norm[self.indices])
+                  - generic [ref=f42e1040]: self.n = n
+                  - generic [ref=f42e1041]: "def search(self, query, k=BM25_TOP_K):"
+                  - generic [ref=f42e1042]: "# 戻り値: [(chunk_id, スコア), ...] をスコアの高い順に"
+                  - generic [ref=f42e1043]: "terms = {self.vocab[t] for t in sudachi_tokenize(query) if t in self.vocab}"
+                  - generic [ref=f42e1044]: "if not terms:"
+                  - generic [ref=f42e1045]: return []
+                  - generic [ref=f42e1046]: scores = np.zeros(self.n, dtype=np.float32)
+                  - generic [ref=f42e1047]: "for j in terms:"
+                  - generic [ref=f42e1048]: s, e = self.indptr[j], self.indptr[j + 1]
+                  - generic [ref=f42e1049]: scores[self.indices[s:e]] += self.weights[s:e]
+                  - generic [ref=f42e1050]: k = min(k, int((scores > 0).sum()))
+                  - generic [ref=f42e1051]: "if k == 0:"
+                  - generic [ref=f42e1052]: return []
+                  - generic [ref=f42e1053]: top = np.argpartition(-scores, k - 1)[:k]
+                  - generic [ref=f42e1054]: "return [(int(d), float(scores[d])) for d in sorted(top.tolist(), key=lambda d: (-scores[d], d))]"
+                  - generic [ref=f42e1055]: bm25 = None
+                  - generic [ref=f42e1056]: "if \"bm25\" in RETRIEVERS:"
+                  - generic [ref=f42e1057]: t0 = time.time()
+                  - generic [ref=f42e1058]: bm25 = BM25(os.path.join(INDEX_ROOT, BM25_INDEX))
+                  - generic [ref=f42e1059]: "print(\"[bm25] %s: %dチャンク / %d語（%.0f s）\" % (BM25_INDEX, bm25.n, len(bm25.vocab), time.time() - t0))"
+                  - generic [ref=f42e1060]: "else:"
+                  - generic [ref=f42e1061]: print("[bm25] 使わない（RETRIEVERS に bm25 がない）")
+              - region "セル 13 出力" [ref=f42e1062]:
+                - generic [ref=f42e1063]:
+                  - generic [ref=f42e1065]:
+                    - button "出力を表示 / 非表示" [ref=f42e1067] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1071] [cursor=pointer]
+                  - group [ref=f42e1078]:
+                    - generic [ref=f42e1079]: "[bm25] 使わない（RETRIEVERS に bm25 がない）"
+          - 'region "セル 14: テキストセル: 3.2 選択した埋め込みモデルの設定を照合する" [ref=f42e1082]':
+            - generic [ref=f42e1088]:
+              - generic [ref=f42e1089]:
+                - generic "3.2 選択した埋め込みモデルの設定を照合する の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1090]:
+                  - button "3.2 選択した埋め込みモデルの設定を照合する の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1091] [cursor=pointer]
+                - heading "3.2 選択した埋め込みモデルの設定を照合する" [level=3] [ref=f42e1095]
+              - paragraph [ref=f42e1096]:
+                - text: Ruri は平均、BGE-M3 は CLS、Qwen は最後の有効トークンでプーリングする。 質問の埋め込みには設定セルの
+                - code [ref=f42e1097]: EMBED_CONFIGS
+                - text: を使い、各インデックスの設定 JSON（
+                - code [ref=f42e1098]: index_config.json
+                - text: ）と項目ごとに照合する。 文書ベクトル作成時と違う項目は
+                - code [ref=f42e1099]: "[警告]"
+                - text: 、質問側だけの項目（
+                - code [ref=f42e1100]: query_prefix
+                - text: ・
+                - code [ref=f42e1101]: max_length
+                - text: ）の変更は
+                - code [ref=f42e1102]: "[変更]"
+                - text: として表示する。
+          - 'region "セル 15: コードセル:" [ref=f42e1104]':
+            - generic [ref=f42e1107]:
+              - generic [ref=f42e1108]:
+                - generic [ref=f42e1112]:
+                  - button "セルを実行" [ref=f42e1113] [cursor=pointer]
+                  - generic [ref=f42e1117]: "[ ]"
+                - generic [ref=f42e1121]:
+                  - generic [ref=f42e1122]: "# [step3.2 embedding]"
+                  - generic [ref=f42e1123]: import gc
+                  - generic [ref=f42e1124]: "def pick_device():"
+                  - generic [ref=f42e1125]: "if DEVICE != \"auto\":"
+                  - generic [ref=f42e1126]: return DEVICE
+                  - generic [ref=f42e1127]: return "cuda" if torch.cuda.is_available() else "cpu"
+                  - generic [ref=f42e1128]: "def free_gpu():"
+                  - generic [ref=f42e1129]: gc.collect()
+                  - generic [ref=f42e1130]: "if torch.cuda.is_available():"
+                  - generic [ref=f42e1131]: torch.cuda.empty_cache()
+                  - generic [ref=f42e1132]: "class Encoder:"
+                  - generic [ref=f42e1133]: "def __init__(self, spec):"
+                  - generic [ref=f42e1134]: from transformers import AutoModel, AutoTokenizer
+                  - generic [ref=f42e1135]: self.spec, self.prefix, self.device = spec, spec["query_prefix"], pick_device()
+                  - generic [ref=f42e1136]: dtype = torch.float16 if self.device == "cuda" else torch.float32
+                  - generic [ref=f42e1137]: kw = dict(revision=spec["revision"], trust_remote_code=spec["trust_remote_code"])
+                  - generic [ref=f42e1138]: self.tokenizer = AutoTokenizer.from_pretrained(spec["model"], **kw)
+                  - generic [ref=f42e1139]: "self.tokenizer.padding_side = \"right\" # CLS/mean/lastすべてで文書作成時の方式と揃える"
+                  - generic [ref=f42e1140]: "if self.tokenizer.pad_token_id is None:"
+                  - generic [ref=f42e1141]: "if self.tokenizer.eos_token_id is None:"
+                  - generic [ref=f42e1142]: raise ValueError("padding 用のトークンがない")
+                  - generic [ref=f42e1143]: self.tokenizer.pad_token = self.tokenizer.eos_token
+                  - generic [ref=f42e1144]: self.model = AutoModel.from_pretrained(spec["model"], dtype=dtype, attn_implementation="sdpa", **kw).to(self.device).eval()
+                  - generic [ref=f42e1145]: "@torch.inference_mode()"
+                  - generic [ref=f42e1146]: "def encode(self, texts, batch_size=EMBED_BATCH_SIZE):"
+                  - generic [ref=f42e1147]: out = []
+                  - generic [ref=f42e1148]: "for i in range(0, len(texts), batch_size):"
+                  - generic [ref=f42e1149]: batch = [self.prefix + t for t in texts[i:i + batch_size]]
+                  - generic [ref=f42e1150]: tok = self.tokenizer(batch, padding=True, truncation=True,
+                  - generic [ref=f42e1151]: max_length=self.spec["max_length"], return_tensors="pt").to(self.device)
+                  - generic [ref=f42e1152]: hidden = self.model(**tok).last_hidden_state
+                  - generic [ref=f42e1153]: mask = tok["attention_mask"]
+                  - generic [ref=f42e1154]: "if self.spec[\"pooling\"] == \"mean\":"
+                  - generic [ref=f42e1155]: m = mask.unsqueeze(-1).to(hidden.dtype)
+                  - generic [ref=f42e1156]: vec = (hidden * m).sum(1) / m.sum(1).clamp_min(1)
+                  - generic [ref=f42e1157]: "elif self.spec[\"pooling\"] == \"cls\":"
+                  - generic [ref=f42e1158]: vec = hidden[:, 0]
+                  - generic [ref=f42e1159]: "else: # \"last\"（Qwen）: 右詰めのpaddingなので、最後の有効トークンは有効トークン数 - 1 の位置"
+                  - generic [ref=f42e1160]: last = mask.sum(1) - 1
+                  - generic [ref=f42e1161]: "if (last < 0).any():"
+                  - generic [ref=f42e1162]: raise ValueError("有効トークンがない入力がある")
+                  - generic [ref=f42e1163]: vec = hidden[torch.arange(len(batch), device=hidden.device), last]
+                  - generic [ref=f42e1164]: vec = vec.float()
+                  - generic [ref=f42e1165]: "if self.spec[\"normalize\"]:"
+                  - generic [ref=f42e1166]: vec = torch.nn.functional.normalize(vec, p=2, dim=1)
+                  - generic [ref=f42e1167]: out.append(vec.cpu().numpy())
+                  - generic [ref=f42e1168]: return np.concatenate(out)
+                  - generic [ref=f42e1169]: "QUERY_ONLY_KEYS = {\"query_prefix\", \"max_length\"} # 文書ベクトルと揃えなくてよい項目"
+                  - generic [ref=f42e1170]: "# 選択した全モデルについて、EMBED_CONFIGS とインデックス作成時の設定を照合する。実際のモデル読み込みは次の検索セル。"
+                  - generic [ref=f42e1171]: "DENSE_INDEXES = {}"
+                  - generic [ref=f42e1172]: "for name in DENSE_NAMES:"
+                  - generic [ref=f42e1173]: folder = os.path.join(INDEX_ROOT, EMB_INDICES[name])
+                  - generic [ref=f42e1174]: "spec, built = EMBED_CONFIGS[name], INDEX_CONFIGS[EMB_INDICES[name]][\"embed\"] # [step1.3 storage] で読み込み済み"
+                  - generic [ref=f42e1175]: "if spec[\"pooling\"] not in (\"mean\", \"cls\", \"last\"):"
+                  - generic [ref=f42e1176]: "raise ValueError('EMBED_CONFIGS[\"%s\"][\"pooling\"] は \"mean\" | \"cls\" | \"last\" のいずれかにすること: %r'"
+                  - generic [ref=f42e1177]: "% (name, spec[\"pooling\"]))"
+                  - generic [ref=f42e1178]: "DENSE_INDEXES[name] = {\"folder\": folder, \"embed\": spec, \"index_embed\": built}"
+                  - generic [ref=f42e1179]: print("[embedding]", name, folder, spec["model"], spec["pooling"])
+                  - generic [ref=f42e1180]: "for key in spec:"
+                  - generic [ref=f42e1181]: "if spec[key] == built.get(key):"
+                  - generic [ref=f42e1182]: continue
+                  - generic [ref=f42e1183]: "if key in QUERY_ONLY_KEYS:"
+                  - generic [ref=f42e1184]: "print(\" [変更] %s: 質問側の %s を変えている（インデックス %r / この実行 %r）\" % (name, key, built.get(key), spec[key]))"
+                  - generic [ref=f42e1185]: "else:"
+                  - generic [ref=f42e1186]: "print(\" [警告] %s: %s が文書ベクトル作成時と違う（インデックス %r / この実行 %r）。検索精度が大きく下がる\""
+                  - generic [ref=f42e1187]: "% (name, key, built.get(key), spec[key]))"
+              - region "セル 15 出力" [ref=f42e1188]:
+                - generic [ref=f42e1189]:
+                  - generic [ref=f42e1191]:
+                    - button "出力を表示 / 非表示" [ref=f42e1193] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1197] [cursor=pointer]
+                  - group [ref=f42e1204]:
+                    - generic [ref=f42e1205]: "[embedding] ruri /content/rag_data/index/ruri-v3-310m cl-nagoya/ruri-v3-310m mean"
+          - 'region "セル 16: テキストセル: Step 4: 埋め込み検索とリランカーの準備" [ref=f42e1208]':
+            - generic [ref=f42e1214]:
+              - generic [ref=f42e1215]:
+                - 'generic "Step 4: 埋め込み検索とリランカーの準備 の下の子セル 2 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1216]':
+                  - 'button "Step 4: 埋め込み検索とリランカーの準備 の下の子セル 2 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1217] [cursor=pointer]'
+                - 'heading "Step 4: 埋め込み検索とリランカーの準備" [level=2] [ref=f42e1221]'
+              - paragraph [ref=f42e1222]:
+                - text: 実行対象の質問を各モデルで埋め込み、文書ベクトルをシャード単位で検索して上位候補を保持する。 モデル間でベクトルは混ぜず、各モデルの検索順位は Step 5 で定義する
+                - code [ref=f42e1223]: fuse
+                - text: で統合する。 リランカーを使う設定なら、続くセルでリランカーを読み込む。
+          - 'region "セル 17: コードセル:" [ref=f42e1225]':
+            - generic [ref=f42e1228]:
+              - generic [ref=f42e1229]:
+                - generic [ref=f42e1233]:
+                  - button "セルを実行" [ref=f42e1234] [cursor=pointer]
+                  - generic [ref=f42e1238]: "[ ]"
+                - generic [ref=f42e1242]:
+                  - generic [ref=f42e1243]: "# [step4.1 dense-search]"
+                  - generic [ref=f42e1244]: import re
+                  - generic [ref=f42e1245]: "def document_shards(folder):"
+                  - generic [ref=f42e1246]: "# 数字部分で並べるだけ。配列は検索時に各ファイルを1回ずつ読み込む。"
+                  - generic [ref=f42e1247]: found = []
+                  - generic [ref=f42e1248]: "for name in os.listdir(folder):"
+                  - generic [ref=f42e1249]: match = re.fullmatch(r"emb_(\d+)\.npy", name)
+                  - generic [ref=f42e1250]: "if match:"
+                  - generic [ref=f42e1251]: found.append((int(match.group(1)), name))
+                  - generic [ref=f42e1252]: return [name for _, name in sorted(found)]
+                  - generic [ref=f42e1253]: "def search_dense_index(name, queries):"
+                  - generic [ref=f42e1254]: "# 検索モデルは1つずつ、文書ベクトルは1シャードずつ読み込む。"
+                  - generic [ref=f42e1255]: "if not queries:"
+                  - generic [ref=f42e1256]: "return {}"
+                  - generic [ref=f42e1257]: entry = DENSE_INDEXES[name]
+                  - generic [ref=f42e1258]: folder, spec = entry["folder"], entry["embed"]
+                  - generic [ref=f42e1259]: files = document_shards(folder)
+                  - generic [ref=f42e1260]: device = pick_device()
+                  - generic [ref=f42e1261]: k = min(RETRIEVER_TOP_K[name], N_CHUNKS)
+                  - generic [ref=f42e1262]: encoder = q_gpu = block = sim = best_scores = best_ids = None
+                  - generic [ref=f42e1263]: "try:"
+                  - generic [ref=f42e1264]: encoder = Encoder(spec)
+                  - generic [ref=f42e1265]: q_array = encoder.encode(queries)
+                  - generic [ref=f42e1266]: "# 質問ベクトルを作った後はモデルを解放し、文書検索のメモリを空ける。"
+                  - generic [ref=f42e1267]: del encoder
+                  - generic [ref=f42e1268]: free_gpu()
+                  - generic [ref=f42e1269]: q_gpu = torch.from_numpy(q_array).to(device)
+                  - generic [ref=f42e1270]: best_scores = torch.full((len(queries), k), -torch.inf, device=device)
+                  - generic [ref=f42e1271]: best_ids = torch.full((len(queries), k), -1, device=device, dtype=torch.long)
+                  - generic [ref=f42e1272]: offset = 0
+                  - generic [ref=f42e1273]: "for file in files:"
+                  - generic [ref=f42e1274]: arr = np.load(os.path.join(folder, file), allow_pickle=False)
+                  - generic [ref=f42e1275]: block = torch.from_numpy(arr).to(device, dtype=torch.float32)
+                  - generic [ref=f42e1276]: "for start in range(0, len(queries), DENSE_QUERY_BATCH_SIZE):"
+                  - generic [ref=f42e1277]: stop = min(start + DENSE_QUERY_BATCH_SIZE, len(queries))
+                  - generic [ref=f42e1278]: sim = q_gpu[start:stop] @ block.T
+                  - generic [ref=f42e1279]: vals, ids = torch.topk(sim, min(k, len(arr)), dim=1)
+                  - generic [ref=f42e1280]: ids += offset
+                  - generic [ref=f42e1281]: candidates = torch.cat((best_scores[start:stop], vals), dim=1)
+                  - generic [ref=f42e1282]: candidate_ids = torch.cat((best_ids[start:stop], ids), dim=1)
+                  - generic [ref=f42e1283]: selected, order = torch.topk(candidates, k, dim=1)
+                  - generic [ref=f42e1284]: best_scores[start:stop] = selected
+                  - generic [ref=f42e1285]: best_ids[start:stop] = candidate_ids.gather(1, order)
+                  - generic [ref=f42e1286]: del sim, vals, ids, candidates, candidate_ids, selected, order
+                  - generic [ref=f42e1287]: offset += len(arr)
+                  - generic [ref=f42e1288]: del arr, block
+                  - generic [ref=f42e1289]: ids_list = best_ids.cpu().tolist()
+                  - generic [ref=f42e1290]: scores_list = best_scores.cpu().tolist()
+                  - generic [ref=f42e1291]: "return {query: list(zip(ids_list[i], scores_list[i])) for i, query in enumerate(queries)}"
+                  - generic [ref=f42e1292]: "finally:"
+                  - generic [ref=f42e1293]: encoder = q_gpu = block = sim = best_scores = best_ids = None
+                  - generic [ref=f42e1294]: free_gpu()
+                  - generic [ref=f42e1295]: "# 実行対象の質問だけ検索し、上位k件の結果を保持する。"
+                  - generic [ref=f42e1296]: "# 同じ質問文は一度だけ処理する。"
+                  - generic [ref=f42e1297]: _query_texts = list(dict.fromkeys(q["question"] for q in TARGET_QUESTIONS))
+                  - generic [ref=f42e1298]: "DENSE_RESULTS = {}"
+                  - generic [ref=f42e1299]: "for name in DENSE_NAMES:"
+                  - generic [ref=f42e1300]: t0 = time.time()
+                  - generic [ref=f42e1301]: DENSE_RESULTS[name] = search_dense_index(name, _query_texts)
+                  - generic [ref=f42e1302]: print("[dense]", name, len(_query_texts), "問 / top %d / %.0f s" % (RETRIEVER_TOP_K[name], time.time() - t0))
+              - region "セル 17 出力" [ref=f42e1303]:
+                - generic [ref=f42e1304]:
+                  - generic [ref=f42e1306]:
+                    - button "出力を表示 / 非表示" [ref=f42e1308] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1312] [cursor=pointer]
+                  - iframe [ref=f42e1319]:
+                    - generic [ref=f56e3]:
+                      - generic [ref=f56e5]:
+                        - generic [ref=f56e6]: "config.json: 100%"
+                        - generic [ref=f56e11]: 1.32k/1.32k [00:00<00:00, 50.5kB/s]
+                      - generic [ref=f56e14]:
+                        - generic [ref=f56e15]: "tokenizer_config.json: 100%"
+                        - generic [ref=f56e20]: 3.78k/3.78k [00:00<00:00, 315kB/s]
+                      - generic [ref=f56e23]:
+                        - generic [ref=f56e24]: "tokenizer.json: 100%"
+                        - generic [ref=f56e29]: 6.72M/6.72M [00:00<00:00, 32.9MB/s]
+                      - generic [ref=f56e32]:
+                        - generic [ref=f56e33]: "tokenizer.model: reconstructing file: 100%"
+                        - generic [ref=f56e38]: 1.83MB / 1.83MB, 178kB/s
+                      - generic [ref=f56e41]:
+                        - generic [ref=f56e42]: "tokenizer.model: downloading bytes:"
+                        - generic [ref=f56e47]: 1.34MB, 130kB/s
+                      - generic [ref=f56e50]:
+                        - generic [ref=f56e51]: "special_tokens_map.json: 100%"
+                        - generic [ref=f56e56]: 968/968 [00:00<00:00, 25.5kB/s]
+                      - generic [ref=f56e59]:
+                        - generic [ref=f56e60]: "model.safetensors: reconstructing file: 100%"
+                        - generic [ref=f56e65]: 1.26GB / 1.26GB, 93.8MB/s
+                      - generic [ref=f56e68]:
+                        - generic [ref=f56e69]: "model.safetensors: downloading bytes:"
+                        - generic [ref=f56e74]: 561MB, 45.1MB/s
+                      - generic [ref=f56e77]:
+                        - generic [ref=f56e78]: "Loading weights: 100%"
+                        - generic [ref=f56e83]: 152/152 [00:00<00:00, 240.42it/s]
+                      - generic [ref=f56e85]: "[dense] ruri 301 問 / top 100 / 70 s"
+          - 'region "セル 18: コードセル:" [ref=f42e1321]':
+            - generic [ref=f42e1324]:
+              - generic [ref=f42e1325]:
+                - generic [ref=f42e1329]:
+                  - button "セルを実行" [ref=f42e1330] [cursor=pointer]
+                  - generic [ref=f42e1334]: "[ ]"
+                - generic [ref=f42e1338]:
+                  - generic [ref=f42e1339]: "# [step4.2 reranker]"
+                  - generic [ref=f42e1340]: "class Reranker:"
+                  - generic [ref=f42e1341]: "# Qwen3-Reranker の公式の書式。質問と文書を渡し、次の語が \"yes\" になる確率をスコアにする"
+                  - generic [ref=f42e1342]: QWEN3_PREFIX = ("<|im_start|>system\nJudge whether the Document meets the requirements based on the Query and "
+                  - generic [ref=f42e1343]: "'the Instruct provided. Note that the answer can only be \"yes\" or \"no\".<|im_end|>\\n<|im_start|>user\\n')"
+                  - generic [ref=f42e1344]: QWEN3_SUFFIX = "<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+                  - generic [ref=f42e1345]: "def __init__(self, spec):"
+                  - generic [ref=f42e1346]: from transformers import AutoModelForCausalLM, AutoModelForSequenceClassification, AutoTokenizer
+                  - generic [ref=f42e1347]: self.spec, self.device = spec, pick_device()
+                  - generic [ref=f42e1348]: self.fp32 = self.device == "cpu"
+                  - generic [ref=f42e1349]: dtype = torch.float32 if self.fp32 else torch.float16
+                  - generic [ref=f42e1350]: "if spec[\"kind\"] == \"qwen3\":"
+                  - generic [ref=f42e1351]: self.tokenizer = AutoTokenizer.from_pretrained(spec["model"], revision=spec["revision"], padding_side="left")
+                  - generic [ref=f42e1352]: self.model = AutoModelForCausalLM.from_pretrained(
+                  - generic [ref=f42e1353]: spec["model"], revision=spec["revision"], dtype=dtype).to(self.device).eval()
+                  - generic [ref=f42e1354]: self.no_yes = [self.tokenizer.convert_tokens_to_ids(t) for t in ("no", "yes")]
+                  - generic [ref=f42e1355]: self.prefix = self.tokenizer.encode(self.QWEN3_PREFIX, add_special_tokens=False)
+                  - generic [ref=f42e1356]: self.suffix = self.tokenizer.encode(self.QWEN3_SUFFIX, add_special_tokens=False)
+                  - generic [ref=f42e1357]: "elif spec[\"kind\"] == \"cross_encoder\":"
+                  - generic [ref=f42e1358]: self.tokenizer = AutoTokenizer.from_pretrained(spec["model"], revision=spec["revision"])
+                  - generic [ref=f42e1359]: self.model = AutoModelForSequenceClassification.from_pretrained(
+                  - generic [ref=f42e1360]: spec["model"], revision=spec["revision"], dtype=dtype).to(self.device).eval()
+                  - generic [ref=f42e1361]: "else:"
+                  - generic [ref=f42e1362]: "raise ValueError(\"RERANKER の kind が不明である: %r\" % spec[\"kind\"])"
+                  - generic [ref=f42e1363]: "def _tokenize(self, query, batch):"
+                  - generic [ref=f42e1364]: "if self.spec[\"kind\"] == \"qwen3\":"
+                  - generic [ref=f42e1365]: "texts = [\"<Instruct>: %s\\n<Query>: %s\\n<Document>: %s\" % (self.spec[\"instruction\"], query, p) for p in batch]"
+                  - generic [ref=f42e1366]: enc = self.tokenizer(texts, padding=False, truncation="longest_first", return_attention_mask=False,
+                  - generic [ref=f42e1367]: max_length=self.spec["max_length"] - len(self.prefix) - len(self.suffix))
+                  - generic [ref=f42e1368]: enc["input_ids"] = [self.prefix + ids + self.suffix for ids in enc["input_ids"]]
+                  - generic [ref=f42e1369]: return self.tokenizer.pad(enc, padding=True, return_tensors="pt").to(self.device)
+                  - generic [ref=f42e1370]: return self.tokenizer([query] * len(batch), batch, padding=True, truncation=True,
+                  - generic [ref=f42e1371]: max_length=self.spec["max_length"], return_tensors="pt").to(self.device)
+                  - generic [ref=f42e1372]: "def _forward(self, tok):"
+                  - generic [ref=f42e1373]: "if self.spec[\"kind\"] == \"qwen3\":"
+                  - generic [ref=f42e1374]: "# 最後の位置の \"no\" と \"yes\" の logits だけを使う（全位置の語彙 logits は計算しない）"
+                  - generic [ref=f42e1375]: logits = self.model(**tok, logits_to_keep=1).logits[:, -1, self.no_yes].float()
+                  - generic [ref=f42e1376]: return logits, torch.softmax(logits, dim=1)[:, 1]
+                  - generic [ref=f42e1377]: logits = self.model(**tok).logits.float()
+                  - generic [ref=f42e1378]: return logits, logits[:, 0] if logits.shape[-1] == 1 else logits[:, -1]
+                  - generic [ref=f42e1379]: "@torch.inference_mode()"
+                  - generic [ref=f42e1380]: "def score(self, query, passages):"
+                  - generic [ref=f42e1381]: scores = []
+                  - generic [ref=f42e1382]: "for i in range(0, len(passages), self.spec[\"batch_size\"]):"
+                  - generic [ref=f42e1383]: tok = self._tokenize(query, passages[i:i + self.spec["batch_size"]])
+                  - generic [ref=f42e1384]: logits, col = self._forward(tok)
+                  - generic [ref=f42e1385]: "if not torch.isfinite(logits).all() and not self.fp32:"
+                  - generic [ref=f42e1386]: "# float16 で NaN / inf が出たときだけ float32 で計算し直す"
+                  - generic [ref=f42e1387]: self.model.float()
+                  - generic [ref=f42e1388]: self.fp32 = True
+                  - generic [ref=f42e1389]: logits, col = self._forward(tok)
+                  - generic [ref=f42e1390]: scores.extend(col.cpu().tolist())
+                  - generic [ref=f42e1391]: return scores
+                  - generic [ref=f42e1392]: reranker = Reranker(RERANKER) if USE_RERANKER else None
+                  - generic [ref=f42e1393]: print("[reranker]", "%s（%s）" % (RERANKER_NAME, RERANKER["model"]) if USE_RERANKER else "使わない")
+              - region "セル 18 出力" [ref=f42e1394]:
+                - generic [ref=f42e1395]:
+                  - generic [ref=f42e1397]:
+                    - button "出力を表示 / 非表示" [ref=f42e1399] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1403] [cursor=pointer]
+                  - group [ref=f42e1410]:
+                    - generic [ref=f42e1411]: "[reranker] 使わない"
+          - 'region "セル 19: テキストセル: Step 5: 検索・統合・リランクの定義" [ref=f42e1414]':
+            - generic [ref=f42e1420]:
+              - generic [ref=f42e1421]:
+                - 'generic "Step 5: 検索・統合・リランクの定義 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1422]':
+                  - 'button "Step 5: 検索・統合・リランクの定義 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1423] [cursor=pointer]'
+                - 'heading "Step 5: 検索・統合・リランクの定義" [level=2] [ref=f42e1427]'
+              - paragraph [ref=f42e1428]:
+                - strong [ref=f42e1429]: 検索
+                - text: （
+                - code [ref=f42e1430]: retrieve
+                - text: "）: 1問ごとに次の順で処理し、生成モデルに渡す資料の dict のリストを返す。"
+              - list [ref=f42e1431]:
+                - listitem [ref=f42e1432]:
+                  - strong [ref=f42e1433]: 各検索
+                  - text: ":"
+                  - code [ref=f42e1434]: RETRIEVERS
+                  - text: に入っている検索を実行する。どの検索も
+                  - code [ref=f42e1435]: "[(chunk_id, スコア), ...]"
+                  - text: をスコアの高い順に返す
+                  - list [ref=f42e1436]:
+                    - listitem [ref=f42e1437]:
+                      - code [ref=f42e1438]: bm25
+                      - text: （
+                      - code [ref=f42e1439]: bm25.search
+                      - text: "）: 上位"
+                      - code [ref=f42e1440]: BM25_TOP_K
+                      - text: 件
+                    - listitem [ref=f42e1441]:
+                      - code [ref=f42e1442]: ruri
+                      - text: /
+                      - code [ref=f42e1443]: bge
+                      - text: /
+                      - code [ref=f42e1444]: qwen
+                      - text: ": Step 4 で事前に検索した上位"
+                      - code [ref=f42e1445]: RURI_TOP_K
+                      - text: /
+                      - code [ref=f42e1446]: BGE_TOP_K
+                      - text: /
+                      - code [ref=f42e1447]: QWEN_TOP_K
+                      - text: 件を使う
+                - listitem [ref=f42e1448]:
+                  - strong [ref=f42e1449]: 統合
+                  - text: （
+                  - code [ref=f42e1450]: fuse
+                  - text: "）: 検索が1つだけならその結果をそのまま使う。2つ以上なら"
+                  - code [ref=f42e1451]: FUSION
+                  - text: の方法でまとめ、上位
+                  - code [ref=f42e1452]: FUSED_TOP_K
+                  - text: 件を残す。ベースラインは RRF（
+                  - code [ref=f42e1453]: score = Σ 1 / (RRF_K + 順位)
+                  - text: ）
+                - listitem [ref=f42e1454]:
+                  - strong [ref=f42e1455]: リランク
+                  - text: ": リランカーを使う場合は、統合結果の上位"
+                  - code [ref=f42e1456]: RERANK_CANDIDATES
+                  - text: 件について質問と
+                  - code [ref=f42e1457]: タイトル\n本文
+                  - text: の関連度を計算して並べ替え、上位
+                  - code [ref=f42e1458]: CONTEXT_TOP_K
+                  - text: 件を残す。使わない場合は、統合結果の上位
+                  - code [ref=f42e1459]: CONTEXT_TOP_K
+                  - text: 件をそのまま使う
+              - paragraph [ref=f42e1460]:
+                - text: 検索を足すときは、同じ形の戻り値を返す関数を書いて
+                - code [ref=f42e1461]: SEARCHERS
+                - text: に登録する。統合方法を足すときは、
+                - code [ref=f42e1462]: FUSIONS
+                - text: に関数を登録して
+                - code [ref=f42e1463]: FUSION
+                - text: で名前を指定する。各検索のスコアも渡しているので、順位ではなくスコアを使う方法も書ける。
+              - paragraph [ref=f42e1464]:
+                - code [ref=f42e1465]: retrieve()
+                - text: の戻り値は、最終順位順の
+                - code [ref=f42e1466]: "[{\"chunk_id\": ..., \"title\": ..., \"text\": ...}, ...]"
+                - text: である。リランカーの有無にかかわらず同じ形になる。
+          - 'region "セル 20: コードセル:" [ref=f42e1468]':
+            - generic [ref=f42e1471]:
+              - generic [ref=f42e1472]:
+                - generic [ref=f42e1476]:
+                  - button "セルを実行" [ref=f42e1477] [cursor=pointer]
+                  - generic [ref=f42e1481]: "[ ]"
+                - generic [ref=f42e1485]:
+                  - generic [ref=f42e1486]: "# [step5.1 pipeline]"
+                  - generic [ref=f42e1487]: "SEARCHERS = {}"
+                  - generic [ref=f42e1488]: "if \"bm25\" in RETRIEVERS:"
+                  - generic [ref=f42e1489]: "SEARCHERS[\"bm25\"] = lambda query: bm25.search(query)"
+                  - generic [ref=f42e1490]: "for name in DENSE_NAMES:"
+                  - generic [ref=f42e1491]: SEARCHERS[name] = DENSE_RESULTS[name].__getitem__
+                  - generic [ref=f42e1492]: "def rrf(results, k=RRF_K):"
+                  - generic [ref=f42e1493]: "# results: {検索名: [(chunk_id, スコア), ...]}。順位だけを使う"
+                  - generic [ref=f42e1494]: "scores = {}"
+                  - generic [ref=f42e1495]: "for ranked in results.values():"
+                  - generic [ref=f42e1496]: "for rank, (cid, _) in enumerate(ranked, 1):"
+                  - generic [ref=f42e1497]: scores[cid] = scores.get(cid, 0.0) + 1.0 / (k + rank)
+                  - generic [ref=f42e1498]: "return sorted(scores, key=lambda cid: (-scores[cid], cid))"
+                  - generic [ref=f42e1499]: "# 統合方法の一覧。FUSION で名前を指定する。戻り値は chunk_id のリスト（関連が高い順）"
+                  - generic [ref=f42e1500]: "FUSIONS = {"
+                  - generic [ref=f42e1501]: "\"rrf\": rrf,"
+                  - generic [ref=f42e1502]: "}"
+                  - generic [ref=f42e1503]: "def fuse(results):"
+                  - generic [ref=f42e1504]: "if len(results) == 1: # 検索が1つなら統合しない"
+                  - generic [ref=f42e1505]: ranked = [cid for cid, _ in next(iter(results.values()))]
+                  - generic [ref=f42e1506]: "else:"
+                  - generic [ref=f42e1507]: ranked = FUSIONS[FUSION](results)
+                  - generic [ref=f42e1508]: return ranked[:FUSED_TOP_K]
+                  - generic [ref=f42e1509]: "def retrieve(query):"
+                  - generic [ref=f42e1510]: "# 検索側の出口は、最終順位順のchunk_id・title・textを持つdictのリスト。"
+                  - generic [ref=f42e1511]: "fused = fuse({name: SEARCHERS[name](query) for name in RETRIEVERS})"
+                  - generic [ref=f42e1512]: candidate_ids = fused[:RERANK_CANDIDATES] if reranker is not None else fused[:CONTEXT_TOP_K]
+                  - generic [ref=f42e1513]: contexts = get_chunks(candidate_ids)
+                  - generic [ref=f42e1514]: "if reranker is not None and contexts:"
+                  - generic [ref=f42e1515]: scores = reranker.score(query, [c["title"] + "\n" + c["text"] for c in contexts])
+                  - generic [ref=f42e1516]: "order = sorted(range(len(contexts)), key=lambda i: (-scores[i], contexts[i][\"chunk_id\"]))"
+                  - generic [ref=f42e1517]: contexts = [contexts[i] for i in order[:CONTEXT_TOP_K]]
+                  - generic [ref=f42e1518]: "return [{\"chunk_id\": c[\"chunk_id\"], \"title\": c[\"title\"], \"text\": c[\"text\"]} for c in contexts]"
+              - region "セル 20 出力"
+          - 'region "セル 21: テキストセル: Step 6: 検索結果を共通形式にまとめる" [ref=f42e1520]':
+            - generic [ref=f42e1526]:
+              - generic [ref=f42e1527]:
+                - 'generic "Step 6: 検索結果を共通形式にまとめる の下の子セル 2 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1528]':
+                  - 'button "Step 6: 検索結果を共通形式にまとめる の下の子セル 2 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1529] [cursor=pointer]'
+                - 'heading "Step 6: 検索結果を共通形式にまとめる" [level=2] [ref=f42e1533]'
+              - paragraph [ref=f42e1534]:
+                - text: 検索設定を
+                - code [ref=f42e1535]: retrieval_config.json
+                - text: に保存してから、実行対象の質問（
+                - code [ref=f42e1536]: TARGET_QUESTIONS
+                - text: ）について
+                - code [ref=f42e1537]: retrieve()
+                - text: を実行する。
+                - code [ref=f42e1538]: retrieve()
+                - text: が検索・統合・リランク・本文取得まで行い、最終順位順の資料を返すので、ここでは質問 ID と質問文を付けて次の
+                - code [ref=f42e1539]: generation_inputs
+                - text: （dict のリスト）にまとめる。
+                - code [ref=f42e1540]: generation_inputs
+                - text: 自体はファイルに保存しない。
+              - code [ref=f42e1542]:
+                - generic [ref=f42e1543]: generation_inputs = [
+                - generic [ref=f42e1544]: "{"
+                - generic [ref=f42e1545]: "\"q_id\": \"q001\","
+                - generic [ref=f42e1546]: "\"question\": \"質問文\","
+                - generic [ref=f42e1547]: "\"contexts\": ["
+                - generic [ref=f42e1548]: "{\"chunk_id\": 456, \"title\": \"記事タイトル\", \"text\": \"本文\"}"
+                - generic [ref=f42e1549]: "],"
+                - generic [ref=f42e1550]: "}"
+                - generic [ref=f42e1551]: "]"
+              - paragraph [ref=f42e1552]:
+                - code [ref=f42e1553]: contexts
+                - text: は、回答生成モデルへ提示する順に並ぶ。リランカーの有無にかかわらず同じ形式である。 独自の検索処理を使う場合も、この形式のデータを用意すれば Step 7 以降を実行できる。形式は続くセル（
+                - code [ref=f42e1554]: "[step6.2 validate]"
+                - text: ）で検証する。 質問数・資料数はこのインターフェースでは固定しない。資料が0件の場合も扱える。
+          - 'region "セル 22: コードセル:" [ref=f42e1556]':
+            - generic [ref=f42e1559]:
+              - generic [ref=f42e1560]:
+                - generic [ref=f42e1564]:
+                  - button "セルを実行" [ref=f42e1565] [cursor=pointer]
+                  - generic [ref=f42e1569]: "[ ]"
+                - generic [ref=f42e1573]:
+                  - generic [ref=f42e1574]: "# [step6.1 retrieval]"
+                  - generic [ref=f42e1575]: "retrieval_config = {"
+                  - generic [ref=f42e1576]: "\"bm25_index\": BM25_INDEX if \"bm25\" in RETRIEVERS else None,"
+                  - generic [ref=f42e1577]: "\"dense_indexes\": {name: {\"index\": EMB_INDICES[name], \"embed\": DENSE_INDEXES[name][\"embed\"],"
+                  - generic [ref=f42e1578]: "\"index_embed\": DENSE_INDEXES[name][\"index_embed\"]} for name in DENSE_NAMES},"
+                  - generic [ref=f42e1579]: "\"reranker\": RERANKER if USE_RERANKER else None,"
+                  - generic [ref=f42e1580]: "\"params\": {\"retrievers\": RETRIEVERS, \"fusion\": FUSION if len(RETRIEVERS) > 1 else None, \"bm25_k1\": BM25_K1, \"bm25_b\": BM25_B,"
+                  - generic [ref=f42e1581]: "\"retriever_top_k\": {name: RETRIEVER_TOP_K[name] for name in RETRIEVERS}, \"rrf_k\": RRF_K, \"fused_top_k\": FUSED_TOP_K,"
+                  - generic [ref=f42e1582]: "\"rerank_candidates\": RERANK_CANDIDATES, \"context_top_k\": CONTEXT_TOP_K},"
+                  - generic [ref=f42e1583]: "}"
+                  - generic [ref=f42e1584]: os.makedirs(RUN_DIR, exist_ok=True)
+                  - generic [ref=f42e1585]: write_json(os.path.join(RUN_DIR, "retrieval_config.json"), dict(retrieval_config, env=ENV))
+                  - generic [ref=f42e1586]: "# 検索側の最終出力。このリスト以降は検索方式・リランカーの有無に依存しない。"
+                  - generic [ref=f42e1587]: generation_inputs = [
+                  - generic [ref=f42e1588]: "{\"q_id\": q[\"q_id\"], \"question\": q[\"question\"], \"contexts\": retrieve(q[\"question\"])}"
+                  - generic [ref=f42e1589]: for q in TARGET_QUESTIONS
+                  - generic [ref=f42e1590]: "]"
+                  - generic [ref=f42e1591]: print("検索完了:", len(generation_inputs))
+              - region "セル 22 出力" [ref=f42e1592]:
+                - generic [ref=f42e1593]:
+                  - generic [ref=f42e1595]:
+                    - button "出力を表示 / 非表示" [ref=f42e1597] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1601] [cursor=pointer]
+                  - group [ref=f42e1608]:
+                    - generic [ref=f42e1609]: "検索完了: 301"
+          - 'region "セル 23: コードセル:" [ref=f42e1612]':
+            - generic [ref=f42e1615]:
+              - generic [ref=f42e1616]:
+                - generic [ref=f42e1620]:
+                  - button "セルを実行" [ref=f42e1621] [cursor=pointer]
+                  - generic [ref=f42e1625]: "[ ]"
+                - generic [ref=f42e1629]:
+                  - generic [ref=f42e1630]: "# [step6.2 validate]"
+                  - generic [ref=f42e1631]: "# 検索側と回答生成側の共通インターフェース。件数や検索方法は固定しない。"
+                  - generic [ref=f42e1632]: "def validate_generation_inputs(items):"
+                  - generic [ref=f42e1633]: "if not isinstance(items, list):"
+                  - generic [ref=f42e1634]: raise ValueError("generation_inputs は dict のリストにすること")
+                  - generic [ref=f42e1635]: seen_questions = set()
+                  - generic [ref=f42e1636]: "for i, item in enumerate(items):"
+                  - generic [ref=f42e1637]: label = "generation_inputs[%d]" % i
+                  - generic [ref=f42e1638]: "if not isinstance(item, dict) or not {\"q_id\", \"question\", \"contexts\"} <= item.keys():"
+                  - generic [ref=f42e1639]: raise ValueError(label + " に q_id・question・contexts が必要である")
+                  - generic [ref=f42e1640]: qid = item["q_id"]
+                  - generic [ref=f42e1641]: "if not isinstance(qid, str) or not qid or qid in seen_questions:"
+                  - generic [ref=f42e1642]: raise ValueError(label + ".q_id は重複のない空でない文字列にすること")
+                  - generic [ref=f42e1643]: seen_questions.add(qid)
+                  - generic [ref=f42e1644]: "if not isinstance(item[\"question\"], str):"
+                  - generic [ref=f42e1645]: raise ValueError(label + ".question は文字列にすること")
+                  - generic [ref=f42e1646]: "if not isinstance(item[\"contexts\"], list):"
+                  - generic [ref=f42e1647]: raise ValueError(label + ".contexts は dict のリストにすること")
+                  - generic [ref=f42e1648]: seen_chunks = set()
+                  - generic [ref=f42e1649]: "for j, context in enumerate(item[\"contexts\"]):"
+                  - generic [ref=f42e1650]: path = label + ".contexts[%d]" % j
+                  - generic [ref=f42e1651]: "if not isinstance(context, dict) or not {\"chunk_id\", \"title\", \"text\"} <= context.keys():"
+                  - generic [ref=f42e1652]: raise ValueError(path + " に chunk_id・title・text が必要である")
+                  - generic [ref=f42e1653]: cid = context["chunk_id"]
+                  - generic [ref=f42e1654]: "if type(cid) is not int or cid < 0 or cid in seen_chunks:"
+                  - generic [ref=f42e1655]: raise ValueError(path + ".chunk_id は質問内で重複のない非負整数にすること")
+                  - generic [ref=f42e1656]: seen_chunks.add(cid)
+                  - generic [ref=f42e1657]: "if not isinstance(context[\"title\"], str) or not isinstance(context[\"text\"], str):"
+                  - generic [ref=f42e1658]: raise ValueError(path + " の title・text は文字列にすること")
+                  - generic [ref=f42e1659]: return items
+                  - generic [ref=f42e1660]: validate_generation_inputs(generation_inputs)
+              - region "セル 23 出力"
+          - 'region "セル 24: テキストセル: Step 7: 推論設定と回答生成モデルの起動" [ref=f42e1662]':
+            - generic [ref=f42e1668]:
+              - generic [ref=f42e1669]:
+                - 'generic "Step 7: 推論設定と回答生成モデルの起動 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1670]':
+                  - 'button "Step 7: 推論設定と回答生成モデルの起動 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1671] [cursor=pointer]'
+                - 'heading "Step 7: 推論設定と回答生成モデルの起動" [level=2] [ref=f42e1675]'
+              - paragraph [ref=f42e1676]:
+                - text: 次のセルで、回答生成のプロンプトとハイパーパラメータをまとめて指定する。
+                - code [ref=f42e1677]: answer_prompt()
+                - text: の文章や資料の並べ方、
+                - code [ref=f42e1678]: GENERATOR
+                - text: の生成設定、
+                - code [ref=f42e1679]: SEED
+                - text: 、
+                - code [ref=f42e1680]: GEN_BATCH_SIZE
+                - text: を変更できる。モデル ID と revision は利用ルールにより固定である。
+              - paragraph [ref=f42e1681]:
+                - text: 検索方法を変える場合は検索側を編集し、最終出力を
+                - code [ref=f42e1682]: generation_inputs
+                - text: の共通形式に合わせる。
+          - 'region "セル 25: コードセル:" [ref=f42e1684]':
+            - generic [ref=f42e1687]:
+              - generic [ref=f42e1688]:
+                - generic [ref=f42e1692]:
+                  - button "セルを実行" [ref=f42e1693] [cursor=pointer]
+                  - generic [ref=f42e1697]: "[ ]"
+                - generic [ref=f42e1701]:
+                  - generic [ref=f42e1702]: "# [step7.1 generation-config] 編集可: プロンプト・生成ハイパーパラメータ"
+                  - generic [ref=f42e1703]: "# 回答生成モデルはコンペのルールで Qwen/Qwen3.5-0.8B に固定（model と revision は変更不可）"
+                  - generic [ref=f42e1704]: "GENERATOR = {"
+                  - generic [ref=f42e1705]: "\"model\": \"Qwen/Qwen3.5-0.8B\","
+                  - generic [ref=f42e1706]: "\"revision\": \"2fc06364715b967f1860aea9cf38778875588b17\","
+                  - generic [ref=f42e1707]: "\"max_new_tokens\": 256, # 短答式のため256で十分。長文生成によるJSON切断を防ぐ"
+                  - generic [ref=f42e1708]: "# サンプリング: モデルカードの推奨値（non-thinking モード・テキスト）"
+                  - generic [ref=f42e1709]: "\"temperature\": 1.0,"
+                  - generic [ref=f42e1710]: "\"top_p\": 1.0,"
+                  - generic [ref=f42e1711]: "\"top_k\": 20,"
+                  - generic [ref=f42e1712]: "\"min_p\": 0.0,"
+                  - generic [ref=f42e1713]: "\"presence_penalty\": 2.0,"
+                  - generic [ref=f42e1714]: "\"repetition_penalty\": 1.0,"
+                  - generic [ref=f42e1715]: "\"max_model_len\": 8192, # 入力+出力の最大トークン数"
+                  - generic [ref=f42e1716]: "\"gpu_memory_utilization\": 0.5,"
+                  - generic [ref=f42e1717]: "\"dtype\": \"float16\", # T4 は bfloat16 非対応"
+                  - generic [ref=f42e1718]: "\"enforce_eager\": True, # True: CUDA グラフを使わない（Qwen3.5 は T4 で False にすると初期化に失敗する）"
+                  - generic [ref=f42e1719]: "\"enable_thinking\": False, # True: thinkingを有効にする"
+                  - generic [ref=f42e1720]: "\"use_structured_outputs\": True, # False: 出力JSONスキーマの制約を使わない"
+                  - generic [ref=f42e1721]: "\"text_only\": True, # True: 画像・動画の入力を無効にする（画像も扱えるモデルの起動が速くなる）"
+                  - generic [ref=f42e1722]: "}"
+                  - generic [ref=f42e1723]: SEED = 42
+                  - generic [ref=f42e1724]: "GEN_BATCH_SIZE = 10 # 何問ずつまとめて生成するか（1バッチごとに提出ファイルへ途中結果を保存）"
+                  - generic [ref=f42e1725]: "def answer_prompt(question, contexts):"
+                  - generic [ref=f42e1726]: context_text = "\n\n".join("[chunk_id=%d] %s\n%s" % (c["chunk_id"], c["title"], c["text"]) for c in contexts)
+                  - generic [ref=f42e1727]: return (
+                  - generic [ref=f42e1728]: "\"次の資料だけを根拠に質問に答えてください。\\n\""
+                  - generic [ref=f42e1729]: "\"ルール:\\n\""
+                  - generic [ref=f42e1730]: "\"- answer は質問への短い答えだけ。目安は30文字以内。説明文・文章・記号の装飾は一切書かない。\\n\""
+                  - generic [ref=f42e1731]: "\"- 答えが年月日なら「1951年」のように、人名・地名・数値などは資料の表記どおりに簡潔に書く。\\n\""
+                  - generic [ref=f42e1732]: "\"- 資料から答えを確定できない場合は answer を「資料からは特定できません」、chunk_id を null にする。\\n\""
+                  - generic [ref=f42e1733]: "\"- chunk_id は、答えの根拠として最も直接的な資料1つの chunk_id(整数)。資料にない番号は書かない。\\n\""
+                  - generic [ref=f42e1734]: "\"- 出力はJSONのみ。前置き・説明・コードブロックは禁止。\\n\""
+                  - generic [ref=f42e1735]: "'形式: {\"answer\":\"回答文字列\",\"chunk_id\":整数}\\n\\n'"
+                  - generic [ref=f42e1736]: "\"資料:\\n\" + context_text + \"\\n\\n質問: \" + question"
+                  - generic [ref=f42e1737]: )
+                  - generic [ref=f42e1738]: print("GENERATOR:", GENERATOR["model"], "/ batch:", GEN_BATCH_SIZE)
+              - region "セル 25 出力" [ref=f42e1739]:
+                - generic [ref=f42e1740]:
+                  - generic [ref=f42e1742]:
+                    - button "出力を表示 / 非表示" [ref=f42e1744] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1748] [cursor=pointer]
+                  - group [ref=f42e1755]:
+                    - generic [ref=f42e1756]: "GENERATOR: Qwen/Qwen3.5-0.8B / batch: 50"
+          - 'region "セル 26: テキストセル: ここから下は編集不要" [ref=f42e1759]':
+            - generic [ref=f42e1765]:
+              - generic [ref=f42e1766]:
+                - generic "ここから下は編集不要 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1767]:
+                  - button "ここから下は編集不要 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1768] [cursor=pointer]
+                - heading "ここから下は編集不要" [level=2] [ref=f42e1772]
+              - paragraph [ref=f42e1773]: ここから下のセルは、そのまま実行する。
+              - heading "モデル起動" [level=3] [ref=f42e1774]
+              - paragraph [ref=f42e1775]:
+                - text: 生成設定を
+                - code [ref=f42e1776]: generation_config.json
+                - text: に保存し、リランカーと BM25 を解放してから回答生成モデルを起動する。プロンプトとハイパーパラメータは、上の推論設定セルの値を使う。
+          - 'region "セル 27: コードセル:" [ref=f42e1778]':
+            - generic [ref=f42e1781]:
+              - generic [ref=f42e1782]:
+                - generic [ref=f42e1786]:
+                  - button "セルを実行" [ref=f42e1787] [cursor=pointer]
+                  - generic [ref=f42e1791]: "[ ]"
+                - generic [ref=f42e1795]:
+                  - generic [ref=f42e1796]: "# [step7.2 generator] 編集不要"
+                  - generic [ref=f42e1797]: "# [step7.1 generation-config] の生成設定を、検索設定とは別に保存する。"
+                  - generic [ref=f42e1798]: "write_json(os.path.join(RUN_DIR, \"generation_config.json\"), {"
+                  - generic [ref=f42e1799]: "\"generator\": GENERATOR, \"seed\": SEED, \"batch_size\": GEN_BATCH_SIZE,"
+                  - generic [ref=f42e1800]: "})"
+                  - generic [ref=f42e1801]: "def answer_schema(contexts):"
+                  - generic [ref=f42e1802]: "# 出力を {\"answer\": 文字列, \"chunk_id\": 渡した資料の chunk_id か null} の JSON に制約する"
+                  - generic [ref=f42e1803]: "return {"
+                  - generic [ref=f42e1804]: "\"type\": \"object\","
+                  - generic [ref=f42e1805]: "\"properties\": {"
+                  - generic [ref=f42e1806]: "\"answer\": {\"type\": \"string\"},"
+                  - generic [ref=f42e1807]: "\"chunk_id\": {\"enum\": [c[\"chunk_id\"] for c in contexts] + [None]},"
+                  - generic [ref=f42e1808]: "},"
+                  - generic [ref=f42e1809]: "\"required\": [\"answer\", \"chunk_id\"],"
+                  - generic [ref=f42e1810]: "\"additionalProperties\": False,"
+                  - generic [ref=f42e1811]: "}"
+                  - generic [ref=f42e1812]: "def parse_answer(raw):"
+                  - generic [ref=f42e1813]: "# 生成モデルの出力から (answer, chunk_id) を取り出す。読み取れないものは None"
+                  - generic [ref=f42e1814]: "try:"
+                  - generic [ref=f42e1815]: payload = json.loads(raw)
+                  - generic [ref=f42e1816]: "except json.JSONDecodeError:"
+                  - generic [ref=f42e1817]: payload = None
+                  - generic [ref=f42e1818]: "if isinstance(payload, dict):"
+                  - generic [ref=f42e1819]: answer, cid = payload.get("answer"), payload.get("chunk_id")
+                  - generic [ref=f42e1820]: "else:"
+                  - generic [ref=f42e1821]: "# max_new_tokens に達して JSON が途中で切れた場合: answer を書けたところまで取り出す"
+                  - generic [ref=f42e1822]: "m = re.match(r'\\s*\\{\\s*\"answer\"\\s*:\\s*\"((?:[^\"\\\\]|\\\\.)*)', raw)"
+                  - generic [ref=f42e1823]: answer, cid = None, None
+                  - generic [ref=f42e1824]: "if m:"
+                  - generic [ref=f42e1825]: "try:"
+                  - generic [ref=f42e1826]: answer = json.loads('"' + m.group(1) + '"')
+                  - generic [ref=f42e1827]: "except json.JSONDecodeError:"
+                  - generic [ref=f42e1828]: answer = m.group(1)
+                  - generic [ref=f42e1829]: "if not isinstance(answer, str):"
+                  - generic [ref=f42e1830]: answer = None
+                  - generic [ref=f42e1831]: "if isinstance(cid, str) and cid.strip().isdigit(): # \"123\" のような数字だけの文字列は整数に直す"
+                  - generic [ref=f42e1832]: cid = int(cid.strip())
+                  - generic [ref=f42e1833]: "if not isinstance(cid, int) or isinstance(cid, bool) or cid < 0:"
+                  - generic [ref=f42e1834]: cid = None
+                  - generic [ref=f42e1835]: return answer, cid
+                  - generic [ref=f42e1836]: "class VLLMGenerator:"
+                  - generic [ref=f42e1837]: "def __init__(self, spec):"
+                  - generic [ref=f42e1838]: self.spec = spec
+                  - generic [ref=f42e1839]: import contextlib, importlib
+                  - generic [ref=f42e1840]: "# Colab 向けの回避策: Colab の出力は fileno() に対応しないため、vLLM の標準出力の抑制を無効にする"
+                  - generic [ref=f42e1841]: "try:"
+                  - generic [ref=f42e1842]: m = importlib.import_module("vllm.utils.system_utils")
+                  - generic [ref=f42e1843]: "if hasattr(m, \"suppress_stdout\"):"
+                  - generic [ref=f42e1844]: m.suppress_stdout = contextlib.nullcontext
+                  - generic [ref=f42e1845]: "except ImportError:"
+                  - generic [ref=f42e1846]: pass
+                  - generic [ref=f42e1847]: from vllm import LLM, SamplingParams
+                  - generic [ref=f42e1848]: from vllm.sampling_params import StructuredOutputsParams
+                  - generic [ref=f42e1849]: "extra = {\"limit_mm_per_prompt\": {\"image\": 0, \"video\": 0}} if spec[\"text_only\"] else {}"
+                  - generic [ref=f42e1850]: self.llm = LLM(model=spec["model"], revision=spec["revision"], dtype=spec["dtype"],
+                  - generic [ref=f42e1851]: max_model_len=spec["max_model_len"], gpu_memory_utilization=spec["gpu_memory_utilization"],
+                  - generic [ref=f42e1852]: enforce_eager=spec["enforce_eager"], seed=SEED, **extra)
+                  - generic [ref=f42e1853]: "self.sampling = dict(max_tokens=spec[\"max_new_tokens\"], seed=SEED, **{k: spec[k] for k in ("
+                  - generic [ref=f42e1854]: "\"temperature\", \"top_p\", \"top_k\", \"min_p\", \"presence_penalty\", \"repetition_penalty\")})"
+                  - generic [ref=f42e1855]: self.SamplingParams, self.StructuredOutputsParams = SamplingParams, StructuredOutputsParams
+                  - generic [ref=f42e1856]: "def generate(self, prompts, schemas):"
+                  - generic [ref=f42e1857]: "# schemas: プロンプトごとの JSON スキーマ"
+                  - generic [ref=f42e1858]: params = [self.SamplingParams(
+                  - generic [ref=f42e1859]: "**self.sampling, structured_outputs=self.StructuredOutputsParams(json=s) if self.spec[\"use_structured_outputs\"] else None)"
+                  - generic [ref=f42e1860]: for s in schemas]
+                  - generic [ref=f42e1861]: "conversations = [[{\"role\": \"user\", \"content\": p}] for p in prompts]"
+                  - generic [ref=f42e1862]: outs = self.llm.chat(conversations, params, use_tqdm=True,
+                  - generic [ref=f42e1863]: "chat_template_kwargs={\"enable_thinking\": self.spec[\"enable_thinking\"]})"
+                  - generic [ref=f42e1864]: return [o.outputs[0].text for o in outs]
+                  - generic [ref=f42e1865]: "# 検索とリランクが終わったので、リランカーと BM25 を解放してから vLLM を起動する。"
+                  - generic [ref=f42e1866]: reranker = None
+                  - generic [ref=f42e1867]: bm25 = None
+                  - generic [ref=f42e1868]: free_gpu()
+                  - generic [ref=f42e1869]: t0 = time.time()
+                  - generic [ref=f42e1870]: generator = VLLMGenerator(GENERATOR)
+                  - generic [ref=f42e1871]: print("[generator] %s (%.0f s)" % (GENERATOR["model"], time.time() - t0))
+              - region "セル 27 出力" [ref=f42e1872]:
+                - generic [ref=f42e1873]:
+                  - generic [ref=f42e1875]:
+                    - button "出力を表示 / 非表示" [ref=f42e1877] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1881] [cursor=pointer]
+                  - iframe [ref=f42e1888]:
+                    - generic [ref=f57e3]:
+                      - generic [ref=f57e4]: "INFO 10-28 07:59:50 [api_utils.py:273] non-default args: {'dtype': 'float16', 'seed': 42, 'max_model_len': 8192, 'gpu_memory_utilization': 0.5, 'disable_log_stats': True, 'revision': '2fc06364715b967f1860aea9cf38778875588b17', 'enforce_eager': True, 'limit_mm_per_prompt': {'image': 0, 'video': 0}, 'model': 'Qwen/Qwen3.5-0.8B'}"
+                      - generic [ref=f57e7]:
+                        - generic [ref=f57e8]: "config.json: 100%"
+                        - generic [ref=f57e13]: 2.91k/2.91k [00:00<00:00, 326kB/s]
+                      - generic [ref=f57e16]:
+                        - generic [ref=f57e17]: "preprocessor_config.json: 100%"
+                        - generic [ref=f57e22]: 390/390 [00:00<00:00, 31.9kB/s]
+                      - generic [ref=f57e24]: "INFO 10-28 08:00:34 [model.py:623] Resolved architecture: Qwen3_5ForConditionalGeneration WARNING 10-28 08:00:34 [model.py:2123] Casting torch.bfloat16 to torch.float16. INFO 10-28 08:00:34 [model.py:1788] Using max model len 8192 INFO 10-28 08:00:34 [scheduler.py:252] Chunked prefill is enabled with max_num_batched_tokens=8192. INFO 10-28 08:00:34 [vllm.py:1109] Asynchronous scheduling is enabled. WARNING 10-28 08:00:34 [vllm.py:1163] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none WARNING 10-28 08:00:34 [vllm.py:1213] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored. INFO 10-28 08:00:34 [kernel.py:295] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']) INFO 10-28 08:00:34 [vllm.py:1392] Cudagraph is disabled under eager mode INFO 10-28 08:00:34 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant"
+                      - generic [ref=f57e27]:
+                        - generic [ref=f57e28]: "tokenizer_config.json: 100%"
+                        - generic [ref=f57e33]: 16.7k/16.7k [00:00<00:00, 461kB/s]
+                      - generic [ref=f57e36]:
+                        - generic [ref=f57e37]: "vocab.json: 100%"
+                        - generic [ref=f57e42]: 6.72M/6.72M [00:00<00:00, 23.2MB/s]
+                      - generic [ref=f57e45]:
+                        - generic [ref=f57e46]: "merges.txt: 100%"
+                        - generic [ref=f57e51]: 3.35M/3.35M [00:00<00:00, 32.3MB/s]
+                      - generic [ref=f57e54]:
+                        - generic [ref=f57e55]: "tokenizer.json: reconstructing file: 100%"
+                        - generic [ref=f57e60]: 12.8MB / 12.8MB, 1.24MB/s
+                      - generic [ref=f57e63]:
+                        - generic [ref=f57e64]: "tokenizer.json: downloading bytes:"
+                        - generic [ref=f57e69]: 5.68MB, 551kB/s
+                      - generic [ref=f57e72]:
+                        - generic [ref=f57e73]: "chat_template.jinja: 100%"
+                        - generic [ref=f57e78]: 7.75k/7.75k [00:00<00:00, 745kB/s]
+                      - generic [ref=f57e82]:
+                        - text: "INFO 10-28 08:00:43 [registry.py:134] All limits of multimodal modalities supported by the model are set to 0, running in text-only mode. WARNING 10-28 08:00:53 [system_utils.py:157] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See"
+                        - link "https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing" [ref=f57e83] [cursor=pointer]:
+                          - /url: https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing
+                        - text: "for more information. Reasons: CUDA is initialized [generator] Qwen/Qwen3.5-0.8B (632 s)"
+          - 'region "セル 28: テキストセル: Step 8: 共通入力から回答生成・提出ファイル保存" [ref=f42e1890]':
+            - generic [ref=f42e1896]:
+              - generic [ref=f42e1897]:
+                - 'generic "Step 8: 共通入力から回答生成・提出ファイル保存 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1898]':
+                  - 'button "Step 8: 共通入力から回答生成・提出ファイル保存 の下の子セル 1 個を閉じる（<Shift> キーを押すと、兄弟セクションも閉じます）" [ref=f42e1899] [cursor=pointer]'
+                - 'heading "Step 8: 共通入力から回答生成・提出ファイル保存" [level=2] [ref=f42e1903]'
+              - paragraph [ref=f42e1904]:
+                - code [ref=f42e1905]: generation_inputs
+                - text: だけからプロンプトと出力 JSON スキーマを作り、回答を生成する。資料の追加取得や検索結果の再参照は行わない。 回答は提出形式で
+                - code [ref=f42e1906]: submission.json
+                - text: に保存する。実行のたびに最初から上書きし、採点は行わない。
+                - code [ref=f42e1907]: GEN_BATCH_SIZE
+                - text: 問を生成するたびに保存するので、途中で中断しても生成済みの回答は残る。
+          - 'region "セル 29: コードセル:" [ref=f42e1909]':
+            - generic [ref=f42e1912]:
+              - generic [ref=f42e1913]:
+                - generic [ref=f42e1917]:
+                  - button "セルを実行" [ref=f42e1918] [cursor=pointer]
+                  - generic [ref=f42e1922]: "[ ]"
+                - generic [ref=f42e1926]:
+                  - generic [ref=f42e1927]: "# [step8.1 generation] 編集不要"
+                  - generic [ref=f42e1928]: SUBMISSION_PATH = os.path.join(RUN_DIR, "submission.json")
+                  - generic [ref=f42e1929]: "# 1バッチ生成するごとに、それまでの回答で提出ファイルを上書きする。中断しても完了分が残る。"
+                  - generic [ref=f42e1930]: submission = []
+                  - generic [ref=f42e1931]: "write_json(SUBMISSION_PATH, submission) # 前回の実行結果が残らないように最初に空にする"
+                  - generic [ref=f42e1932]: "for start in range(0, len(generation_inputs), GEN_BATCH_SIZE):"
+                  - generic [ref=f42e1933]: batch = generation_inputs[start:start + GEN_BATCH_SIZE]
+                  - generic [ref=f42e1934]: prompts = [answer_prompt(item["question"], item["contexts"]) for item in batch]
+                  - generic [ref=f42e1935]: outputs = generator.generate(prompts, [answer_schema(item["contexts"]) for item in batch])
+                  - generic [ref=f42e1936]: "if len(outputs) != len(batch):"
+                  - generic [ref=f42e1937]: raise ValueError("生成件数が質問数と一致しない")
+                  - generic [ref=f42e1938]: "for item, raw in zip(batch, outputs):"
+                  - generic [ref=f42e1939]: answer, cid = parse_answer(raw)
+                  - generic [ref=f42e1940]: "submission.append({\"q_id\": item[\"q_id\"], \"answer\": answer, \"chunk\": cid})"
+                  - generic [ref=f42e1941]: write_json(SUBMISSION_PATH, submission)
+                  - generic [ref=f42e1942]: print("[generation] %d / %d 問を保存した" % (len(submission), len(generation_inputs)))
+                  - generic [ref=f42e1943]: print("提出ファイル:", SUBMISSION_PATH)
+              - region "セル 29 出力" [ref=f42e1944]:
+                - generic [ref=f42e1945]:
+                  - generic [ref=f42e1947]:
+                    - button "出力を表示 / 非表示" [ref=f42e1949] [cursor=pointer]
+                    - button "コードセルの出力アクション" [ref=f42e1953] [cursor=pointer]
+                  - iframe [ref=f42e1960]:
+                    - generic [ref=f58e3]:
+                      - generic [ref=f58e5]:
+                        - generic [ref=f58e6]: "Rendering conversations: 100%"
+                        - generic [ref=f58e11]: 50/50 [00:08<00:00, 17.78it/s]
+                      - generic [ref=f58e14]:
+                        - generic [ref=f58e15]: "video_preprocessor_config.json: 100%"
+                        - generic [ref=f58e20]: 385/385 [00:00<00:00, 33.9kB/s]
+                      - generic [ref=f58e22]: "INFO 10-28 08:10:07 [hf.py:540] Detected the chat template content format to be 'openai'. You can set `--chat-template-content-format` to override this."
+                      - generic [ref=f58e24]: "Processed prompts: 100%|██████████| 50/50 [01:37<00:00, 1.96s/it, est. speed input: 1619.87 toks/s, output: 18.29 toks/s]"
+                      - generic [ref=f58e26]: "[generation] 50 / 301 問を保存した"
+                      - generic [ref=f58e29]:
+                        - generic [ref=f58e30]: "Rendering conversations: 100%"
+                        - generic [ref=f58e35]: 50/50 [00:00<00:00, 60.61it/s]
+                      - generic [ref=f58e37]: "Processed prompts: 100%|██████████| 50/50 [01:53<00:00, 2.28s/it, est. speed input: 1378.55 toks/s, output: 23.15 toks/s]"
+                      - generic [ref=f58e39]: "[generation] 100 / 301 問を保存した"
+                      - generic [ref=f58e42]:
+                        - generic [ref=f58e43]: "Rendering conversations: 100%"
+                        - generic [ref=f58e48]: 50/50 [00:01<00:00, 39.69it/s]
+                      - generic [ref=f58e50]: "Processed prompts: 100%|██████████| 50/50 [01:01<00:00, 1.22s/it, est. speed input: 2635.65 toks/s, output: 24.08 toks/s]"
+                      - generic [ref=f58e52]: "[generation] 150 / 301 問を保存した"
+                      - generic [ref=f58e55]:
+                        - generic [ref=f58e56]: "Rendering conversations: 100%"
+                        - generic [ref=f58e61]: 50/50 [00:00<00:00, 57.92it/s]
+                      - generic [ref=f58e63]: "Processed prompts: 100%|██████████| 50/50 [01:00<00:00, 1.21s/it, est. speed input: 2624.57 toks/s, output: 23.43 toks/s]"
+                      - generic [ref=f58e65]: "[generation] 200 / 301 問を保存した"
+                      - generic [ref=f58e68]:
+                        - generic [ref=f58e69]: "Rendering conversations: 100%"
+                        - generic [ref=f58e74]: 50/50 [00:00<00:00, 63.45it/s]
+                      - generic [ref=f58e76]: "Processed prompts: 100%|██████████| 50/50 [01:06<00:00, 1.34s/it, est. speed input: 2331.13 toks/s, output: 22.76 toks/s]"
+                      - generic [ref=f58e78]: "[generation] 250 / 301 問を保存した"
+                      - generic [ref=f58e81]:
+                        - generic [ref=f58e82]: "Rendering conversations: 100%"
+                        - generic [ref=f58e87]: 50/50 [00:01<00:00, 41.37it/s]
+                      - generic [ref=f58e89]: "Processed prompts: 100%|██████████| 50/50 [01:01<00:00, 1.24s/it, est. speed input: 2593.05 toks/s, output: 20.53 toks/s]"
+                      - generic [ref=f58e91]: "[generation] 300 / 301 問を保存した"
+                      - generic [ref=f58e94]:
+                        - generic [ref=f58e95]: "Rendering conversations: 100%"
+                        - generic [ref=f58e100]: 1/1 [00:00<00:00, 27.67it/s]
+                      - generic [ref=f58e102]: "Processed prompts: 100%|██████████| 1/1 [00:02<00:00, 2.26s/it, est. speed input: 1309.62 toks/s, output: 11.51 toks/s]"
+                      - generic [ref=f58e104]: "[generation] 301 / 301 問を保存した 提出ファイル: /content/drive/MyDrive/LLM講座最終コンペ_work/run001/submission.json"
+        - generic [ref=f42e1963]:
+          - link "Colab の有料サービス 新しいタブでリンクが開きます" [ref=f42e1964] [cursor=pointer]:
+            - /url: /signup?utm_source=footer&utm_medium=link&utm_campaign=footer_links
+            - text: Colab の有料サービス
+          - text: "-"
+          - link "Google AI のプラン解約はこちら 新しいタブでリンクが開きます" [ref=f42e1965] [cursor=pointer]:
+            - /url: https://support.google.com/googleone/answer/9056360?authuser=0
+            - text: Google AI のプラン解約はこちら
+  - button "Gemini を切り替える" [ref=f42e1967] [cursor=pointer]
+  - region "ランタイム ステータスバー" [ref=f42e1971]:
+    - generic [ref=f42e1972]:
+      - generic:
+        - button "変数" [ref=f42e1975] [cursor=pointer]
+        - button "ターミナル" [ref=f42e1981] [cursor=pointer]

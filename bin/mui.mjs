@@ -20,12 +20,26 @@ import { readFile, rm } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { DshClient } from '../lib/dsh-api.mjs';
+import { pickInteractive } from './mui-pick.mjs';
 
 const dir = join(import.meta.dirname, '..');
 const daemon = join(dir, 'bin', 'mui-daemon.mjs');
 const view = join(dir, 'bin', 'mui-view.mjs');
 const forward = join(dir, 'bin', 'mui-forward.mjs');
 const STATE = join(homedir(), '.dsh', 'mui-daemon.json');
+
+// フルスクリーン・セッションピッカーを起動して選択結果を返す
+// 戻り値: sessionId | 'new' | null (quit)
+async function runPicker() {
+  const state = JSON.parse(await readFile(STATE, 'utf8'));
+  let daemonCwd = state.cwd;
+  if (!daemonCwd && state.pid) {
+    const out = spawnSync('lsof', ['-a', '-p', String(state.pid), '-d', 'cwd', '-Fn'], { encoding: 'utf8' });
+    daemonCwd = (out.stdout ?? '').split('\n').find((l) => l.startsWith('n/'))?.slice(1);
+  }
+  const client = new DshClient({ origin: state.origin, token: state.token });
+  return pickInteractive({ client, daemonCwd });
+}
 
 const argv = process.argv.slice(2);
 const command = argv[0];
@@ -81,8 +95,16 @@ switch (command) {
       });
       if (r.status !== 0) process.exit(r.status ?? 1);
     }
-    const child = spawn(process.execPath, [view, ...argv.slice(1)], { stdio: 'inherit' });
-    child.on('exit', (code) => process.exit(code ?? 0));
+    if (process.stdin.isTTY) {
+      const target = await runPicker(); // フルスクリーン・セッションピッカー
+      if (target === null) process.exit(0); // quit
+      const extra = target === 'new' ? [] : [`--session=${target}`];
+      const child = spawn(process.execPath, [view, ...extra], { stdio: 'inherit' });
+      child.on('exit', (code) => process.exit(code ?? 0));
+    } else {
+      const child = spawn(process.execPath, [view, ...argv.slice(1)], { stdio: 'inherit' });
+      child.on('exit', (code) => process.exit(code ?? 0));
+    }
     break;
   }
   case 'tui': {
@@ -126,10 +148,17 @@ switch (command) {
       if (r.status !== 0) process.exit(r.status ?? 1);
     }
     let target = argv[1];
-    if (!target) {
-      // 最後に触っていたセッションへ (tmux attach 相当)。
-      // 候補は daemon と同じワークスペースのセッションに限定し、attach 試行で
-      // 他プロセスのロック衝突 (session/conflict) なら次の候補へ落ちる。
+    if (!target && process.stdin.isTTY) {
+      // フルスクリーン・セッションピッカー (↑↓ / 検索 / フィルタ / アーカイブ)
+      const picked = await runPicker();
+      if (picked === null) process.exit(0);
+      target = picked === 'new' ? undefined : picked;
+      if (!target) {
+        run(view, ['--new']);
+        break;
+      }
+    } else if (!target) {
+      // TTY無し (パイプ等): 最後に触っていたセッションへ自動resume
       const state = JSON.parse(await readFile(STATE, 'utf8'));
       let daemonCwd = state.cwd;
       if (!daemonCwd) {
@@ -138,20 +167,14 @@ switch (command) {
       }
       const client = new DshClient({ origin: state.origin, token: state.token });
       const { items } = await client.listSessions();
-      const candidates = items
-        .filter((x) => !x.blank && (!daemonCwd || x.cwd === daemonCwd))
-        .sort((a, b) => (b.updatedAt ?? 0) - (a.updatedAt ?? 0));
-      target = undefined;
-      for (const cand of candidates.slice(0, 5)) {
-        // ロックを握らない (prompt時点でhostが解決する)。参照可能かの確認のみ。
+      const candidates = items.filter((x) => !x.blank && (!daemonCwd || x.cwd === daemonCwd));
+      for (const cand of candidates) {
         try {
           await client.call('session/page', { address: { kind: 'session', sessionId: cand.sessionId }, maxMessages: 1 });
           target = cand.sessionId;
-          const when = cand.updatedAt ? new Date(cand.updatedAt).toLocaleString('ja-JP') : '';
-          console.log(`mui: resuming ${cand.sessionId} ${when}`);
           break;
         } catch (e) {
-          continue; // 読めなければ次の候補
+          continue;
         }
       }
       if (!target) {
@@ -166,13 +189,8 @@ switch (command) {
     run(view, ['list']);
     break;
   case 'url':
-  case 'start':
-  case 'status':
   case 'log':
     run(daemon, [command]);
-    break;
-  case 'stop':
-    run(daemon, ['stop']);
     break;
   case 'kill':
     await killDaemon();
@@ -202,16 +220,12 @@ switch (command) {
                             実行したディレクトリがセッションのワークスペースになる。
   mui new ["最初の指示"]     新しいセッションを作成して接続する。
                             指示を付けると初回プロンプトとして送信する。
-  mui resume [id]           最後に触っていたセッションを再開する (tmux attach相当)。
-                            自分のコアが所有するセッションだけを候補にするため、
-                            他プロセスのセッションと衝突しない。id指定で任意へ。
+  mui resume [id]           セッション一覧から選んで再開する (↑↓/検索/フィルタ、
+                            Enter resume / Esc 新規 / ^a archive)。id 指定なら直行。
   mui attach <id>           セッションをID直指定で接続する。
   mui list                  セッション一覧を表示する (●=実行中)。
   mui url                   ブラウザ用のトークン付きURLを表示する。
                             トークンはプロセス毎に変わるので、繋がらない時は再取得。
-  mui start                 コアの起動だけ行う (接続しない)。
-  mui status                コアの稼働状態 (pid / port / トークン) を表示する。
-  mui stop                  コアを正常終了する (SIGTERM)。
   mui kill                  コアを強制終了する (SIGKILL)。
                             ポートの残骸リスナーも掃除する。復帰は mui でOK。
   mui log                   コアのログ末尾を表示する (tail -f で追跡)。

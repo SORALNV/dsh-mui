@@ -1,0 +1,60 @@
+- generic [ref=f205e2]:
+  - generic [ref=f205e3]:
+    - generic [ref=f205e4]:
+      - link [ref=f205e6] [cursor=pointer]:
+        - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - img "CoursePower" [ref=f205e7]
+      - list [ref=f205e9]:
+        - listitem [ref=f205e10]:
+          - generic:
+            - link [ref=f205e11] [cursor=pointer]:
+              - /url: "#"
+              - img "プロフィール画像" [ref=f205e13]
+            - link "小寺 漱空 さん" [ref=f205e14] [cursor=pointer]:
+              - /url: "#"
+        - listitem [ref=f205e16]:
+          - generic [ref=f205e17] [cursor=pointer]: Language
+        - listitem [ref=f205e18]:
+          - img "設定" [ref=f205e20] [cursor=pointer]
+        - listitem [ref=f205e21]:
+          - link "ログアウト" [ref=f205e22] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f205e23]:
+      - list:
+        - listitem [ref=f205e24]:
+          - link "HOME" [ref=f205e25] [cursor=pointer]:
+            - /url: /lmsv2/homeRedirect/;SID=s1a1ef32f3f1137df5801cf4147
+        - listitem [ref=f205e27]:
+          - link [ref=f205e28] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f205e29]: 機械学習
+        - listitem [ref=f205e30]:
+          - link [ref=f205e31] [cursor=pointer]:
+            - /url: /lmsv2/corsColl/;SID=s1a1ef32f3f1137df5801cf4147
+            - paragraph [ref=f205e32]: ３層パーセプトロン：3層以上のニューラルネットワークを学習させる際に勾配法を使用する。この手法について解説する。
+        - listitem [ref=f205e33]:
+          - link [ref=f205e34]:
+            - /url: javascript:void(0)
+            - paragraph [ref=f205e35]: 板書
+    - generic [ref=f205e36]: 機械学習
+  - generic [ref=f205e42]:
+    - generic [ref=f205e43]:
+      - paragraph [ref=f205e45]: 資料
+      - button "教材一覧に戻る" [ref=f205e47] [cursor=pointer]
+    - generic [ref=f205e49]:
+      - paragraph [ref=f205e51]:
+        - link "参照状況を更新する" [ref=f205e52] [cursor=pointer]:
+          - /url: javascript:void(0);
+      - table [ref=f205e53]:
+        - rowgroup [ref=f205e54]:
+          - row [ref=f205e55]:
+            - rowheader "No.1" [ref=f205e56]
+            - cell [ref=f205e57]:
+              - img "ファイル資料" [ref=f205e58]
+              - link "板書.pdf" [active] [ref=f205e59] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - cell "未参照" [ref=f205e60]
+            - cell "登録日:2026/11/05" [ref=f205e61]
+            - cell "-" [ref=f205e62]
+          - row [ref=f205e63]:
+            - cell [ref=f205e64]

@@ -1,0 +1,307 @@
+- generic [ref=f288e1]:
+  - generic:
+    - link "メイン コンテンツにスキップ" [ref=f288e2] [cursor=pointer]
+    - navigation "タイトルバーのナビゲーション" [ref=f288e3]:
+      - generic [ref=f288e4]:
+        - generic [ref=f288e6]:
+          - generic [ref=f288e9]:
+            - button "メインメニュー" [expanded] [ref=f288e10] [cursor=pointer]
+            - tooltip [aria-hidden] [ref=f288e16]: メインメニュー
+          - heading [level=1] [ref=f288e17]:
+            - link "Google Classroom Classroom" [ref=f288e18] [cursor=pointer]:
+              - /url: /u/0/h?hl=ja
+              - img "Google Classroom" [ref=f288e19]
+              - generic [ref=f288e20]: Classroom
+            - link "2026 音声情報処理" [ref=f288e24] [cursor=pointer]:
+              - /url: /u/0/c/ODczNjE2MDM5Mzc1?hl=ja
+        - generic [ref=f288e32]:
+          - button "Google アプリ" [ref=f288e36] [cursor=pointer]
+          - 'button "Google アカウント: EP24052小寺 漱空 (ep24052-0864@gs4e.chubu.ac.jp)" [ref=f288e42] [cursor=pointer]'
+    - navigation "メイン ナビゲーション" [ref=f288e45]:
+      - menu [ref=f288e47]:
+        - generic [ref=f288e48]:
+          - menuitem "ホーム" [ref=f288e49] [cursor=pointer]
+          - menuitem "カレンダー" [ref=f288e57] [cursor=pointer]
+          - menuitem "Gemini" [ref=f288e65] [cursor=pointer]
+          - separator [ref=f288e73]
+          - menuitem "登録科目" [expanded] [ref=f288e74] [cursor=pointer]
+          - group "登録科目" [ref=f288e84]:
+            - menuitem "ToDo" [ref=f288e85] [cursor=pointer]
+            - menuitem "2026 PM-B 実験B 秋学期午後 B-group" [ref=f288e101] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e106]: "2"
+              - generic [ref=f288e107]:
+                - generic [ref=f288e108]: 2026 PM-B 実験B
+                - generic [ref=f288e109]: 秋学期午後 B-group
+            - menuitem "2026 コンピュータグラフィックス" [ref=f288e110] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e115]: "2"
+            - menuitem "2026 音声情報処理" [ref=f288e118] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e124]: "2"
+            - menuitem "Xu's English for Travel 1 class 3-4(Wednesday)" [ref=f288e127] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e132]: X
+              - generic [ref=f288e133]:
+                - generic [ref=f288e134]: Xu's English for Travel 1 class
+                - generic [ref=f288e135]: 3-4(Wednesday)
+            - menuitem "2026MPRG-ゼミ" [ref=f288e136] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e141]: "2"
+            - menuitem "2026 情報工学実験B 全体連絡用（午前・午後共通）" [ref=f288e144] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e149]: "2"
+              - generic [ref=f288e150]:
+                - generic [ref=f288e151]: 2026 情報工学実験B
+                - generic [ref=f288e152]: 全体連絡用（午前・午後共通）
+            - menuitem "オペレーションズリサーチ (2026) 情報工学科3年" [ref=f288e153] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e158]: オ
+              - generic [ref=f288e159]:
+                - generic [ref=f288e160]: オペレーションズリサーチ (2026)
+                - generic [ref=f288e161]: 情報工学科3年
+            - menuitem "2026画像情報処理 学科専門科目" [ref=f288e162] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e167]: "2"
+              - generic [ref=f288e168]:
+                - generic [ref=f288e169]: 2026画像情報処理
+                - generic [ref=f288e170]: 学科専門科目
+            - menuitem "2026 コンパイラ 担当：奥居" [ref=f288e171] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e176]: "2"
+              - generic [ref=f288e177]:
+                - generic [ref=f288e178]: 2026 コンパイラ
+                - generic [ref=f288e179]: 担当：奥居
+            - menuitem "2026_PCスタート講習会 連絡先：（MAIL）info-csd@fsc.chubu.ac.jp ／（TEL）0568-51-5013" [ref=f288e180] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e185]: "2"
+              - generic [ref=f288e186]:
+                - generic [ref=f288e187]: 2026_PCスタート講習会
+                - generic [ref=f288e188]: 連絡先：（MAIL）info-csd@fsc.chubu.ac.jp ／（TEL）0568-51-5013
+            - menuitem "CSDアルバイト用Class2026 連絡先：（MAIL）info-csd@fsc.chubu.ac.jp ／（TEL）0568-51-5013" [ref=f288e189] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e194]: C
+              - generic [ref=f288e195]:
+                - generic [ref=f288e196]: CSDアルバイト用Class2026
+                - generic [ref=f288e197]: 連絡先：（MAIL）info-csd@fsc.chubu.ac.jp ／（TEL）0568-51-5013
+          - separator [ref=f288e198]
+          - menuitem "アーカイブされたクラス" [ref=f288e199] [cursor=pointer]
+          - menuitem "設定" [ref=f288e207] [cursor=pointer]
+    - navigation "ページ ナビゲーション" [ref=f288e216]:
+      - generic [ref=f288e219]:
+        - list [ref=f288e221]:
+          - listitem [ref=f288e605]:
+            - link "ストリーム（選択中）" [ref=f288e606] [cursor=pointer]:
+              - /url: /u/0/c/ODczNjE2MDM5Mzc1?hl=ja
+              - text: ストリーム
+          - listitem [ref=f288e607]:
+            - link "授業" [ref=f288e608] [cursor=pointer]:
+              - /url: /u/0/w/ODczNjE2MDM5Mzc1/t/all?hl=ja
+          - listitem [ref=f288e609]:
+            - link "メンバー" [ref=f288e610] [cursor=pointer]:
+              - /url: /u/0/r/ODczNjE2MDM5Mzc1/sort-name?hl=ja
+        - generic [ref=f288e228]:
+          - generic [ref=f288e232]:
+            - link "Google カレンダー" [ref=f288e238] [cursor=pointer]:
+              - /url: https://calendar.google.com/render?cid=c_classroom4f887f3f@group.calendar.google.com&authuser=0
+            - tooltip [aria-hidden] [ref=f288e239]: Google カレンダー
+          - generic [ref=f288e243]:
+            - link "クラスのドライブ フォルダ" [ref=f288e250] [cursor=pointer]:
+              - /url: https://drive.google.com/drive/folders/1H8pcLa0VMZeNGal9VtYi8HTDd0rum4VKLEu69kmUhHE6Polw4XY7LyPLIRb8gnP_jpZAbxHR?authuser=0
+            - tooltip [aria-hidden] [ref=f288e251]: クラスのドライブ フォルダ
+  - generic [ref=f288e261]:
+    - heading [level=1] [ref=f288e266]: 2026 音声情報処理
+    - generic [ref=f288e267]:
+      - complementary [ref=f288e268]:
+        - generic [ref=f288e271]:
+          - heading [level=2] [ref=f288e272]: 期限間近
+          - generic [ref=f288e273]:
+            - heading [level=2] [ref=f288e274]: 今日まで
+            - link [ref=f288e276] [cursor=pointer]:
+              - /url: /u/0/c/ODczNjE2MDM5Mzc1/a/ODkwODIxNTY1OTM5/details?hl=ja
+              - text: 13:35 – 第7週 提出課題
+            - generic [ref=f288e279] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f288e280]: すべて表示
+              - link [ref=f288e281]:
+                - /url: /u/0/a/not-turned-in/ODczNjE2MDM5Mzc1?hl=ja
+      - main [ref=f288e282]:
+        - button [ref=f288e286] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f288e289]: edit
+          - generic [ref=f288e290]: 新しいお知らせ
+        - generic [ref=f288e292]:
+          - generic [ref=f288e295]:
+            - link [ref=f288e296]
+            - generic [aria-hidden] [ref=f288e298]: book
+            - generic [ref=f288e299]:
+              - generic [ref=f288e300]:
+                - generic [ref=f288e301]: "資料: 「第8回 講義スライド」"
+                - generic [ref=f288e302]: "山本一公 さんが新しい資料を投稿しました: 第8回 講義スライド"
+              - generic [ref=f288e304]:
+                - generic [ref=f288e305]: 作成 11月12日
+                - text: 11月12日
+            - generic [ref=f288e310]:
+              - button [ref=f288e311] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e313]: more_vert
+              - tooltip [aria-hidden] [ref=f288e315]: その他のオプション
+          - generic [ref=f288e318]:
+            - link [ref=f288e319]
+            - generic [aria-hidden] [ref=f288e321]: assignment
+            - generic [ref=f288e322]:
+              - generic [ref=f288e323]:
+                - generic [ref=f288e324]: "課題: 「第7週 提出課題」"
+                - generic [ref=f288e325]: "山本一公 さんが新しい課題を投稿しました: 第7週 提出課題"
+              - generic [ref=f288e327]:
+                - generic [ref=f288e328]: 作成 11月12日
+                - text: 11月12日
+            - generic [ref=f288e333]:
+              - button [ref=f288e334] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e336]: more_vert
+              - tooltip [aria-hidden] [ref=f288e338]: その他のオプション
+          - generic [ref=f288e341]:
+            - link [ref=f288e342]
+            - generic [aria-hidden] [ref=f288e344]: book
+            - generic [ref=f288e345]:
+              - generic [ref=f288e346]:
+                - generic [ref=f288e347]: "資料: 「第7回 講義スライド」"
+                - generic [ref=f288e348]: "山本一公 さんが新しい資料を投稿しました: 第7回 講義スライド"
+              - generic [ref=f288e350]:
+                - generic [ref=f288e351]: 作成 11月5日
+                - text: 11月5日
+            - generic [ref=f288e356]:
+              - button [ref=f288e357] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e359]: more_vert
+              - tooltip [aria-hidden] [ref=f288e361]: その他のオプション
+          - generic [ref=f288e364]:
+            - link [ref=f288e365]
+            - generic [aria-hidden] [ref=f288e367]: assignment
+            - generic [ref=f288e368]:
+              - generic [ref=f288e369]:
+                - generic [ref=f288e370]: "課題: 「第5週 提出課題」"
+                - generic [ref=f288e371]: "山本一公 さんが新しい課題を投稿しました: 第5週 提出課題"
+              - generic [ref=f288e373]:
+                - generic [ref=f288e374]: 作成 10月29日
+                - text: "10月29日 （最終編集: 11月4日）"
+            - generic [ref=f288e379]:
+              - button [ref=f288e380] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e382]: more_vert
+              - tooltip [aria-hidden] [ref=f288e384]: その他のオプション
+          - generic [ref=f288e387]:
+            - link [ref=f288e388]
+            - generic [aria-hidden] [ref=f288e390]: book
+            - generic [ref=f288e391]:
+              - generic [ref=f288e392]:
+                - generic [ref=f288e393]: "資料: 「第6回 講義スライド」"
+                - generic [ref=f288e394]: "山本一公 さんが新しい資料を投稿しました: 第6回 講義スライド"
+              - generic [ref=f288e396]:
+                - generic [ref=f288e397]: 作成 10月29日
+                - text: 10月29日
+            - generic [ref=f288e402]:
+              - button [ref=f288e403] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e405]: more_vert
+              - tooltip [aria-hidden] [ref=f288e407]: その他のオプション
+          - generic [ref=f288e410]:
+            - link [ref=f288e411]
+            - generic [aria-hidden] [ref=f288e413]: book
+            - generic [ref=f288e414]:
+              - generic [ref=f288e415]:
+                - generic [ref=f288e416]: "資料: 「第5回 講義スライド」"
+                - generic [ref=f288e417]: "山本一公 さんが新しい資料を投稿しました: 第5回 講義スライド"
+              - generic [ref=f288e419]:
+                - generic [ref=f288e420]: 作成 10月22日
+                - text: 10月22日
+            - generic [ref=f288e425]:
+              - button [ref=f288e426] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e428]: more_vert
+              - tooltip [aria-hidden] [ref=f288e430]: その他のオプション
+          - generic [ref=f288e433]:
+            - link [ref=f288e434]
+            - generic [aria-hidden] [ref=f288e436]: assignment
+            - generic [ref=f288e437]:
+              - generic [ref=f288e438]:
+                - generic [ref=f288e439]: "課題: 「第4週 提出課題」"
+                - generic [ref=f288e440]: "山本一公 さんが新しい課題を投稿しました: 第4週 提出課題"
+              - generic [ref=f288e442]:
+                - generic [ref=f288e443]: 作成 10月22日
+                - text: "10月22日 （最終編集: 10月28日）"
+            - generic [ref=f288e448]:
+              - button [ref=f288e449] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e451]: more_vert
+              - tooltip [aria-hidden] [ref=f288e453]: その他のオプション
+          - generic [ref=f288e456]:
+            - link [ref=f288e457]
+            - generic [aria-hidden] [ref=f288e459]: book
+            - generic [ref=f288e460]:
+              - generic [ref=f288e461]:
+                - generic [ref=f288e462]: "資料: 「第4回 講義スライド」"
+                - generic [ref=f288e463]: "山本一公 さんが新しい資料を投稿しました: 第4回 講義スライド"
+              - generic [ref=f288e465]:
+                - generic [ref=f288e466]: 作成 10月15日
+                - text: 10月15日
+            - generic [ref=f288e471]:
+              - button [ref=f288e472] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e474]: more_vert
+              - tooltip [aria-hidden] [ref=f288e476]: その他のオプション
+          - generic [ref=f288e479]:
+            - link [ref=f288e480]
+            - generic [aria-hidden] [ref=f288e482]: assignment
+            - generic [ref=f288e483]:
+              - generic [ref=f288e484]:
+                - generic [ref=f288e485]: "課題: 「第3週 提出課題」"
+                - generic [ref=f288e486]: "山本一公 さんが新しい課題を投稿しました: 第3週 提出課題"
+              - generic [ref=f288e488]:
+                - generic [ref=f288e489]: 作成 10月15日
+                - text: "10月15日 （最終編集: 10月28日）"
+            - generic [ref=f288e494]:
+              - button [ref=f288e495] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e497]: more_vert
+              - tooltip [aria-hidden] [ref=f288e499]: その他のオプション
+          - generic [ref=f288e502]:
+            - link [ref=f288e503]
+            - generic [aria-hidden] [ref=f288e505]: book
+            - generic [ref=f288e506]:
+              - generic [ref=f288e507]:
+                - generic [ref=f288e508]: "資料: 「第3回 講義スライド」"
+                - generic [ref=f288e509]: "山本一公 さんが新しい資料を投稿しました: 第3回 講義スライド"
+              - generic [ref=f288e511]:
+                - generic [ref=f288e512]: 作成 10月9日
+                - text: 10月9日
+            - generic [ref=f288e517]:
+              - button [ref=f288e518] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e520]: more_vert
+              - tooltip [aria-hidden] [ref=f288e522]: その他のオプション
+          - generic [ref=f288e525]:
+            - link [ref=f288e526]
+            - generic [aria-hidden] [ref=f288e528]: assignment
+            - generic [ref=f288e529]:
+              - generic [ref=f288e530]:
+                - generic [ref=f288e531]: "課題: 「第2回 提出課題」"
+                - generic [ref=f288e532]: "山本一公 さんが新しい課題を投稿しました: 第2回 提出課題"
+              - generic [ref=f288e534]:
+                - generic [ref=f288e535]: 作成 10月9日
+                - text: "10月9日 （最終編集: 10月14日）"
+            - generic [ref=f288e540]:
+              - button [ref=f288e541] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e543]: more_vert
+              - tooltip [aria-hidden] [ref=f288e545]: その他のオプション
+          - generic [ref=f288e548]:
+            - link [ref=f288e549]
+            - generic [aria-hidden] [ref=f288e551]: book
+            - generic [ref=f288e552]:
+              - generic [ref=f288e553]:
+                - generic [ref=f288e554]: "資料: 「第2回 講義スライド」"
+                - generic [ref=f288e555]: "山本一公 さんが新しい資料を投稿しました: 第2回 講義スライド"
+              - generic [ref=f288e557]:
+                - generic [ref=f288e558]: 作成 9月30日
+                - text: 9月30日
+            - generic [ref=f288e563]:
+              - button [ref=f288e564] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e566]: more_vert
+              - tooltip [aria-hidden] [ref=f288e568]: その他のオプション
+          - generic [ref=f288e571]:
+            - link [ref=f288e572]
+            - generic [aria-hidden] [ref=f288e574]: book
+            - generic [ref=f288e575]:
+              - generic [ref=f288e576]:
+                - generic [ref=f288e577]: "資料: 「第1回 講義スライド」"
+                - generic [ref=f288e578]: "山本一公 さんが新しい資料を投稿しました: 第1回 講義スライド"
+              - generic [ref=f288e580]:
+                - generic [ref=f288e581]: 作成 9月30日
+                - text: 9月30日
+            - generic [ref=f288e586]:
+              - button [ref=f288e587] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f288e589]: more_vert
+              - tooltip [aria-hidden] [ref=f288e591]: その他のオプション
+  - contentinfo [ref=f288e592]:
+    - generic [ref=f288e595]:
+      - button "ヘルプとフィードバック" [ref=f288e596] [cursor=pointer]
+      - tooltip [aria-hidden] [ref=f288e602]: ヘルプとフィードバック
+  - generic [ref=f288e603]: 2026 音声情報処理 - Classroom

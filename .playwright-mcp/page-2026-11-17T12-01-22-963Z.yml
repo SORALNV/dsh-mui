@@ -1,0 +1,223 @@
+- generic [ref=f38e2]:
+  - banner [ref=f38e3]:
+    - generic [ref=f38e5]:
+      - link "Colab Pro のホーム" [ref=f38e7] [cursor=pointer]:
+        - /url: https://colab.research.google.com/
+      - search [ref=f38e17]:
+        - combobox "ノートブックを検索" [ref=f38e19]
+      - generic [ref=f38e20]:
+        - button "設定" [ref=f38e23] [cursor=pointer]
+        - generic [ref=f38e31]:
+          - button "Google アプリ" [ref=f38e35] [cursor=pointer]
+          - 'button "Google アカウント: そら (kodera.daigaku.24052@gmail.com), Google メンバーシップ" [ref=f38e41] [cursor=pointer]'
+  - generic [ref=f38e45]:
+    - main [ref=f38e46]:
+      - generic [ref=f38e47]:
+        - link "ノートブックを新規作成" [ref=f38e50] [cursor=pointer]:
+          - /url: https://colab.research.google.com/notebook#create=true
+        - button "ノートブックをアップロード" [ref=f38e57] [cursor=pointer]
+      - region "ノートブックの例" [ref=f38e62]:
+        - generic [ref=f38e63]:
+          - heading "ノートブックの例" [level=2] [ref=f38e64]
+          - button "すべてのサンプル ノートブックを見る" [ref=f38e67] [cursor=pointer]:
+            - generic [ref=f38e69]: すべて表示
+        - list [ref=f38e70]:
+          - listitem [ref=f38e71]:
+            - generic [ref=f38e73] [cursor=pointer]:
+              - generic:
+                - link "Colab サブスクリプションを最大限に活用する" [ref=f38e75]:
+                  - /url: https://colab.research.google.com/notebooks/pro.ipynb
+                - generic [ref=f38e76]: Colab サブスクリプション限定の機能を確認します。
+          - listitem [ref=f38e77]:
+            - generic [ref=f38e79] [cursor=pointer]:
+              - generic:
+                - link "Colab での Antigravity CLI" [ref=f38e81]:
+                  - /url: https://colab.research.google.com/notebooks/antigravity_cli.ipynb
+                - generic [ref=f38e82]: ノートブックでエージェント型開発が可能になります。
+          - listitem [ref=f38e83]:
+            - generic [ref=f38e85] [cursor=pointer]:
+              - generic:
+                - link "Lyria" [ref=f38e87]:
+                  - /url: https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Get_started_Lyria.ipynb
+                - generic [ref=f38e88]: 高性能な Lyria モデルを使用して、オリジナルの音楽を生成できます。
+          - listitem [ref=f38e89]:
+            - generic [ref=f38e91] [cursor=pointer]:
+              - generic:
+                - link "ライブ翻訳" [ref=f38e93]:
+                  - /url: https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Get_started_LiveTranslate.ipynb
+                - generic [ref=f38e94]: ノートブックで直接、リアルタイムの言語翻訳ツールを構築できます。
+      - generic [ref=f38e95]:
+        - region "最近使用したノートブック" [ref=f38e97]:
+          - generic [ref=f38e98]:
+            - generic [ref=f38e99]:
+              - heading "最近使用したノートブック" [level=2] [ref=f38e100]
+              - button "ファイル選択ツールを開く" [ref=f38e103] [cursor=pointer]
+            - table "最近使用したノートブック" [ref=f38e107]:
+              - rowgroup [ref=f38e108]:
+                - row [ref=f38e109]:
+                  - columnheader "アイコン" [ref=f38e110]
+                  - columnheader "タイトル" [ref=f38e111]
+                  - columnheader "最終閲覧" [ref=f38e112]
+              - rowgroup [ref=f38e113]:
+                - row [ref=f38e114]:
+                  - cell [ref=f38e115]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e116]
+                  - cell [ref=f38e124]:
+                    - link "V01_baseline_run001.ipynb" [ref=f38e125] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1LxphmZmocMSAK045XgFb5o1CcH80a5tb
+                  - cell "19:43" [ref=f38e126]
+                - row [ref=f38e127]:
+                  - cell [ref=f38e128]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e129]
+                  - cell [ref=f38e137]:
+                    - link "kaggle-exp000.ipynb" [ref=f38e138] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1SW5hyhgXEtywzI0GpH-mgoxhCLFGXIry
+                  - cell "11月3日" [ref=f38e139]
+                - row [ref=f38e140]:
+                  - cell [ref=f38e141]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e142]
+                  - cell [ref=f38e150]:
+                    - link "exp000_colab.ipynb" [ref=f38e151] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1Nz0vQiw5cVvQ9lfdAPqaH5ZIYO_wiq6P
+                  - cell "11月2日" [ref=f38e152]
+                - row [ref=f38e153]:
+                  - cell [ref=f38e154]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e155]
+                  - cell [ref=f38e163]:
+                    - link "chap02_exercise.ipynb のコピー" [ref=f38e164] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1TN5QdXPecdGtkdH7zy8a_vZV9yhy-Dzm
+                  - cell "11月2日" [ref=f38e165]
+                - row [ref=f38e166]:
+                  - cell [ref=f38e167]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e168]
+                  - cell [ref=f38e176]:
+                    - link "torchvision_models_local.ipynb" [ref=f38e177] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1wYMjQrxnGv_2tWtUuJ4LBI9gP7APzuEb
+                  - cell "10月19日" [ref=f38e178]
+                - row [ref=f38e179]:
+                  - cell [ref=f38e180]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e181]
+                  - cell [ref=f38e189]:
+                    - link "03_preprocessing_baseline.ipynb" [ref=f38e190] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1k5W9tMmKUlkH2kLM1Jk2VsPShtpVMUck
+                  - cell "10月18日" [ref=f38e191]
+                - row [ref=f38e192]:
+                  - cell [ref=f38e193]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e194]
+                  - cell [ref=f38e202]:
+                    - link "DGM_第5回_解答確認_20260908.ipynb" [ref=f38e203] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1NL5hYQmBtseTg-grUTsp3w1YRTAacZK0
+                  - cell "9月8日" [ref=f38e204]
+                - row [ref=f38e205]:
+                  - cell [ref=f38e206]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e207]
+                  - cell [ref=f38e215]:
+                    - link "宿題第5回_エネルギーベースモデル.ipynb" [ref=f38e216] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1AXvbjrHDEtZodmu3hnvChAdHh4MOGEa2
+                  - cell "9月8日" [ref=f38e217]
+                - row [ref=f38e218]:
+                  - cell [ref=f38e219]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e220]
+                  - cell [ref=f38e228]:
+                    - link "02_validation_and_metrics.ipynb" [ref=f38e229] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1rqROO0RXRFFm2t6IycKSML7gZovn5np2
+                  - cell "9月6日" [ref=f38e230]
+                - row [ref=f38e231]:
+                  - cell [ref=f38e232]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e233]
+                  - cell [ref=f38e241]:
+                    - link "01_data_understanding.ipynb" [ref=f38e242] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1v-WdHCk--7KVXMA4TUHU-xh4xbpLPPK1
+                  - cell "9月5日" [ref=f38e243]
+                - row [ref=f38e244]:
+                  - cell [ref=f38e245]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e246]
+                  - cell [ref=f38e254]:
+                    - link "ColorJitter_brightness_contrast_hue_guide.ipynb" [ref=f38e255] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1m2e4fcVAQH4zBOMhycZX7NbROindgHTp
+                  - cell "8月9日" [ref=f38e256]
+                - row [ref=f38e257]:
+                  - cell [ref=f38e258]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e259]
+                  - cell [ref=f38e267]:
+                    - link "11 リカレントニューラルネットワーク" [ref=f38e268] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1LGhXw1j2-O4Ys3e_ocufUoYlDpKwjeOf
+                  - cell "7月24日" [ref=f38e269]
+                - row [ref=f38e270]:
+                  - cell [ref=f38e271]:
+                    - img "Google ドライブに保存されているノートブック" [ref=f38e272]
+                  - cell [ref=f38e280]:
+                    - link "大規模言語モデル1_Day2.ipynb のコピー" [ref=f38e281] [cursor=pointer]:
+                      - /url: https://colab.research.google.com/drive/1J1wTlXt0_hPHTQ3gEcMSK27TEdad3Ccy
+                  - cell "7月22日" [ref=f38e282]
+          - button "最近使用したノートブックをもっと見る" [ref=f38e285] [cursor=pointer]:
+            - generic [ref=f38e287]: もっと見る...
+        - region "最新情報" [ref=f38e289]:
+          - heading "最新情報" [level=2] [ref=f38e290]
+          - list "最新情報" [ref=f38e291]:
+            - listitem [ref=f38e292]:
+              - generic [ref=f38e294]:
+                - generic [ref=f38e295]: Colab での Antigravity CLI
+                - generic [ref=f38e296]:
+                  - text: ノートブックでエージェント型開発が可能になります。
+                  - link "サンプル ノートブックを表示 新しいタブでリンクが開きます" [ref=f38e297] [cursor=pointer]:
+                    - /url: https://colab.research.google.com/notebooks/antigravity_cli.ipynb
+                    - text: サンプル ノートブックを表示
+                  - text: 。
+            - listitem [ref=f38e298]:
+              - generic [ref=f38e300]:
+                - generic [ref=f38e301]: Colab MCP サーバー
+                - generic [ref=f38e302]:
+                  - text: ホスト型 MCP サーバーを介してエージェントとツールを Colab ランタイムに接続し、ランタイムの作成、コードの実行、セッションの管理を行うことができます。
+                  - link "MCP リファレンスを表示 新しいタブでリンクが開きます" [ref=f38e303] [cursor=pointer]:
+                    - /url: https://developers.google.com/colab/api/reference/mcp
+                    - text: MCP リファレンスを表示
+                  - text: 。
+            - listitem [ref=f38e304]:
+              - generic [ref=f38e306]:
+                - generic [ref=f38e307]: Colab API
+                - generic [ref=f38e308]:
+                  - text: ツールやエージェントから、Colab ランタイムをプログラマティックにプロビジョニングして管理できます。
+                  - link "API リファレンスを見る 新しいタブでリンクが開きます" [ref=f38e309] [cursor=pointer]:
+                    - /url: https://developers.google.com/colab/api/reference/rest
+                    - text: API リファレンスを見る
+                  - text: 。
+            - listitem [ref=f38e310]:
+              - generic [ref=f38e312]:
+                - generic [ref=f38e313]: Colab CLI
+                - generic [ref=f38e314]:
+                  - text: Colab の高性能な機能をターミナルで直接活用する方法を確認します。
+                  - link "お知らせ全文を読む 新しいタブでリンクが開きます" [ref=f38e315] [cursor=pointer]:
+                    - /url: https://developers.googleblog.com/introducing-the-google-colab-cli/
+                    - text: お知らせ全文を読む
+            - listitem [ref=f38e316]:
+              - generic [ref=f38e318]:
+                - generic [ref=f38e319]: ビジュアリゼーション モードと出力の全画面表示共有
+                - generic [ref=f38e320]:
+                  - text: 自然言語を使用してインタラクティブなダッシュボードを即座に生成し、単一のリンクでスタンドアロン ページとして共有できます。
+                  - link "実例を見る 新しいタブでリンクが開きます" [ref=f38e321] [cursor=pointer]:
+                    - /url: https://medium.com/google-colab/announcing-visualization-mode-fullscreen-output-sharing-in-google-colab-5f53ffa51494
+                    - text: 実例を見る
+          - link "Colab の新機能についてもっと見る 新しいタブでリンクが開きます" [ref=f38e324] [cursor=pointer]:
+            - /url: /notebooks/relnotes.ipynb
+            - generic [ref=f38e326]: もっと見る...
+        - region "ダウンロード" [ref=f38e328]:
+          - heading "ダウンロード" [level=2] [ref=f38e329]
+          - list [ref=f38e330]:
+            - listitem [ref=f38e331]:
+              - link "VS Code 新しいタブでリンクが開きます" [ref=f38e346] [cursor=pointer]:
+                - /url: https://marketplace.visualstudio.com/items?itemName=Google.colab
+                - text: VS Code
+            - listitem [ref=f38e347]:
+              - link "Colab CLI 新しいタブでリンクが開きます" [ref=f38e351] [cursor=pointer]:
+                - /url: https://github.com/googlecolab/google-colab-cli
+                - text: Colab CLI
+    - contentinfo [ref=f38e352]:
+      - generic [ref=f38e353]:
+        - link "Colab の有料サービス 新しいタブでリンクが開きます" [ref=f38e354] [cursor=pointer]:
+          - /url: /signup?utm_source=homepage&utm_medium=link&utm_campaign=footer_links
+          - text: Colab の有料サービス
+        - text: •
+        - link "Google AI のプラン解約はこちら 新しいタブでリンクが開きます" [ref=f38e355] [cursor=pointer]:
+          - /url: https://support.google.com/googleone/answer/9056360?authuser=0
+          - text: Google AI のプラン解約はこちら
