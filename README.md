@@ -130,6 +130,41 @@ OpenMausBotの **Plugins → MCP servers → Add server** に以下を貼り付�
 
 既定は読み取り専用（許可セッションの一覧・実行状態・キュー件数・直近の会話）。ボットに指示送信も任せる場合だけ `env` に `"MUI_MCP_WRITE": "1"` を追加すると、`mui_send_prompt` で `queue` または `steer` を選べます。**Bot access** は対象ボットだけに絞り、会話や指示送信を任せられるクライアントで利用してください。トークンを設定に貼る必要はありません。別マシンからのMCP接続、ACP、汎用RPC転送は提供しません。
 
+## Compaction Manager
+
+通常推論のモデルは変えず、DSH標準の `dsh-compaction-basic` に圧縮専用ルートを設定します。初期値は `opencode-free/deepseek-v4.1-flash-free`、機能は初期状態で無効です。
+
+```sh
+npm ci
+mui compaction status
+mui compaction doctor                           # 実稼働プロファイル、CLI・プラグイン、モデル一覧、構成を確認
+mui compaction test                             # 無料OpenCodeルートに合成テキストを送る。既存DSH会話は使わない
+mui compaction set opencode-free deepseek-v4.1-flash-free
+mui compaction enable
+mui compaction sync                             # 起動前に適用内容を検証・再生成
+mui compaction disable                          # 専用ルートだけを解除。DSH既存の圧縮は残す
+mui compaction rollback                         # 直前のManager設定を復元
+```
+
+変更は **次回のMUIコア起動時**に反映されます。このコマンド群は現在のデーモンを再起動しません。`status` の `restartRequired` で反映待ちを確認できます。`/compaction status` や `/compaction set <provider> <model>` は `mui tui` からも実行できます。Webは同梱の公式DSH設定拡張を明示的に導入すると **設定 → Compaction Manager** から操作できます。既存の認証済みオーナーのみが操作でき、設定を保存しても実行中のホストは停止しません。
+
+```sh
+# Web設定画面が必要な場合だけ、リポジトリのルートで実行
+npm pack ./plugins/compaction-manager
+dsh plugin --profile web add "$(pwd)/mui-compaction-manager-0.1.0.tgz"
+```
+
+既存の `dsh-deep-opencode` は変更しません。未導入の場合だけ、管理者が次の固定リビジョンを明示的に導入できます。自動更新・自動インストールは行いません。現在の検証対象は DSH `0.2.2-rc.1`、OpenCode `2.4.1`、`dsh-deep-opencode` `0.1.0` です。
+
+```sh
+dsh plugin --profile web add 'github:temidayoxyz/deep-opencode#ace9f75493313e8b1b80096f377f106401b4d538'
+```
+
+- Agent Preset内の有効なエンジンと既存の `modelPolicies` に専用ルートを設定します。元のプロファイル・認証・会話は編集せず、一時ディレクトリでDSHの構成を確認してから、MUI管理の `--patch` を原子的に生成します。
+- 未検証のDSHバージョンや不整合があれば、専用ルートを適用せず警告し従来設定で起動します。**従来設定の圧縮には従来のモデルが使われ得ます。** 専用ルートが適用済みのとき、無料ルートの応答エラーに対してManagerから別モデルを呼ぶことはありません。
+- カタログに載ることと推論可能であることは別です。無料枠、モデル廃止や容量超過はDSH／プロバイダーのエラーに従います。容量はカタログまたは公開メタデータの参考値で、取得不能時は不明です。`test` は通常推論のプローブであり、実会話の圧縮試験ではありません。
+- `node --test test/compaction.test.mjs`、`npm --prefix plugins/compaction-manager test`、`node test/compaction-live.mjs --fixture` で検証できます。`node test/compaction-live.mjs` は外部の無料ルートに合成データを送る任意の実測です。いずれも実稼働セッションに接続しません。
+
 ## 検証済みの動作（2026-11-16 未明）
 
 | 検証 | 結果 |

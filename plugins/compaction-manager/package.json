@@ -1,0 +1,24 @@
+{
+  "name": "@mui/compaction-manager",
+  "version": "0.1.0",
+  "description": "Inspect compaction manager status in DSH Web settings.",
+  "private": true,
+  "type": "module",
+  "engines": { "dsh": "0.2.2-rc.1" },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "scripts": { "test": "node --test test/plugin.test.js" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-settings-general"]
+    }
+  }
+}

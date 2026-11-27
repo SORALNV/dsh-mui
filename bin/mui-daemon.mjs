@@ -76,10 +76,19 @@ async function start() {
   const bin = process.env.DSH_BIN ?? 'dsh';
   // web プロファイルは `dsh web` サブコマンド形式で起動する
   // (DSH_BIN にラッパーを差し込んでも `dsh web --profile web` の二重指定にならないように)
-  const args =
-    profile === 'web'
-      ? ['web', '--no-open', '--port', String(port), ...extra]
-      : ['--profile', profile, '--no-open', '--port', String(port), ...extra];
+  let managed = {};
+  let overlays = [];
+  try {
+    const { startupCompaction } = await import('../lib/compaction.mjs');
+    managed = await startupCompaction(profile, { extra });
+    if (managed.overlay) overlays = ['--patch', managed.overlay];
+  } catch (error) {
+    console.error(`mui-daemon: 専用圧縮モデルは適用されません。DSH既存の圧縮設定で起動します (${error.message})`);
+  }
+  const args = [
+    ...(profile === 'web' ? ['web'] : ['--profile', profile]),
+    ...overlays, '--no-open', '--port', String(port), ...extra,
+  ];
 
   const logFd = await open(LOG, 'w');
   // ワークスペースは粘着的: 以前のコアと同じ場所を引き継ぐ (シェルの起動場所に左右されない)
@@ -88,7 +97,11 @@ async function start() {
     detached: true,
     stdio: ['ignore', logFd.fd, logFd.fd],
     cwd: bootCwd,
-    env: importProviderKeysFromLaunchd({ ...process.env }),
+    env: importProviderKeysFromLaunchd({
+      ...process.env,
+      MUI_COMPACTION_MANAGER_MODULE: join(import.meta.dirname, '..', 'lib', 'compaction.mjs'),
+      MUI_COMPACTION_MANAGER_PROFILE: profile,
+    }),
   });
   child.unref();
   logFd.close();
@@ -128,6 +141,7 @@ async function start() {
     startedAt: new Date().toISOString(),
     logFile: LOG,
     extraArgs: extra,
+    compactionDigest: managed.digest ?? null,
   };
   await writeState(state);
   console.log(`mui-daemon: started (pid ${child.pid}, profile ${profile}, port ${port})`);

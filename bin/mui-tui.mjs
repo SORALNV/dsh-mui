@@ -191,6 +191,17 @@ async function handleLine(raw) {
     printNote('detached', 'コアはこのまま動き続けます (Webも無傷)');
     process.exit(0);
   }
+  if (text === '/compaction' || text.startsWith('/compaction ')) {
+    try {
+      const [, action = 'status', ...args] = text.split(/\s+/);
+      const { manage } = await import('../lib/compaction.mjs');
+      const status = await manage(action, args);
+      printNote('compaction', JSON.stringify(status, (key, value) => key === 'overlay' ? undefined : value));
+    } catch (error) {
+      printErr(`compaction: ${error.message}`);
+    }
+    return;
+  }
   if (text === '/help') {
     printNote('help', '(文章)=送信/Queue · /steer (文章)=実行中への指示 · /stop=中断 · /resume=同期 · /reload=再描画 · /quit=離脱 (Ctrl+C×2でも離脱)');
     return;
