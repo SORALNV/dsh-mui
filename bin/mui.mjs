@@ -134,9 +134,17 @@ switch (command) {
     break;
   }
   case 'tui': {
-    // フルTUI (dsh-TUI + Web を1プロセスで) に席を譲る:
-    // daemon を止め → TUI をフォアグラウンドで起動 → トークンを捕捉して
-    // mui url / mui-view / 8444 経由がそのまま使えるようにする。
+    // mui tui = コアに接続する「端末フェイス」。コア(daemon)はそのまま:
+    // Web/スマホは一切影響を受けず、トークンも何も変わらない。
+    await ensureDaemon();
+    const extra = argv.slice(1).filter((a) => a && !a.startsWith('--cwd'));
+    const child = spawn(process.execPath, [join(dir, 'bin', 'mui-tui.mjs'), ...extra], { stdio: 'inherit' });
+    child.on('exit', (code) => process.exit(code ?? 0));
+    break;
+  }
+  case 'tui-host': {
+    // 旧仕様: フルdsh-TUIがコアの座に着く (Web面も同プロセスで提供)。
+    // 通常は使わない: コアが入れ替わるためブラウザは再接続が必要。
     await killDaemon();
     const port = process.env.MUI_PORT ?? '3080';
     const logFile = join(homedir(), '.dsh', 'mui-tui.log');
@@ -183,9 +191,20 @@ switch (command) {
   case 'list':
     run(view, ['list']);
     break;
-  case 'url':
+  case 'url': {
+    const s = JSON.parse(await readFile(STATE, 'utf8'));
+    const local = `${s.origin}/?token=${s.token}`;
+    console.log(`local:    ${local}`);
+    const host = s.tailscaleHost ?? 'macstudio.tailcf365a.ts.net';
+    console.log(`スマホ等:  https://${host}/?token=${s.token}`);
+    // ローカル(非SSH)なら既定ブラウザも開く
+    if (!process.env.SSH_CONNECTION && !process.env.SSH_TTY && !argv.includes('--no-open')) {
+      try { spawnSync('open', [local], { stdio: 'ignore' }); } catch { /* headless環境では無視 */ }
+    }
+    break;
+  }
   case 'log':
-    run(daemon, [command]);
+    run(daemon, ['log']);
     break;
   case 'kill':
     await killDaemon();
@@ -224,10 +243,10 @@ switch (command) {
                             ポートの残骸リスナーも掃除する。復帰は mui でOK。
   mui log                   コアのログ末尾を表示する (tail -f で追跡)。
   mui forward <kind>        コアを外部公開する: tailscale | cloudflared | off | status
-  mui tui                   フルTUI (dsh-TUI) を前面で起動する。
-                            TUI自体がコアの座に着く (Web面も同プロセスで提供)。
-                            普段のTUIと同じUI/UXで作業したい時に使う。
-                            TUIを閉じるとコアも終了する (セッションは保存済み)。
+  mui tui [id]              端末フェイスを開く (コアはそのまま)。
+                            Web/スマホは無傷・URLも不変。実行中優先で接続。
+                            実行中に入力すればQueue、/steer (文章)で割り込み指示。
+  mui url                   ローカルURLとスマホ用URLを表示 (ローカルなら開く)。
   mui takeover              単独の dsh web を廃止し、コアを3080ポートで常駐させる
                             移行コマンド (一度実行すれば以後は不要)。
   mui --profile <p>         従来型の前景モード (dsh --profile <p>)。

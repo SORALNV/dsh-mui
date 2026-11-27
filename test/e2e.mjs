@@ -84,10 +84,19 @@ log('PASS: two faces shared one live session; turns serialized; both replies vis
 
 // 5. clean up: archive the test session so the thread list stays clean
 if (!process.argv.includes('--keep')) {
-  try {
-    await A.call('workspace/archiveSession', { request: { sessionId, stopActivity: true } });
-    log('test session archived');
-  } catch (e) {
-    log('archive failed (harmless):', e.message);
+  const shapes = [
+    { request: { sessionId, stopActivity: true } },
+    { sessionId, stopActivity: true },
+    { sessionId },
+  ];
+  let done = false;
+  for (const args of shapes) {
+    try {
+      await A.call('workspace/archiveSession', args);
+      log('test session archived');
+      done = true;
+      break;
+    } catch { /* 次のshapeへ */ }
   }
+  if (!done) log('archive failed (harmless): could not archive', sessionId);
 }
