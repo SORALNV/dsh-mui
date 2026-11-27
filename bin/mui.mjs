@@ -203,6 +203,9 @@ switch (command) {
     }
     break;
   }
+  case 'mcp':
+    await import('./mui-mcp.mjs');
+    break;
   case 'log':
     run(daemon, ['log']);
     break;
@@ -242,6 +245,8 @@ switch (command) {
   mui kill                  コアを強制終了する (SIGKILL)。
                             ポートの残骸リスナーも掃除する。復帰は mui でOK。
   mui log                   コアのログ末尾を表示する (tail -f で追跡)。
+  mui mcp                   OpenMausBot等から接続するローカルstdio MCP。
+                            MUI_MCP_SESSIONS に許可するセッションIDを指定。
   mui forward <kind>        コアを外部公開する: tailscale | cloudflared | off | status
   mui tui [id]              端末フェイスを開く (コアはそのまま)。
                             Web/スマホは無傷・URLも不変。実行中優先で接続。

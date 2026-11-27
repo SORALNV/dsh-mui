@@ -110,6 +110,26 @@ mui-view --new "最初の指示"        # 新規セッション + 初回プロ�
 dsh --profile mui        # dsh-TUI と Web GUI が同一セッションに同時 attach（実測済み）
 ```
 
+### OpenMausBot・MCPクライアントから接続
+
+`mui mcp` は同じMac上のコアに接続する **stdio MCP** サーバーです。コアを起動・停止せず、WebのURLや認証を変更しません。ソースから使う場合は、リポジトリで `npm ci` を実行してください。
+
+OpenMausBotの **Plugins → MCP servers → Add server** に以下を貼り付けます。`command` とスクリプトには実際の絶対パスを、`MUI_MCP_SESSIONS` にはボットに公開してよいセッションIDを指定してください（複数はカンマ区切り）。
+
+```json
+{
+  "mcpServers": {
+    "mui": {
+      "command": "/absolute/path/to/node",
+      "args": ["/absolute/path/to/dsh-mui/bin/mui.mjs", "mcp"],
+      "env": { "MUI_MCP_SESSIONS": "session-your-id" }
+    }
+  }
+}
+```
+
+既定は読み取り専用（許可セッションの一覧・実行状態・キュー件数・直近の会話）。ボットに指示送信も任せる場合だけ `env` に `"MUI_MCP_WRITE": "1"` を追加すると、`mui_send_prompt` で `queue` または `steer` を選べます。**Bot access** は対象ボットだけに絞り、会話や指示送信を任せられるクライアントで利用してください。トークンを設定に貼る必要はありません。別マシンからのMCP接続、ACP、汎用RPC転送は提供しません。
+
 ## 検証済みの動作（2026-11-16 未明）
 
 | 検証 | 結果 |
