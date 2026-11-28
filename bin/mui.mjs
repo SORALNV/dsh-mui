@@ -203,6 +203,24 @@ switch (command) {
     }
     break;
   }
+  case 'recovery': {
+    try {
+      const { recoverInference } = await import('../lib/recovery.mjs');
+      const state = JSON.parse(await readFile(STATE, 'utf8'));
+      const origin = new URL(state.origin);
+      if (!['http:', 'https:'].includes(origin.protocol) || !['127.0.0.1', '[::1]', 'localhost'].includes(origin.hostname) || origin.origin !== state.origin) {
+        throw new Error('Recovery requires the local MUI core');
+      }
+      const client = new DshClient({ ...state, fetchImpl: (url, options) => fetch(url, {
+        ...options, redirect: 'manual', signal: AbortSignal.timeout(10_000),
+      }) });
+      console.log(JSON.stringify(await recoverInference(client, argv[1], argv.slice(2)), null, 2));
+    } catch (error) {
+      console.error(`mui recovery: ${error.message}`);
+      process.exitCode = 1;
+    }
+    break;
+  }
   case 'compaction': {
     try {
       const { manage } = await import('../lib/compaction.mjs');
@@ -258,7 +276,9 @@ switch (command) {
   mui kill                  コアを強制終了する (SIGKILL)。
                             ポートの残骸リスナーも掃除する。復帰は mui でOK。
   mui log                   コアのログ末尾を表示する (tail -f で追跡)。
-  mui compaction            圧縮専用モデルを管理（status/enable/disable/set/doctor/test/sync/rollback）。
+  mui compaction            圧縮専用モデルを管理（status/enable/disable/set/fallback/doctor/test/sync/rollback）。
+  mui recovery candidates <provider>  指定した上限到達プロバイダーを除く候補を表示。
+  mui recovery switch <id> <provider> <new-provider/model>  プロンプトは再送せずモデルを選択。
   mui mcp                   OpenMausBot等から接続するローカルstdio MCP。
                             MUI_MCP_SESSIONS に許可するセッションIDを指定。
   mui forward <kind>        コアを外部公開する: tailscale | cloudflared | off | status

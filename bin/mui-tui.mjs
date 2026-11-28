@@ -191,6 +191,14 @@ async function handleLine(raw) {
     printNote('detached', 'コアはこのまま動き続けます (Webも無傷)');
     process.exit(0);
   }
+  if (text === '/recovery' || text.startsWith('/recovery ')) {
+    try {
+      const [, action, ...args] = text.split(/\s+/);
+      const { recoverInference } = await import('../lib/recovery.mjs');
+      printNote('recovery', JSON.stringify(await recoverInference(client, action, args, sessionId)));
+    } catch (error) { printErr(`recovery: ${error.message}`); }
+    return;
+  }
   if (text === '/compaction' || text.startsWith('/compaction ')) {
     try {
       const [, action = 'status', ...args] = text.split(/\s+/);

@@ -5,7 +5,7 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
-import { cp, lstat, mkdir, mkdtemp, realpath, rm, writeFile } from 'node:fs/promises';
+import { cp, lstat, mkdir, mkdtemp, readFile, realpath, rm, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import { homedir, tmpdir } from 'node:os';
@@ -18,6 +18,9 @@ const offline = process.argv.includes('--fixture');
 const provider = offline ? 'smoke-fixture' : defaults.provider;
 const model = offline ? 'summary' : process.env.MUI_COMPACTION_TEST_MODEL ?? defaults.model;
 const conversation = offline ? 'wide' : model;
+const backupProvider = 'smoke-backup';
+const backupModel = 'summary-backup';
+const backupSummary = 'Synthetic backup checkpoint: deterministic test records and their acknowledgements.';
 const count = offline ? 2400 : 2600;
 const thresholdRatio = offline ? 0.6 : 0.009;
 const source = process.env.MUI_COMPACTION_TEST_PROVIDER ?? join(homedir(), '.dsh/profiles/web/node_modules/dsh-deep-opencode');
@@ -91,26 +94,41 @@ async function executablePath() {
   throw new Error(`Cannot resolve CLI executable ${cli}`);
 }
 
-async function installFixture(path) {
+async function installFixture(path, fixtureProvider, evidencePath, { backup = false } = {}) {
   const llmModule = createRequire(await executablePath()).resolve('@deepseek-ai/dsh-llm');
-  await writeFile(path, `import { LlmAdapter } from ${JSON.stringify(llmModule)};
-export const name = 'smoke-fixture';
+  const available = backup ? [backupModel] : [conversation, 'narrow', model];
+  await writeFile(path, `import { LlmAdapter, LlmError } from ${JSON.stringify(llmModule)};
+import { appendFile } from 'node:fs/promises';
+export const name = ${JSON.stringify(fixtureProvider)};
 export const inject = ['llm'];
-const provider = 'smoke-fixture';
+const backup = ${backup};
+const summaryModel = ${JSON.stringify(backup ? backupModel : model)};
+const evidencePath = ${JSON.stringify(evidencePath)};
 class Fixture extends LlmAdapter {
   async resolveModel(provider, model) {
     return { id: model, name: model, provider, defaultMaxTokens: 256,
       context: { contextWindow: model === 'wide' ? 32768 : 16384 } };
   }
-  async listModels(provider) { return Promise.all(['wide', 'narrow', 'summary'].map(model => this.resolveModel(provider, model))); }
+  async listModels(provider) { return Promise.all(${JSON.stringify(available)}.map(model => this.resolveModel(provider, model))); }
   async *stream(options) {
     options.signal?.throwIfAborted();
     const isSummary = options.purpose === 'compaction';
-    if (isSummary !== (options.model === 'summary')) throw new Error('Unexpected fixture route: ' + options.model);
+    if (isSummary ? options.model !== summaryModel : backup || options.model === summaryModel) {
+      throw new Error('Unexpected fixture route: ' + name + '/' + options.model);
+    }
     const replies = options.messages.filter(m => m.role === 'user').flatMap(m => m.content)
       .map(p => p.text?.match(/Reply with only (SMOKE-[A-Z0-9]+)/)?.[1]).filter(Boolean);
-    if (isSummary && replies.includes('SMOKE-OVERFLOW')) throw new Error('synthetic summary context capacity exceeded');
-    const text = isSummary ? 'Synthetic checkpoint: deterministic test records and their acknowledgements.' : replies.at(-1);
+    if (!isSummary && replies.at(-1) === 'SMOKE-SWITCH3' && options.model !== 'narrow') {
+      throw new Error('Expected narrow conversation model after switch, got ' + options.model);
+    }
+    if (isSummary) {
+      const limited = replies.some(marker => marker.startsWith('SMOKE-ALLLIMIT') || (!backup && marker.startsWith('SMOKE-SWITCH')));
+      const outcome = limited ? 'http-429' : replies.includes('SMOKE-OVERFLOW') ? 'overflow' : 'summary';
+      await appendFile(evidencePath, JSON.stringify({ route: name + '/' + options.model, outcome }) + '\\n');
+      if (limited) throw new LlmError('Synthetic summary quota exhausted', 'PROVIDER', { status: 429 });
+      if (outcome === 'overflow') throw new Error('synthetic summary context capacity exceeded');
+    }
+    const text = isSummary ? (backup ? ${JSON.stringify(backupSummary)} : 'Synthetic checkpoint: deterministic test records and their acknowledgements.') : replies.at(-1);
     if (!text) throw new Error('Missing generated marker');
     yield { type: 'block-start', index: 0, blockType: 'text' };
     yield { type: 'text-delta', index: 0, text };
@@ -118,7 +136,7 @@ class Fixture extends LlmAdapter {
     yield { type: 'finish', reason: { kind: 'stop' } };
   }
 }
-export function apply(ctx) { ctx.effect(() => ctx.llm.registerAdapter([provider], new Fixture())); }
+export function apply(ctx) { ctx.effect(() => ctx.llm.registerAdapter([name], new Fixture())); }
 `);
 }
 
@@ -128,11 +146,20 @@ async function test() {
   await Promise.all([mkdir(modules, { recursive: true }), mkdir(work), mkdir(userHome)]);
   // Copy only the provider package, not the production profile, patch, credentials, or sessions.
   const fixturePath = join(root, 'smoke-fixture.mjs');
+  const backupPath = join(root, 'smoke-backup.mjs');
+  const evidencePath = join(root, 'summary-attempts.jsonl');
+  const summaryAttempts = async () => (await readFile(evidencePath, 'utf8')).trim().split('\n').filter(Boolean).map(line => JSON.parse(line));
+  const primaryRoute = `${provider}/${model}`;
+  const backupRoute = `${backupProvider}/${backupModel}`;
   const webBundle = '@mui/compaction-manager';
   const webSource = fileURLToPath(new URL('../plugins/compaction-manager/', import.meta.url));
   if (offline) {
-    await installFixture(fixturePath);
-    await cp(webSource, join(modules, webBundle), { recursive: true });
+    await Promise.all([
+      installFixture(fixturePath, provider, evidencePath),
+      installFixture(backupPath, backupProvider, evidencePath, { backup: true }),
+      writeFile(evidencePath, ''),
+      cp(webSource, join(modules, webBundle), { recursive: true }),
+    ]);
   } else {
     const installed = await realpath(source);
     await cp(installed, join(modules, 'dsh-deep-opencode'), {
@@ -161,12 +188,13 @@ async function test() {
     const patches = [
       { id: 'session-title-llm', disabled: true }, { id: 'llm-retry', disabled: true },
       ...(offline ? [] : [{ id: 'deep-opencode', config: { bridgeHarnessTools: false, reuseSessions: false, turnTimeoutMs: 75000 } }]),
-      { insert: [...(offline ? [{ id: 'smoke-fixture', name: fixturePath }] : []),
+      { insert: [...(offline ? [{ id: provider, name: fixturePath }, { id: backupProvider, name: backupPath }] : []),
         preset('smoke-manual', { auto: false }), preset('smoke-auto', { thresholdRatio: offline ? 0.16 : thresholdRatio }),
         ...(alternate ? [preset('smoke-switch', { modelPolicies: [{ provider, model: alternate, thresholdRatio }] })] : [])] },
     ];
     await writeFile(join(dir, 'cordis.patch.yml'), JSON.stringify(patches));
     await manage('set', [provider, model], { profile });
+    if (offline && alternate) await manage('fallback', [backupRoute], { profile });
     const enabled = await manage('enable', [], { profile });
     const started = await startupCompaction(profile);
     assert.equal(enabled.digest, started.digest);
@@ -208,6 +236,12 @@ async function test() {
   console.log(`${offline ? 'Fixture' : 'Live'} catalog ${provider}: ${models.map(m => m.id).join(', ')}`);
   assert.ok(catalog.routableProviders?.includes(provider) && models.some(m => m.id === model), `Default ${provider}/${model} is not routable in isolated catalog`);
   const alternate = models.find(m => m.id !== model && m.id !== conversation)?.id;
+  if (offline) {
+    assert.equal(alternate, 'narrow');
+    assert.ok(catalog.routableProviders?.includes(backupProvider) &&
+      catalog.groups?.find(g => g.id === backupProvider)?.models.some(m => m.id === backupModel),
+    `${backupRoute} is not routable in isolated catalog`);
+  }
   const cases = [];
   const run = async (label, fn) => {
     try { await fn(); }
@@ -251,6 +285,15 @@ async function test() {
     console.log(`PASS ${trigger}: summary seq=${summary.seq}, end seq=${end.seq}, shadowed=${data.shadowedSeqs.length}, route=${data.provider}/${data.model}`);
     return end.seq;
   };
+  const failedManual = async id => {
+    const before = await events(id);
+    const result = await c.compact(id);
+    assert.equal(result.result?.kind, 'error');
+    assert.match(result.result.text, /could not produce a useful summary/);
+    const after = await events(id);
+    assert.deepEqual(after.slice(0, before.length), before);
+    assert.ok(!after.some(e => e.type === 'compaction/summary' || e.data?.source?.kind === 'compact-checkpoint'));
+  };
   let inferred = false;
   await run(`${offline ? 'fixture' : 'free inference'} and native manual`, async () => {
     const id = await make('manual');
@@ -265,13 +308,7 @@ async function test() {
     const id = await make('manual');
     await turn(id, 'OVERFLOW', 360);
     await turn(id, 'BEFORE', 360);
-    const before = await events(id);
-    const result = await c.compact(id);
-    assert.equal(result.result?.kind, 'error');
-    assert.match(result.result.text, /could not produce a useful summary/);
-    const after = await events(id);
-    assert.deepEqual(after.slice(0, before.length), before);
-    assert.ok(!after.some(e => e.type === 'compaction/summary' || e.data?.source?.kind === 'compact-checkpoint'));
+    await failedManual(id);
     await turn(id, 'AFTER');
     console.log('PASS failed summary leaves history intact and session usable');
   });
@@ -284,20 +321,44 @@ async function test() {
       if (!(await events(id)).some(e => e.type === 'compaction/summary')) await turn(id, 'AUTO3');
       checkpoint(await events(id), 'step pressure');
     });
-    if (alternate) await run('native model switch', async () => {
+    let fallbackBooted = false;
+    if (alternate) await run(offline ? 'native model switch with summary failover' : 'native model switch', async () => {
       await stop();
       c = await boot(await configure(alternate));
+      fallbackBooted = offline;
       const id = await make('switch');
       await turn(id, 'SWITCH1', count);
       await turn(id, 'SWITCH2', count);
       assert.ok(!(await events(id)).some(e => e.type === 'compaction/summary'), 'history already compacted before model switch');
+      const attemptStart = offline ? (await summaryAttempts()).length : 0;
       await c.selectModel(id, provider, alternate);
       const switched = await turn(id, 'SWITCH3');
       const endSeq = checkpoint(switched, 'model switch');
-      assert.ok(switched.some(e => e.seq > endSeq && e.type === 'request/header' && e.data.header?.config?.model === alternate), 'new request header did not follow switch compaction');
+      const config = switched.find(e => e.seq > endSeq && e.type === 'request/header')?.data.header?.config;
+      assert.deepEqual([config?.provider, config?.model], [provider, alternate], 'new request header did not follow switch compaction');
+      if (offline) {
+        // The native compaction event names the configured route, not the adapter that served it.
+        assert.deepEqual((await summaryAttempts()).slice(attemptStart), [
+          { route: primaryRoute, outcome: 'http-429' }, { route: backupRoute, outcome: 'summary' },
+        ]);
+        assert.ok(contentText(switched.find(e => e.type === 'compaction/summary').data.summary).includes(backupSummary));
+        console.log(`PASS HTTP 429 on ${primaryRoute}; summary served by ${backupRoute}`);
+      }
       console.log(`PASS request header switched to ${provider}/${alternate} after compaction`);
     });
     else console.log('SKIP model switch: no second cataloged model');
+    if (fallbackBooted) await run('native compaction when both routes are limited', async () => {
+      const id = await make('manual');
+      await turn(id, 'ALLLIMIT1', 360);
+      await turn(id, 'ALLLIMIT2', 360);
+      const attemptStart = (await summaryAttempts()).length;
+      await failedManual(id);
+      assert.deepEqual((await summaryAttempts()).slice(attemptStart), [
+        { route: primaryRoute, outcome: 'http-429' }, { route: backupRoute, outcome: 'http-429' },
+      ]);
+      await turn(id, 'AFTERLIMIT');
+      console.log('PASS exhausted summary routes leave history intact and session usable');
+    });
   } else console.log('BLOCKED auto and switch: initial inference did not complete');
   if (cases.length) diagnostics();
 }

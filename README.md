@@ -161,9 +161,32 @@ dsh plugin --profile web add 'github:temidayoxyz/deep-opencode#ace9f75493313e8b1
 ```
 
 - Agent Preset内の有効なエンジンと既存の `modelPolicies` に専用ルートを設定します。元のプロファイル・認証・会話は編集せず、一時ディレクトリでDSHの構成を確認してから、MUI管理の `--patch` を原子的に生成します。
-- 未検証のDSHバージョンや不整合があれば、専用ルートを適用せず警告し従来設定で起動します。**従来設定の圧縮には従来のモデルが使われ得ます。** 専用ルートが適用済みのとき、無料ルートの応答エラーに対してManagerから別モデルを呼ぶことはありません。
+- 未検証のDSHバージョンや不整合があれば、専用ルートを適用せず警告し従来設定で起動します。**従来設定の圧縮には従来のモデルが使われ得ます。** 専用ルートが適用済みでも、下記の予備ルートを明示的に許可しない限り別モデルは呼びません。
 - カタログに載ることと推論可能であることは別です。無料枠、モデル廃止や容量超過はDSH／プロバイダーのエラーに従います。容量はカタログまたは公開メタデータの参考値で、取得不能時は不明です。`test` は通常推論のプローブであり、実会話の圧縮試験ではありません。
 - `node --test test/compaction.test.mjs`、`npm --prefix plugins/compaction-manager test`、`node test/compaction-live.mjs --fixture` で検証できます。`node test/compaction-live.mjs` は外部の無料ルートに合成データを送る任意の実測です。いずれも実稼働セッションに接続しません。
+
+### レート制限・利用枠切れからの復旧
+
+圧縮の予備ルートは既定で空です。圧縮に必要な会話の一部が送られてもよい **実在する `provider/model`** を、主ルートとは別のプロバイダーから明示的に登録してください。登録した順番で最大5件です。別のルート名でも同じ利用枠を共有するプロバイダーは避けてください。
+
+```sh
+mui recovery candidates opencode-go
+mui compaction fallback '<backup-provider>/<backup-model>'
+mui compaction enable
+mui compaction status
+# 圧縮の予備ルートを全消去（次回起動から）: mui compaction fallback
+```
+
+次回のMUIコア起動後、主ルートから圧縮出力が始まる前に429・利用枠切れが返った場合だけ、許可リストから別ルートを試します。既定モデルや切り替え先は書き換えません。出力開始後のエラー、認証・容量エラー、キャンセルはそのまま返します。予備ルートもすべて制限中なら圧縮は失敗し、DSHは置換チェックポイントを書きません。有料ルートを許可リストに明示すると利用料が生じ得ます。実際に試した予備ルートは `mui log` で確認できます。DSH標準の圧縮イベントには論理上の主ルート名が残ります。
+
+通常推論は、同じ会話で候補を確認してから選べます。カタログは接続先の候補であり、実際の残り枠は示しません。コマンドは次のモデル選択を保存するだけで、プロンプトやツールを自動再実行しません。次の送信時に圧縮が必要なら、通常の圧縮条件が適用されます。
+
+```sh
+mui recovery candidates opencode-go
+mui recovery switch '<session-id>' opencode-go '<new-provider>/<new-model>'
+```
+
+`mui tui` では `/recovery candidates <limited-provider>` と `/recovery switch <limited-provider> <provider/model>` が同じ操作を行い、後者の対象は接続中の会話です。
 
 ## 検証済みの動作（2026-11-16 未明）
 
